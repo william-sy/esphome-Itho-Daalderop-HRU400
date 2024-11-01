@@ -1,0 +1,20 @@
+###
+# Modbus Settings
+###
+modbus:
+  id: modbus
+  uart_id: uart_modbus
+  #send_wait_time: 2000ms
+
+modbus_controller:
+  - id: wtw
+    address:          0x1
+    modbus_id:        modbus
+    setup_priority:   -10
+    update_interval:  15s
+    command_throttle: 200ms
+    offline_skip_updates: 100
+
+substitutions:
+  skip_updates: 5
+  modbus_id: wtw

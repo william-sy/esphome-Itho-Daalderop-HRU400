@@ -1,0 +1,54 @@
+esphome:
+  name: wtw-rs485
+  friendly_name: WTW-RS485
+  comment: Itho Daalderop HRU 400 WTW
+
+# Enable logging
+logger:
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret encryption_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+wifi:
+  # Local of things (no internet)
+  ssid: !secret lot_wifi_ssid
+  password: !secret lot_wifi_password
+  fast_connect: true
+  power_save_mode: light
+  use_address: !secret ip_address
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "WTW-RS485 Fallback Hotspot"
+    password: "HRU400Fallback"
+##
+# Enable captive portal  
+captive_portal:
+##
+# Debugging webserver
+web_server:
+  port: 80
+  version: 3
+
+packages:
+  remote_package:
+    url: https://github.com/william-sy/esphome-Itho-Daalderop-HRU400
+    ref: main
+    refresh: 0s
+    files: [
+      # Language Files (to do):
+      #esphome/i18n/EN.yaml,
+      #esphome/i18n/NL.yaml,
+      esphome/base/base.yaml,
+      esphome/base/board-esp32-atom-light.yaml,
+      esphome/base/fan.yaml,
+      esphome/base/switch.yaml,
+      esphome/base/bypass.yaml,
+      #esphome/base/sensors_advanced.yaml,
+      esphome/base/sensors_faultcodes.yaml,
+      esphome/base/sensors_zone2-5.yaml,
+      esphome/base/sensors_general.yaml
+    ]

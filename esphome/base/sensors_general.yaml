@@ -1,0 +1,431 @@
+sensor:
+  - name: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
+    address: 2000
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42001 inschakelen/uitschakelen
+    address: 2001
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Ventilatievraag toevoer
+    address: 2010
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42011 in-/uitschakelen
+    address: 2011
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Ventilatievraag afvoer
+    address: 2012
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42013 inschakelen/uitschakelen
+    address: 2013
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom(flow) toevoerventilator (geen massabalans)
+    address: 2020
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42021 inschakelen/uitschakelen
+    address: 2021
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom (flow) afvoerventilator (geen massabalans)
+    address: 2022
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42023 inschakelen/uitschakelen
+    address: 2023
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Positie stepper vorstklep Stappen
+    address: 2030
+    unit_of_measurement: 0
+    value_type: null
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42031 inschakelen/uitschakelen
+    address: 2031
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Positie stepper bypass klep
+    address: 2032
+    unit_of_measurement: Stappen
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42033 inschakelen/uitschakelen
+    address: 2033
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Positie stepper zoneklep 1
+    address: 2034
+    unit_of_measurement: Stappen
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42035 inschakelen/uitschakelen
+    address: 2035
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+
+  - name: Ventilatieniveau zone 1
+    address: 2200
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42201 inschakelen/uitschakelen
+    address: 2201
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+
+  - name: Stroomvraag (flow) zone 1
+    address: 2210
+    unit_of_measurement: "m3"/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42211 inschakelen/uitschakelen
+    address: 2211
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+
+  - name: Hoogste percentage toevoer in Automodus
+    address: 3000
+    unit_of_measurement: '%'
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Hoogste percentage afvoer in Automodus
+    address: 3001
+    unit_of_measurement: '%'
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
+    address: 3010
+    unit_of_measurement: '%'
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Hoogste gemeten CO2-concentratie
+    address: 3011
+    unit_of_measurement: Ppm
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Snelheid toevoerventilator
+    address: 3020
+    unit_of_measurement: Rpm
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Snelheid afvoerventilator
+    address: 3021
+    unit_of_measurement: Rpm
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Werkelijke vermogen voedingsventilator
+    address: 3022
+    unit_of_measurement: W
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Werkelijke vermogen afvoerventilator
+    address: 3023
+    unit_of_measurement: W
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Zonekleppen aangesloten; Bit 0= Zone 1; Bit 1= Zone 2; Bit 3= Zone 3; Bit 4= Zone 4
+    address: 3024
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom van buitenaf
+    address: 3030
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Massastroom van buitenaf
+    address: 3031
+    unit_of_measurement: kg/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Temperatuur van buitenaf
+    address: 3032
+    unit_of_measurement: °C
+    value_type: 145
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Relatieve vochtigheid van buitenaf
+    address: 3033
+    unit_of_measurement: '%'
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom door vorstklep
+    address: 3040
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom gemengd
+    address: 3050
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Massastroom gemengd
+    address: 3051
+    unit_of_measurement: kg/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Temperatuur gemengd
+    address: 3052
+    unit_of_measurement: °C
+    value_type: 145
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Relatieve vochtigheid gemengd "%"
+    address: 3053
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom naar gebouw "m3/h"
+    address: 3060
+    value_type: None"0X10"
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Massastroom naar gebouw "kg/h"
+    address: 3061
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Temperatuur naar gebouw
+    address: 3062
+    unit_of_measurement: °C
+    value_type: 145
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Relatieve vochtigheid naar gebouw "%"
+    address: 3063
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Volumestroom van gebouw "m3/h"
+    address: 3070
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Massastroom van gebouw "kg/h"
+    address: 3071
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Temperatuur van gebouw
+    address: 3072
+    unit_of_measurement: °C
+    value_type: 145
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Relatieve vochtigheid van gebouw
+    address: 3073
+    unit_of_measurement: '%'
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${3080}
+    address: 3080
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${3081}
+    address: 3081
+    unit_of_measurement: "kg/h"
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${3082}
+    address: 3082
+    filters:
+    - multiply: 0.1
+    unit_of_measurement: "°C"
+    value_type: S_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${3083}
+    address: 3083
+    unit_of_measurement: "%"
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    device_class: "humidity"
+  - name: ${3200}
+    address: 3200
+    unit_of_measurement: "m3/h"
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${4000}
+    address: 4000
+    unit_of_measurement: "h"
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${4001}
+    address: 4001
+    unit_of_measurement: "h"
+    value_type: U_WORD
+    register_type: holding
+    state_class: "total_increasing"
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    skip_updates: ${skip_updates}
+  - name: ${4002}
+    address: 4002
+    unit_of_measurement: "m3"
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    skip_updates: ${skip_updates}
+    state_class: "total_increasing"
+  - name: ${4003}
+    address: 4003
+    unit_of_measurement: "m3"
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    skip_updates: ${skip_updates}
+    state_class: "total_increasing"
