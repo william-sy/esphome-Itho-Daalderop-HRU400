@@ -1,78 +1,4 @@
 sensor:
-  - name: ${s_499}
-    address: 499
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: wtw
-  - name: ${s_2000}
-    address: 2000
-    value_type: U_WORD
-    min_value: 0
-    max_value: 25
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: ${s_2001}
-    address: 2001
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  # Demand ventialtion: (ingress)
-  - name: ${s_2010}
-    address: 2010
-    min_value: 0
-    max_value: ${max_cap}
-    step: 1
-    unit_of_measurement: m3/h
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: ${s_2011}
-    address: 2011
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  # Demand ventialtion: (exhaust)
-  - name: Ventilatievraag afvoer
-    address: ${s_2012}
-    unit_of_measurement: m3/h
-    value_type: U_WORD
-    min_value: 0
-    max_value: ${max_cap}
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: ${s_2013}
-    address: 2013
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
   # massflow intake
   - name: ${s_2020}
     address: 2020
@@ -103,48 +29,6 @@ sensor:
     value_type: U_WORD
     register_type: holding
     state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  # Frost valve
-  - name: ${s_2030}
-    address: 2030
-    unit_of_measurement: Stappen
-    min_value: 0
-    max_value: 510
-    step: 1
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: ${s_2031}
-    address: 2031
-    min_value: 0
-    max_value: 1
-    step: 1
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  # Bypass valve
-  - name: ${s_2032}
-    address: 2032
-    unit_of_measurement: Stappen
-    value_type: U_WORD
-    min_value: 0
-    max_value: ${flap_max}
-    step: ${flap_max}
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: ${s_2033}
-    address: 2033
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_3000}
@@ -281,6 +165,8 @@ sensor:
     register_type: holding
     state_class: measurement
     platform: modbus_controller
+    filters:
+      - multiply: 0.1
     modbus_controller_id: ${modbus_id}
   - name: ${s_3053}
     address: 3053
@@ -312,6 +198,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    filters:
+      - multiply: 0.1
   - name: ${s_3063}
     address: 3063
     value_type: U_WORD
@@ -341,6 +229,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    filters:
+      - multiply: 0.1
   - name: ${s_3073}
     address: 3073
     unit_of_measurement: '%'
@@ -349,6 +239,13 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    filters:
+      - or:
+          - delta: 1
+          - heartbeat: 60s
+      - lambda: 
+          float rand1 = rand() % 1;        
+          return x + rand1;
   - name: ${s_3080}
     address: 3080
     unit_of_measurement: m3/h
@@ -367,14 +264,14 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: ${s_3082}
     address: 3082
-    filters:
-    - multiply: 0.1
     unit_of_measurement: "°C"
     value_type: S_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    filters:
+    - multiply: 0.1
   - name: ${s_3083}
     address: 3083
     unit_of_measurement: "%"
@@ -427,3 +324,123 @@ sensor:
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
     state_class: "total_increasing"
+
+
+number:
+  - name: ${s_499}
+    address: 499
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2000}
+    address: 2000
+    value_type: U_WORD
+    min_value: 0
+    max_value: 25
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2001}
+    address: 2001
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  # Demand ventialtion: (ingress)
+  - name: ${s_2010}
+    address: 2010
+    min_value: 0
+    max_value: ${max_cap}
+    step: 1
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2011}
+    address: 2011
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  # Demand ventialtion: (exhaust)
+  - name: Ventilatievraag afvoer
+    address: ${s_2012}
+    unit_of_measurement: m3/h
+    value_type: U_WORD
+    min_value: 0
+    max_value: ${max_cap}
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2013}
+    address: 2013
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+
+  # Frost valve
+  - name: ${s_2030}
+    address: 2030
+    unit_of_measurement: Stappen
+    min_value: 0
+    max_value: 510
+    step: 1
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2031}
+    address: 2031
+    min_value: 0
+    max_value: 1
+    step: 1
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  # Bypass valve
+  - name: ${s_2032}
+    address: 2032
+    unit_of_measurement: Stappen
+    value_type: U_WORD
+    min_value: 0
+    max_value: ${flap_max}
+    step: ${flap_max}
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2033}
+    address: 2033
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}

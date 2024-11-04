@@ -6,151 +6,151 @@ sensor:
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_200}
     address: 200
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_201}
     address: 201
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_202}
     address: 202
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_203}
     address: 203
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_210}
     address: 210
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_211}
     address: 211
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_212}
     address: 212
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_213}
     address: 213
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_214}
     address: 214
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_215}
     address: 215
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_216}
     address: 216
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_217}
     address: 217
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_218}
     address: 218
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_219}
     address: 219
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_220}
     address: 220
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_221}
     address: 221
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_222}
     address: 222
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_230}
     address: 230
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_231}
     address: 231
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_232}
     address: 232
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ${s_233}
     address: 233
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
