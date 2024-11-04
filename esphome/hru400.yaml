@@ -49,6 +49,9 @@ packages:
       esphome/base/bypass.yaml,
       #esphome/base/sensors_advanced.yaml,
       esphome/base/sensors_faultcodes.yaml,
-      esphome/base/sensors_zone2-5.yaml,
+      esphome/base/zone_1.yaml,
+      #esphome/base/zone_2.yaml,
+      #esphome/base/zone_3.yaml,
+      #esphome/base/zone_4.yaml,
       esphome/base/sensors_general.yaml
     ]

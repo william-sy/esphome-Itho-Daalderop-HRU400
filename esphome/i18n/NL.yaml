@@ -1,4 +1,21 @@
 substitutions:
+  2032: Positie stepper bypass klep
+  2033: Positie stepper bypass klep - inschakelen/uitschakelen
+
+  2034: Positie stepper zoneklep 1
+  2035: Positie stepper zoneklep 1 - inschakelen/uitschakelen
+  2200: Ventilatieniveau zone 1
+  2201: Ventilatieniveau zone 1 - inschakelen/uitschakelen
+  2210: Stroomvraag (flow) zone 1
+  2211: Stroomvraag (flow) zone 1 - inschakelen/uitschakelen
+  3000: Hoogste percentage toevoer in Automodus
+  3001: Hoogste percentage afvoer in Automodus
+  3010: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
+  3011: Hoogste gemeten CO2-concentratie
+  3020: Snelheid toevoerventilator
+  3021: Snelheid afvoerventilator
+  3022: Werkelijke vermogen voedingsventilator
+  3023: Werkelijke vermogen afvoerventilator
   3024: Zonekleppen aangesloten; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
   3030: Volumestroom van buitenaf
   3031: Massastroom van buitenaf

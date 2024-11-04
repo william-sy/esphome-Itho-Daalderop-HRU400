@@ -1,0 +1,61 @@
+# Not all systems have zone flaps:
+sensor:
+  # Position stepper zone flap 1
+  - name: ${2034}
+    address: 2034
+    unit_of_measurement: Stappen
+    value_type: U_WORD
+    min_value: 0
+    max_value: ${flap_max}
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${2035}
+    address: 2035
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  # Ventialtion level zone 1
+  - name: ${2200}
+    address: 2200
+    min_value: 0
+    max_value: 25
+    step: 1
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${2201}
+    address: 2201
+    value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  # Flow demand zone 1:
+  - name: ${2210}
+    address: 2210
+    unit_of_measurement: m3/h
+    min_value: 0
+    max_value: ${max_cap}
+    step: 1
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${2211}
+    address: 2211
+    min_value: 0
+    max_value: 1
+    step: 1
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}

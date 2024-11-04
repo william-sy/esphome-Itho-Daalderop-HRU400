@@ -1,4 +1,20 @@
 substitutions:
+  2032: Positipn stepper bypass valve
+  2033: Position stepper bypass valve - Turn On/Off
+  2034: Position stepper zone flap 1
+  2035: Position stepper zone flap 1 - Turn On/Off
+  2200: Ventilation level zone 1
+  2201: Ventilation level zone 1 - Turn On/Off
+  2210: Flow demand zone 1
+  2211: Flow demand zone 1 - Turn On/Off
+  3000: Highest percentage ingress in Automodus
+  3001: Highest percentage exhaust in Automodus
+  3010: Highest measured RV (extern & I²C) (not in fans)
+  3011: Highest measured CO2-concentratie
+  3020: Speed ingress fan
+  3021: Speed exhaust fan
+  3022: Power usage ingress fan
+  3023: Power usage exhaust fan
   3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
   3030: Volume flow from outside
   3031: Mass flow from outside
