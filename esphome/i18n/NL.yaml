@@ -1,4 +1,10 @@
 substitutions:
+  3073: Relatieve vochtigheid van gebouw in %
+  3080: Volumestroom naar buiten in m3/h
+  3081: Massastroom naar buiten in kg/h
+  3082: Temperatuur naar buiten
+  3083: Relatieve vochtigheid naar buiten 
+  3200: Ongebalanceerde stroomvraag zone 1
   4000: Levensduur teller deel 1
   4001: Levensduur teller deel 2
   4002: Mengstroom teller deel 1

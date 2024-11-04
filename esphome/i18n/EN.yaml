@@ -4,7 +4,7 @@ substitutions:
   3081: Mass flow to outside (kg/h)
   3082: Temperature to outside
   3083: Relative air humidity to outside
-  3200: Unbalanced flowdemans zone 1
+  3200: Unbalanced flow demand zone 1
   4000: Lifetime counter part 1
   4001: Lifetime counter part 2
   4002: Mixflow counter part 1
