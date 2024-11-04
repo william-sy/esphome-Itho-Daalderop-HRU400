@@ -1,5 +1,5 @@
 sensor:
-  - name: Aantal fout 34 (schrijfbaar voor reset)
+  - name: ${499}
     address: 499
     value_type: U_WORD
     min_value: 0
