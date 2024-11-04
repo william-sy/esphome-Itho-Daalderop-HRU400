@@ -1,10 +1,13 @@
 ###
 # Select Manual / Auto mode on the WTW Unit
+
+# These are technically duplicates from the sensors_general.yaml,
+# But are a switch instead.
 select:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: HRU_fan_flow_ingress_select
-    name: "Flow ingress - auto/manual"
+    name: ${sw_ingress}
     address: 2021
     optionsmap:
       Auto: 0
@@ -13,7 +16,7 @@ select:
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: HRU_fan_demand_ingress_select
-    name: "Flow demand - auto/manual"
+    name: ${sw_demand}
     address: 2011
     optionsmap:
       Auto: 0

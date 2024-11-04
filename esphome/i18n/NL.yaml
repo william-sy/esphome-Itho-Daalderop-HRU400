@@ -1,18 +1,18 @@
 substitutions:
+  # sensors_general.yaml:
+  499: Herstart WTW unit.
   2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
   2001: Werkelijk ventilatieniveau (BRDG) - inschakelen/uitschakelen
   2010: Ventilatievraag toevoer
   2011: Ventilatievraag toevoer - inschakelen/uitschakelen
   2012: Ventilatievraag afvoer
   2013: Ventilatievraag afvoer - inschakelen/uitschakelen
-
   2020: Volumestroom (flow) toevoerventilator (geen massabalans)
   2021: Volumestroom (flow) toevoerventilator (geen massabalans) - inschakelen/uitschakelen
   2022: Volumestroom (flow) afvoerventilator (geen massabalans)
   2023: Volumestroom (flow) afvoerventilator (geen massabalans) - inschakelen/uitschakelen
   2030: Positie stepper vorstklep Stappen
   2031: Positie stepper vorstklep Stappen - inschakelen/uitschakelen
-
   2032: Positie stepper bypass klep
   2033: Positie stepper bypass klep - inschakelen/uitschakelen
   2034: Positie stepper zoneklep 1
@@ -56,3 +56,29 @@ substitutions:
   4001: Levensduur teller deel 2
   4002: Mengstroom teller deel 1
   4003: Mengstroom teller deel 2
+  # Switch:
+  sw_ingress: Volume toevoer - auto/manueel
+  sw_demand: Volume vraag - auto/manuaal
+  # Fault codes: 
+  199: Foutnummer
+  200: Aantal fout 1 (schrijfbaar voor reset)
+  201: Aantal fout 2 (schrijfbaar voor reset)
+  202: Aantal fout 3 (schrijfbaar voor reset)
+  203: Aantal fout 4 (schrijfbaar voor reset)
+  210: Aantal fout 11 (schrijfbaar voor reset)
+  211: Aantal fout 12 (schrijfbaar voor reset)
+  212: Aantal fout 13 (schrijfbaar voor reset)
+  213: Aantal fout 14 (schrijfbaar voor reset)
+  214: Aantal fout 15 (schrijfbaar voor reset)
+  215: Aantal fout 16 (schrijfbaar voor reset)
+  216: Aantal fout 17 (schrijfbaar voor reset)
+  217: Aantal fout 18 (schrijfbaar voor reset)
+  218: Aantal fout 19 (schrijfbaar voor reset)
+  219: Aantal fout 20 (schrijfbaar voor reset)
+  220: Aantal fout 21 (schrijfbaar voor reset)
+  221: Aantal fout 22 (schrijfbaar voor reset)
+  222: Aantal fout 23 (schrijfbaar voor reset)
+  230: Aantal fout 31 (schrijfbaar voor reset)
+  231: Aantal fout 32 (schrijfbaar voor reset)
+  232: Aantal fout 33 (schrijfbaar voor reset)
+  233: Aantal fout 34 (schrijfbaar voor reset)

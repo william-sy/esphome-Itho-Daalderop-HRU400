@@ -1,4 +1,6 @@
 substitutions:
+  # sensors_general.yaml:
+  499: Restart WTW unit.
   2000: Real ventilation level (synchronized with BRDG)
   2001: Real ventilation level (BRDG) - Turn On/Off
   2010: Ventilation demand ingress
@@ -54,3 +56,30 @@ substitutions:
   4001: Lifetime counter part 2
   4002: Mixflow counter part 1
   4003: Mixflow counter part 2
+  # Switch:
+  sw_ingress: Flow ingress - auto/manual
+  sw_demand: Flow demand - auto/manual
+  # Fault codes: 
+  # Fault codes: 
+  199: Error Code
+  200: Dirty filter (Volume)
+  201: Dirty Filter (by time)
+  202: Flow-warning exhaust flow
+  203: Flow-warning ingress flow
+  210: Error hunidity sensor intern
+  211: Error hunidity sensor exhaust
+  212: Error hunidity sensor ingress
+  213: Error temperature sensor intern
+  214: Error temperature sensor exhaust
+  215: Error temperature sensor ingress
+  216: Error valve zone 1
+  217: Error valve zone 2
+  218: Error valve zone 3
+  219: Error valve zone 4
+  220: Error bypass valve
+  221: Error frost valve
+  222: Error electronics compartiment
+  230: Error flow sensor exhaust
+  231: Error flow sensor ingress
+  232: Error fan module exhaust
+  233: Error fan module ingress

@@ -1,160 +1,154 @@
 sensor:
-  - name: Foutnummer
+  # These are writable for reset:
+  - name: ${199}
     address: 199
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 1 (schrijfbaar voor reset)
+  - name: ${200}
     address: 200
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 2 (schrijfbaar voor reset)
+  - name: ${201}
     address: 201
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 3 (schrijfbaar voor reset)
+  - name: ${202}
     address: 202
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 4 (schrijfbaar voor reset)
+  - name: ${203}
     address: 203
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 11 (schrijfbaar voor reset)
+  - name: ${210}
     address: 210
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 12 (schrijfbaar voor reset)
+  - name: ${211}
     address: 211
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 13 (schrijfbaar voor reset)
+  - name: ${212}
     address: 212
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 14 (schrijfbaar voor reset)
+  - name: ${213}
     address: 213
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 15 (schrijfbaar voor reset)
+  - name: ${214}
     address: 214
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 16 (schrijfbaar voor reset)
+  - name: ${215}
     address: 215
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 17 (schrijfbaar voor reset)
+  - name: ${216}
     address: 216
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 18 (schrijfbaar voor reset)
+  - name: ${217}
     address: 217
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 19 (schrijfbaar voor reset)
+  - name: ${218}
     address: 218
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 20 (schrijfbaar voor reset)
+  - name: ${219}
     address: 219
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 21 (schrijfbaar voor reset)
+  - name: ${220}
     address: 220
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 22 (schrijfbaar voor reset)
+  - name: ${221}
     address: 221
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 23 (schrijfbaar voor reset)
+  - name: ${222}
     address: 222
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 31 (schrijfbaar voor reset)
+  - name: ${230}
     address: 230
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 32 (schrijfbaar voor reset)
+  - name: ${231}
     address: 231
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 33 (schrijfbaar voor reset)
+  - name: ${232}
     address: 232
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: Aantal fout 34 (schrijfbaar voor reset)
+  - name: ${233}
     address: 233
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: wtw
-  - name: Aantal fout 34 (schrijfbaar voor reset)
-    address: 499
     value_type: U_WORD
     register_type: holding
     state_class: measurement
