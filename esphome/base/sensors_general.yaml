@@ -63,8 +63,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-
-  - name: Volumestroom(flow) toevoerventilator (geen massabalans)
+  # massflow intake
+  - name: ${2020}
     address: 2020
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -72,14 +72,15 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42021 inschakelen/uitschakelen
+  - name: ${2021}
     address: 2021
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Volumestroom (flow) afvoerventilator (geen massabalans)
+  # massflow exhaust
+  - name: ${2022}
     address: 2022
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -87,23 +88,30 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42023 inschakelen/uitschakelen
+  - name: ${2023}
     address: 2023
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Positie stepper vorstklep Stappen
+  # Frost valve
+  - name: ${2030}
     address: 2030
     unit_of_measurement: Stappen
+    min_value: 0
+    max_value: 510
+    step: 1
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42031 inschakelen/uitschakelen
+  - name: ${2031}
     address: 2031
+    min_value: 0
+    max_value: 1
+    step: 1
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -219,7 +227,7 @@ sensor:
   - name: ${3032}
     address: 3032
     unit_of_measurement: °C
-    value_type: FP32
+    value_type: S_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -259,7 +267,7 @@ sensor:
   - name: ${3052}
     address: 3052
     unit_of_measurement: °C
-    value_type: FP32
+    value_type: S_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -289,7 +297,7 @@ sensor:
   - name: ${3062}
     address: 3062
     unit_of_measurement: °C
-    value_type: FP32
+    value_type: S_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -318,7 +326,7 @@ sensor:
   - name: ${3072}
     address: 3072
     unit_of_measurement: °C
-    value_type: FP32
+    value_type: S_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller

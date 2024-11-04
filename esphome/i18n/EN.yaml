@@ -5,9 +5,13 @@ substitutions:
   2011: Ventilation demand ingress - Turn On/Off
   2012: Ventilation demand exhaust
   2013: Ventilation demand exhaust - Turn On/Off
-
-
-  2032: Positipn stepper bypass valve
+  2020: Mass flow, intake fan (no mass balanse)
+  2021: Mass flow, intake fan (no mass balanse) - Turn On/Off
+  2022: Mass flow, exhaust fan (no mass balanse)
+  2023: Mass flow, exhaust fan (no mass balanse) - Turn On/Off
+  2030: Position stepper frost flap steps
+  2031: Position stepper frost flap steps - Turn On/Off
+  2032: Position stepper bypass valve
   2033: Position stepper bypass valve - Turn On/Off
   2034: Position stepper zone flap 1
   2035: Position stepper zone flap 1 - Turn On/Off

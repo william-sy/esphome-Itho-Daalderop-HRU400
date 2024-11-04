@@ -6,7 +6,12 @@ substitutions:
   2012: Ventilatievraag afvoer
   2013: Ventilatievraag afvoer - inschakelen/uitschakelen
 
-
+  2020: Volumestroom (flow) toevoerventilator (geen massabalans)
+  2021: Volumestroom (flow) toevoerventilator (geen massabalans) - inschakelen/uitschakelen
+  2022: Volumestroom (flow) afvoerventilator (geen massabalans)
+  2023: Volumestroom (flow) afvoerventilator (geen massabalans) - inschakelen/uitschakelen
+  2030: Positie stepper vorstklep Stappen
+  2031: Positie stepper vorstklep Stappen - inschakelen/uitschakelen
 
   2032: Positie stepper bypass klep
   2033: Positie stepper bypass klep - inschakelen/uitschakelen
