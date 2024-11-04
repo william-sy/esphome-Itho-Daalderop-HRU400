@@ -376,7 +376,7 @@ number:
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (exhaust)
   - name: ${s_2012}
-    address: ${2012}
+    address: 2012
     unit_of_measurement: m3/h
     value_type: U_WORD
     min_value: 0
