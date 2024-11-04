@@ -334,7 +334,6 @@ number:
     max_value: 1
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_2000}
@@ -344,7 +343,6 @@ number:
     max_value: 25
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_2001}
@@ -354,7 +352,6 @@ number:
     max_value: 1
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (ingress)
@@ -366,7 +363,6 @@ number:
     unit_of_measurement: m3/h
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_2011}
@@ -376,7 +372,6 @@ number:
     max_value: 1
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (exhaust)
@@ -388,7 +383,6 @@ number:
     max_value: ${max_cap}
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_2013}
@@ -398,10 +392,8 @@ number:
     max_value: 1
     step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-
   # Frost valve
   - name: ${s_2030}
     address: 2030
@@ -411,7 +403,6 @@ number:
     step: 1
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_2031}
@@ -421,7 +412,6 @@ number:
     step: 1
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Bypass valve
