@@ -1,7 +1,24 @@
 substitutions:
-  3073: Relatieve vochtigheid van gebouw in %
-  3080: Volumestroom naar buiten in m3/h
-  3081: Massastroom naar buiten in kg/h
+  3024: Zonekleppen aangesloten; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  3030: Volumestroom van buitenaf
+  3031: Massastroom van buitenaf
+  3032: Temperatuur van buitenaf
+  3033: Relatieve vochtigheid van buitenaf (%)
+  3040: Volumestroom door vorstklep
+  3050: Volumestroom gemengd
+  3051: Massastroom gemengd
+  3052: Temperatuur gemengd
+  3053: Relatieve vochtigheid gemengd (%)
+  3060: Volumestroom naar gebouw (m3/h)
+  3061: Massastroom naar gebouw (kg/h)
+  3062: Temperatuur naar gebouw
+  3063: Relatieve vochtigheid naar gebouw (%)
+  3070: Volumestroom van gebouw (m3/h)
+  3071: Massastroom van gebouw (kg/h)
+  3072: Temperatuur van gebouw
+  3073: Relatieve vochtigheid van gebouw (%)
+  3080: Volumestroom naar buiten (m3/h)
+  3081: Massastroom naar buiten (kg/h)
   3082: Temperatuur naar buiten
   3083: Relatieve vochtigheid naar buiten 
   3200: Ongebalanceerde stroomvraag zone 1

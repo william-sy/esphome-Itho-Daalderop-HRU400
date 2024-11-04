@@ -245,7 +245,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Relatieve vochtigheid van buitenaf
+  - name: ${3033}
     address: 3033
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -253,7 +253,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Volumestroom door vorstklep
+  - name: ${3040}
     address: 3040
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -261,7 +261,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Volumestroom gemengd
+  - name: ${3050}
     address: 3050
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -269,7 +269,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Massastroom gemengd
+  - name: ${3051}
     address: 3051
     unit_of_measurement: kg/h
     value_type: U_WORD
@@ -277,7 +277,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Temperatuur gemengd
+  - name: ${3052}
     address: 3052
     unit_of_measurement: °C
     value_type: FP32
@@ -285,14 +285,14 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Relatieve vochtigheid gemengd "%"
+  - name: ${3053}
     address: 3053
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Volumestroom naar gebouw "m3/h"
+  - name: ${3060}
     id: hru_m3h_toevoer_binnen_total
     address: 3060
     value_type: U_WORD
@@ -300,14 +300,14 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Massastroom naar gebouw "kg/h"
+  - name: ${3061}
     address: 3061
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Temperatuur naar gebouw
+  - name: ${3062}
     address: 3062
     unit_of_measurement: °C
     value_type: FP32
@@ -315,28 +315,28 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Relatieve vochtigheid naar gebouw "%"
+  - name: ${3063}
     address: 3063
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Volumestroom van gebouw "m3/h"
+  - name: ${3070}
     address: 3070
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Massastroom van gebouw "kg/h"
+  - name: ${3071}
     address: 3071
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Temperatuur van gebouw
+  - name: ${3072}
     address: 3072
     unit_of_measurement: °C
     value_type: FP32
@@ -344,7 +344,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: Relatieve vochtigheid van gebouw
+  - name: ${3073}
     address: 3073
     unit_of_measurement: '%'
     value_type: U_WORD

@@ -1,9 +1,26 @@
 substitutions:
+  3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  3030: Volume flow from outside
+  3031: Mass flow from outside
+  3032: Temperature from outside
+  3033: Relative air humidity from outside (%)
+  3040: Volume flow trough frost flap
+  3050: Volume flow mixed
+  3051: Mass flow mixed
+  3052: Temperature mixed
+  3053: Relative humidity mixed (%)
+  3060: Volume flow to building (m3/h)
+  3061: Mass flow to building (kg/h)
+  3062: Temperature to building
+  3063: Relative air humidity to building (%)
+  3070: Volume flow from building (m3/h)
+  3071: Mass flow from building (kg/h)
+  3072: Temperature from building
   3073: Relative humidity from building (%)
   3080: Volume flow to outside (m3/h)
   3081: Mass flow to outside (kg/h)
   3082: Temperature to outside
-  3083: Relative air humidity to outside
+  3083: Relative air humidity to outside (%)
   3200: Unbalanced flow demand zone 1
   4000: Lifetime counter part 1
   4001: Lifetime counter part 2
