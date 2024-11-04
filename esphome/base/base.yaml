@@ -16,7 +16,7 @@ modbus_controller:
     offline_skip_updates: 100
 
 substitutions:
-  skip_updates: 5
+  skip_updates: "5"
   modbus_id: wtw
-  max_cap: 399
-  flap_max: 550
+  max_cap: "399"
+  flap_max: "550"
