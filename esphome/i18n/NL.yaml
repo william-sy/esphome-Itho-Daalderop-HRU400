@@ -1,84 +1,84 @@
 substitutions:
   # sensors_general.yaml:
-  499: Herstart WTW unit.
-  2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
-  2001: Werkelijk ventilatieniveau (BRDG) - inschakelen/uitschakelen
-  2010: Ventilatievraag toevoer
-  2011: Ventilatievraag toevoer - inschakelen/uitschakelen
-  2012: Ventilatievraag afvoer
-  2013: Ventilatievraag afvoer - inschakelen/uitschakelen
-  2020: Volumestroom (flow) toevoerventilator (geen massabalans)
-  2021: Volumestroom (flow) toevoerventilator (geen massabalans) - inschakelen/uitschakelen
-  2022: Volumestroom (flow) afvoerventilator (geen massabalans)
-  2023: Volumestroom (flow) afvoerventilator (geen massabalans) - inschakelen/uitschakelen
-  2030: Positie stepper vorstklep Stappen
-  2031: Positie stepper vorstklep Stappen - inschakelen/uitschakelen
-  2032: Positie stepper bypass klep
-  2033: Positie stepper bypass klep - inschakelen/uitschakelen
-  2034: Positie stepper zoneklep 1
-  2035: Positie stepper zoneklep 1 - inschakelen/uitschakelen
-  2200: Ventilatieniveau zone 1
-  2201: Ventilatieniveau zone 1 - inschakelen/uitschakelen
-  2210: Stroomvraag (flow) zone 1
-  2211: Stroomvraag (flow) zone 1 - inschakelen/uitschakelen
-  3000: Hoogste percentage toevoer in Automodus
-  3001: Hoogste percentage afvoer in Automodus
-  3010: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
-  3011: Hoogste gemeten CO2-concentratie
-  3020: Snelheid toevoerventilator
-  3021: Snelheid afvoerventilator
-  3022: Werkelijke vermogen voedingsventilator
-  3023: Werkelijke vermogen afvoerventilator
-  3024: Zonekleppen aangesloten; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
-  3030: Volumestroom van buitenaf
-  3031: Massastroom van buitenaf
-  3032: Temperatuur van buitenaf
-  3033: Relatieve vochtigheid van buitenaf (%)
-  3040: Volumestroom door vorstklep
-  3050: Volumestroom gemengd
-  3051: Massastroom gemengd
-  3052: Temperatuur gemengd
-  3053: Relatieve vochtigheid gemengd (%)
-  3060: Volumestroom naar gebouw (m3/h)
-  3061: Massastroom naar gebouw (kg/h)
-  3062: Temperatuur naar gebouw
-  3063: Relatieve vochtigheid naar gebouw (%)
-  3070: Volumestroom van gebouw (m3/h)
-  3071: Massastroom van gebouw (kg/h)
-  3072: Temperatuur van gebouw
-  3073: Relatieve vochtigheid van gebouw (%)
-  3080: Volumestroom naar buiten (m3/h)
-  3081: Massastroom naar buiten (kg/h)
-  3082: Temperatuur naar buiten
-  3083: Relatieve vochtigheid naar buiten 
-  3200: Ongebalanceerde stroomvraag zone 1
-  4000: Levensduur teller deel 1
-  4001: Levensduur teller deel 2
-  4002: Mengstroom teller deel 1
-  4003: Mengstroom teller deel 2
+  s_499: Herstart WTW unit.
+  s_2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
+  s_2001: Werkelijk ventilatieniveau (BRDG) - inschakelen/uitschakelen
+  s_2010: Ventilatievraag toevoer
+  s_2011: Ventilatievraag toevoer - inschakelen/uitschakelen
+  s_2012: Ventilatievraag afvoer
+  s_2013: Ventilatievraag afvoer - inschakelen/uitschakelen
+  s_2020: Volumestroom (flow) toevoerventilator (geen massabalans)
+  s_2021: Volumestroom (flow) toevoerventilator (geen massabalans) - inschakelen/uitschakelen
+  s_2022: Volumestroom (flow) afvoerventilator (geen massabalans)
+  s_2023: Volumestroom (flow) afvoerventilator (geen massabalans) - inschakelen/uitschakelen
+  s_2030: Positie stepper vorstklep Stappen
+  s_2031: Positie stepper vorstklep Stappen - inschakelen/uitschakelen
+  s_2032: Positie stepper bypass klep
+  s_2033: Positie stepper bypass klep - inschakelen/uitschakelen
+  s_2034: Positie stepper zoneklep 1
+  s_2035: Positie stepper zoneklep 1 - inschakelen/uitschakelen
+  s_2200: Ventilatieniveau zone 1
+  s_2201: Ventilatieniveau zone 1 - inschakelen/uitschakelen
+  s_2210: Stroomvraag (flow) zone 1
+  s_2211: Stroomvraag (flow) zone 1 - inschakelen/uitschakelen
+  s_3000: Hoogste percentage toevoer in Automodus
+  s_3001: Hoogste percentage afvoer in Automodus
+  s_3010: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
+  s_3011: Hoogste gemeten CO2-concentratie
+  s_3020: Snelheid toevoerventilator
+  s_3021: Snelheid afvoerventilator
+  s_3022: Werkelijke vermogen voedingsventilator
+  s_3023: Werkelijke vermogen afvoerventilator
+  s_3024: Zonekleppen aangesloten; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  s_3030: Volumestroom van buitenaf
+  s_3031: Massastroom van buitenaf
+  s_3032: Temperatuur van buitenaf
+  s_3033: Relatieve vochtigheid van buitenaf (%)
+  s_3040: Volumestroom door vorstklep
+  s_3050: Volumestroom gemengd
+  s_3051: Massastroom gemengd
+  s_3052: Temperatuur gemengd
+  s_3053: Relatieve vochtigheid gemengd (%)
+  s_3060: Volumestroom naar gebouw (m3/h)
+  s_3061: Massastroom naar gebouw (kg/h)
+  s_3062: Temperatuur naar gebouw
+  s_3063: Relatieve vochtigheid naar gebouw (%)
+  s_3070: Volumestroom van gebouw (m3/h)
+  s_3071: Massastroom van gebouw (kg/h)
+  s_3072: Temperatuur van gebouw
+  s_3073: Relatieve vochtigheid van gebouw (%)
+  s_3080: Volumestroom naar buiten (m3/h)
+  s_3081: Massastroom naar buiten (kg/h)
+  s_3082: Temperatuur naar buiten
+  s_3083: Relatieve vochtigheid naar buiten 
+  s_3200: Ongebalanceerde stroomvraag zone 1
+  s_4000: Levensduur teller deel 1
+  s_4001: Levensduur teller deel 2
+  s_4002: Mengstroom teller deel 1
+  s_4003: Mengstroom teller deel 2
   # Switch:
   sw_ingress: Volume toevoer - auto/manueel
   sw_demand: Volume vraag - auto/manuaal
   # Fault codes: 
-  199: Foutnummer
-  200: Aantal fout 1 (schrijfbaar voor reset)
-  201: Aantal fout 2 (schrijfbaar voor reset)
-  202: Aantal fout 3 (schrijfbaar voor reset)
-  203: Aantal fout 4 (schrijfbaar voor reset)
-  210: Aantal fout 11 (schrijfbaar voor reset)
-  211: Aantal fout 12 (schrijfbaar voor reset)
-  212: Aantal fout 13 (schrijfbaar voor reset)
-  213: Aantal fout 14 (schrijfbaar voor reset)
-  214: Aantal fout 15 (schrijfbaar voor reset)
-  215: Aantal fout 16 (schrijfbaar voor reset)
-  216: Aantal fout 17 (schrijfbaar voor reset)
-  217: Aantal fout 18 (schrijfbaar voor reset)
-  218: Aantal fout 19 (schrijfbaar voor reset)
-  219: Aantal fout 20 (schrijfbaar voor reset)
-  220: Aantal fout 21 (schrijfbaar voor reset)
-  221: Aantal fout 22 (schrijfbaar voor reset)
-  222: Aantal fout 23 (schrijfbaar voor reset)
-  230: Aantal fout 31 (schrijfbaar voor reset)
-  231: Aantal fout 32 (schrijfbaar voor reset)
-  232: Aantal fout 33 (schrijfbaar voor reset)
-  233: Aantal fout 34 (schrijfbaar voor reset)
+  s_199: Foutnummer
+  s_200: Filter vuil (volumemeting)
+  s_201: Filter vuil (tijdmeting)
+  s_202: Flow-waarschuwing afvoervolume
+  s_203: Flow-waarschuwing toevoervolume
+  s_210: Fout vochtsensor intern
+  s_211: Fout vochtsensor afvoer
+  s_212: Fout vochtsensor toevoer
+  s_213: Fout temperatuursensor intern
+  s_214: Fout temperatuursensor afvoer
+  s_215: Fout temperatuursensor toevoer
+  s_216: Fout klep zone 1
+  s_217: Fout klep zone 2
+  s_218: Fout klep zone 3
+  s_219: Fout klep zone 4
+  s_220: Fout bypassklep
+  s_221: Fout vorstklep
+  s_222: Fout elektronicacompartimen
+  s_230: Fout volumesensor afvoer
+  s_231: Fout volumesensor toevoer
+  s_232: Fout ventilatormodule afvoer
+  s_233: Fout ventilatormodule toevoer

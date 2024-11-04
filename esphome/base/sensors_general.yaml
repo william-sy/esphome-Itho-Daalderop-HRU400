@@ -1,5 +1,5 @@
 sensor:
-  - name: ${499}
+  - name: ${s_499}
     address: 499
     value_type: U_WORD
     min_value: 0
@@ -9,7 +9,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: wtw
-  - name: ${2000}
+  - name: ${s_2000}
     address: 2000
     value_type: U_WORD
     min_value: 0
@@ -19,7 +19,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2001}
+  - name: ${s_2001}
     address: 2001
     value_type: U_WORD
     min_value: 0
@@ -30,7 +30,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (ingress)
-  - name: ${2010}
+  - name: ${s_2010}
     address: 2010
     min_value: 0
     max_value: ${max_cap}
@@ -41,7 +41,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2011}
+  - name: ${s_2011}
     address: 2011
     value_type: U_WORD
     min_value: 0
@@ -53,7 +53,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (exhaust)
   - name: Ventilatievraag afvoer
-    address: ${2012}
+    address: ${s_2012}
     unit_of_measurement: m3/h
     value_type: U_WORD
     min_value: 0
@@ -63,7 +63,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2013}
+  - name: ${s_2013}
     address: 2013
     value_type: U_WORD
     min_value: 0
@@ -74,7 +74,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # massflow intake
-  - name: ${2020}
+  - name: ${s_2020}
     address: 2020
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -82,7 +82,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2021}
+  - name: ${s_2021}
     address: 2021
     value_type: U_WORD
     register_type: holding
@@ -90,7 +90,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # massflow exhaust
-  - name: ${2022}
+  - name: ${s_2022}
     address: 2022
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -98,7 +98,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2023}
+  - name: ${s_2023}
     address: 2023
     value_type: U_WORD
     register_type: holding
@@ -106,7 +106,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Frost valve
-  - name: ${2030}
+  - name: ${s_2030}
     address: 2030
     unit_of_measurement: Stappen
     min_value: 0
@@ -117,7 +117,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2031}
+  - name: ${s_2031}
     address: 2031
     min_value: 0
     max_value: 1
@@ -128,7 +128,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   # Bypass valve
-  - name: ${2032}
+  - name: ${s_2032}
     address: 2032
     unit_of_measurement: Stappen
     value_type: U_WORD
@@ -138,7 +138,7 @@ sensor:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${2033}
+  - name: ${s_2033}
     address: 2033
     value_type: U_WORD
     min_value: 0
@@ -147,7 +147,7 @@ sensor:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3000}
+  - name: ${s_3000}
     address: 3000
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -155,7 +155,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3001}
+  - name: ${s_3001}
     address: 3001
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -163,7 +163,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3010}
+  - name: ${s_3010}
     address: 3010
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -171,7 +171,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3011}
+  - name: ${s_3011}
     address: 3011
     unit_of_measurement: Ppm
     value_type: U_WORD
@@ -179,7 +179,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3020}
+  - name: ${s_3020}
     address: 3020
     unit_of_measurement: Rpm
     value_type: U_WORD
@@ -187,7 +187,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3021}
+  - name: ${s_3021}
     address: 3021
     unit_of_measurement: Rpm
     value_type: U_WORD
@@ -195,7 +195,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3022}
+  - name: ${s_3022}
     address: 3022
     unit_of_measurement: W
     value_type: U_WORD
@@ -203,7 +203,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3023}
+  - name: ${s_3023}
     address: 3023
     unit_of_measurement: W
     value_type: U_WORD
@@ -211,14 +211,14 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3024}
+  - name: ${s_3024}
     address: 3024
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3030}
+  - name: ${s_3030}
     address: 3030
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -226,7 +226,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3031}
+  - name: ${s_3031}
     address: 3031
     unit_of_measurement: kg/h
     value_type: U_WORD
@@ -234,7 +234,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3032}
+  - name: ${s_3032}
     address: 3032
     unit_of_measurement: °C
     value_type: S_WORD
@@ -242,7 +242,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3033}
+  - name: ${s_3033}
     address: 3033
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -250,7 +250,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3040}
+  - name: ${s_3040}
     address: 3040
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -258,7 +258,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3050}
+  - name: ${s_3050}
     address: 3050
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -266,7 +266,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3051}
+  - name: ${s_3051}
     address: 3051
     unit_of_measurement: kg/h
     value_type: U_WORD
@@ -274,7 +274,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3052}
+  - name: ${s_3052}
     address: 3052
     unit_of_measurement: °C
     value_type: S_WORD
@@ -282,14 +282,14 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3053}
+  - name: ${s_3053}
     address: 3053
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3060}
+  - name: ${s_3060}
     id: hru_m3h_toevoer_binnen_total
     address: 3060
     value_type: U_WORD
@@ -297,14 +297,14 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3061}
+  - name: ${s_3061}
     address: 3061
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3062}
+  - name: ${s_3062}
     address: 3062
     unit_of_measurement: °C
     value_type: S_WORD
@@ -312,28 +312,28 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3063}
+  - name: ${s_3063}
     address: 3063
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3070}
+  - name: ${s_3070}
     address: 3070
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3071}
+  - name: ${s_3071}
     address: 3071
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3072}
+  - name: ${s_3072}
     address: 3072
     unit_of_measurement: °C
     value_type: S_WORD
@@ -341,7 +341,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3073}
+  - name: ${s_3073}
     address: 3073
     unit_of_measurement: '%'
     value_type: U_WORD
@@ -349,7 +349,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3080}
+  - name: ${s_3080}
     address: 3080
     unit_of_measurement: m3/h
     value_type: U_WORD
@@ -357,7 +357,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3081}
+  - name: ${s_3081}
     address: 3081
     unit_of_measurement: "kg/h"
     value_type: U_WORD
@@ -365,7 +365,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3082}
+  - name: ${s_3082}
     address: 3082
     filters:
     - multiply: 0.1
@@ -375,7 +375,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${3083}
+  - name: ${s_3083}
     address: 3083
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -384,7 +384,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     device_class: "humidity"
-  - name: ${3200}
+  - name: ${s_3200}
     address: 3200
     unit_of_measurement: "m3/h"
     value_type: U_WORD
@@ -392,7 +392,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${4000}
+  - name: ${s_4000}
     address: 4000
     unit_of_measurement: "h"
     value_type: U_WORD
@@ -400,7 +400,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${4001}
+  - name: ${s_4001}
     address: 4001
     unit_of_measurement: "h"
     value_type: U_WORD
@@ -409,7 +409,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
-  - name: ${4002}
+  - name: ${s_4002}
     address: 4002
     unit_of_measurement: "m3"
     value_type: U_WORD
@@ -418,7 +418,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
     state_class: "total_increasing"
-  - name: ${4003}
+  - name: ${s_4003}
     address: 4003
     unit_of_measurement: "m3"
     value_type: U_WORD

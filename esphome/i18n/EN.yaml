@@ -1,85 +1,85 @@
 substitutions:
   # sensors_general.yaml:
-  499: Restart WTW unit.
-  2000: Real ventilation level (synchronized with BRDG)
-  2001: Real ventilation level (BRDG) - Turn On/Off
-  2010: Ventilation demand ingress
-  2011: Ventilation demand ingress - Turn On/Off
-  2012: Ventilation demand exhaust
-  2013: Ventilation demand exhaust - Turn On/Off
-  2020: Mass flow, intake fan (no mass balanse)
-  2021: Mass flow, intake fan (no mass balanse) - Turn On/Off
-  2022: Mass flow, exhaust fan (no mass balanse)
-  2023: Mass flow, exhaust fan (no mass balanse) - Turn On/Off
-  2030: Position stepper frost flap steps
-  2031: Position stepper frost flap steps - Turn On/Off
-  2032: Position stepper bypass valve
-  2033: Position stepper bypass valve - Turn On/Off
-  2034: Position stepper zone flap 1
-  2035: Position stepper zone flap 1 - Turn On/Off
-  2200: Ventilation level zone 1
-  2201: Ventilation level zone 1 - Turn On/Off
-  2210: Flow demand zone 1
-  2211: Flow demand zone 1 - Turn On/Off
-  3000: Highest percentage ingress in Automodus
-  3001: Highest percentage exhaust in Automodus
-  3010: Highest measured RV (extern & I²C) (not in fans)
-  3011: Highest measured CO2-concentratie
-  3020: Speed ingress fan
-  3021: Speed exhaust fan
-  3022: Power usage ingress fan
-  3023: Power usage exhaust fan
-  3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
-  3030: Volume flow from outside
-  3031: Mass flow from outside
-  3032: Temperature from outside
-  3033: Relative air humidity from outside (%)
-  3040: Volume flow trough frost flap
-  3050: Volume flow mixed
-  3051: Mass flow mixed
-  3052: Temperature mixed
-  3053: Relative humidity mixed (%)
-  3060: Volume flow to building (m3/h)
-  3061: Mass flow to building (kg/h)
-  3062: Temperature to building
-  3063: Relative air humidity to building (%)
-  3070: Volume flow from building (m3/h)
-  3071: Mass flow from building (kg/h)
-  3072: Temperature from building
-  3073: Relative humidity from building (%)
-  3080: Volume flow to outside (m3/h)
-  3081: Mass flow to outside (kg/h)
-  3082: Temperature to outside
-  3083: Relative air humidity to outside (%)
-  3200: Unbalanced flow demand zone 1
-  4000: Lifetime counter part 1
-  4001: Lifetime counter part 2
-  4002: Mixflow counter part 1
-  4003: Mixflow counter part 2
+  s_499: Restart WTW unit.
+  s_2000: Real ventilation level (synchronized with BRDG)
+  s_2001: Real ventilation level (BRDG) - Turn On/Off
+  s_2010: Ventilation demand ingress
+  s_2011: Ventilation demand ingress - Turn On/Off
+  s_2012: Ventilation demand exhaust
+  s_2013: Ventilation demand exhaust - Turn On/Off
+  s_2020: Mass flow, intake fan (no mass balanse)
+  s_2021: Mass flow, intake fan (no mass balanse) - Turn On/Off
+  s_2022: Mass flow, exhaust fan (no mass balanse)
+  s_2023: Mass flow, exhaust fan (no mass balanse) - Turn On/Off
+  s_2030: Position stepper frost flap steps
+  s_2031: Position stepper frost flap steps - Turn On/Off
+  s_2032: Position stepper bypass valve
+  s_2033: Position stepper bypass valve - Turn On/Off
+  s_2034: Position stepper zone flap 1
+  s_2035: Position stepper zone flap 1 - Turn On/Off
+  s_2200: Ventilation level zone 1
+  s_2201: Ventilation level zone 1 - Turn On/Off
+  s_2210: Flow demand zone 1
+  s_2211: Flow demand zone 1 - Turn On/Off
+  s_3000: Highest percentage ingress in Automodus
+  s_3001: Highest percentage exhaust in Automodus
+  s_3010: Highest measured RV (extern & I²C) (not in fans)
+  s_3011: Highest measured CO2-concentratie
+  s_3020: Speed ingress fan
+  s_3021: Speed exhaust fan
+  s_3022: Power usage ingress fan
+  s_3023: Power usage exhaust fan
+  s_3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  s_3030: Volume flow from outside
+  s_3031: Mass flow from outside
+  s_3032: Temperature from outside
+  s_3033: Relative air humidity from outside (%)
+  s_3040: Volume flow trough frost flap
+  s_3050: Volume flow mixed
+  s_3051: Mass flow mixed
+  s_3052: Temperature mixed
+  s_3053: Relative humidity mixed (%)
+  s_3060: Volume flow to building (m3/h)
+  s_3061: Mass flow to building (kg/h)
+  s_3062: Temperature to building
+  s_3063: Relative air humidity to building (%)
+  s_3070: Volume flow from building (m3/h)
+  s_3071: Mass flow from building (kg/h)
+  s_3072: Temperature from building
+  s_3073: Relative humidity from building (%)
+  s_3080: Volume flow to outside (m3/h)
+  s_3081: Mass flow to outside (kg/h)
+  s_3082: Temperature to outside
+  s_3083: Relative air humidity to outside (%)
+  s_3200: Unbalanced flow demand zone 1
+  s_4000: Lifetime counter part 1
+  s_4001: Lifetime counter part 2
+  s_4002: Mixflow counter part 1
+  s_4003: Mixflow counter part 2
   # Switch:
   sw_ingress: Flow ingress - auto/manual
   sw_demand: Flow demand - auto/manual
   # Fault codes: 
   # Fault codes: 
-  199: Error Code
-  200: Dirty filter (Volume)
-  201: Dirty Filter (by time)
-  202: Flow-warning exhaust flow
-  203: Flow-warning ingress flow
-  210: Error hunidity sensor intern
-  211: Error hunidity sensor exhaust
-  212: Error hunidity sensor ingress
-  213: Error temperature sensor intern
-  214: Error temperature sensor exhaust
-  215: Error temperature sensor ingress
-  216: Error valve zone 1
-  217: Error valve zone 2
-  218: Error valve zone 3
-  219: Error valve zone 4
-  220: Error bypass valve
-  221: Error frost valve
-  222: Error electronics compartiment
-  230: Error flow sensor exhaust
-  231: Error flow sensor ingress
-  232: Error fan module exhaust
-  233: Error fan module ingress
+  s_199: Error Code
+  s_200: Dirty filter (Volume)
+  s_201: Dirty Filter (by time)
+  s_202: Flow-warning exhaust flow
+  s_203: Flow-warning ingress flow
+  s_210: Error hunidity sensor intern
+  s_211: Error hunidity sensor exhaust
+  s_212: Error hunidity sensor ingress
+  s_213: Error temperature sensor intern
+  s_214: Error temperature sensor exhaust
+  s_215: Error temperature sensor ingress
+  s_216: Error valve zone 1
+  s_217: Error valve zone 2
+  s_218: Error valve zone 3
+  s_219: Error valve zone 4
+  s_220: Error bypass valve
+  s_221: Error frost valve
+  s_222: Error electronics compartiment
+  s_230: Error flow sensor exhaust
+  s_231: Error flow sensor ingress
+  s_232: Error fan module exhaust
+  s_233: Error fan module ingress
