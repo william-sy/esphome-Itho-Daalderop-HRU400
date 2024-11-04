@@ -1,5 +1,5 @@
 # Not all systems have zone flaps:
-sensor:
+number:
   # Position stepper zone flap 1
   - name: ${s_2034}
     address: 2034
