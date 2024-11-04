@@ -1,7 +1,15 @@
 substitutions:
+  2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
+  2001: Werkelijk ventilatieniveau (BRDG) - inschakelen/uitschakelen
+  2010: Ventilatievraag toevoer
+  2011: Ventilatievraag toevoer - inschakelen/uitschakelen
+  2012: Ventilatievraag afvoer
+  2013: Ventilatievraag afvoer - inschakelen/uitschakelen
+
+
+
   2032: Positie stepper bypass klep
   2033: Positie stepper bypass klep - inschakelen/uitschakelen
-
   2034: Positie stepper zoneklep 1
   2035: Positie stepper zoneklep 1 - inschakelen/uitschakelen
   2200: Ventilatieniveau zone 1

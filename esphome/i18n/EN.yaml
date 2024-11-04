@@ -1,4 +1,12 @@
 substitutions:
+  2000: Real ventilation level (synchronized with BRDG)
+  2001: Real ventilation level (BRDG) - Turn On/Off
+  2010: Ventilation demand ingress
+  2011: Ventilation demand ingress - Turn On/Off
+  2012: Ventilation demand exhaust
+  2013: Ventilation demand exhaust - Turn On/Off
+
+
   2032: Positipn stepper bypass valve
   2033: Position stepper bypass valve - Turn On/Off
   2034: Position stepper zone flap 1
