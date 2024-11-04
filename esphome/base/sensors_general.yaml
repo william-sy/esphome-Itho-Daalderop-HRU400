@@ -75,8 +75,8 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: Positie stepper vorstklep Stappen
     address: 2030
-    unit_of_measurement: 0
-    value_type: null
+    unit_of_measurement: Stappen
+    value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -136,7 +136,7 @@ sensor:
 
   - name: Stroomvraag (flow) zone 1
     address: 2210
-    unit_of_measurement: "m3"/h
+    unit_of_measurement: m3/h
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -240,7 +240,7 @@ sensor:
   - name: Temperatuur van buitenaf
     address: 3032
     unit_of_measurement: °C
-    value_type: 145
+    value_type: FP32
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -280,7 +280,7 @@ sensor:
   - name: Temperatuur gemengd
     address: 3052
     unit_of_measurement: °C
-    value_type: 145
+    value_type: FP32
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -294,7 +294,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: Volumestroom naar gebouw "m3/h"
     address: 3060
-    value_type: None"0X10"
+    value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -309,7 +309,7 @@ sensor:
   - name: Temperatuur naar gebouw
     address: 3062
     unit_of_measurement: °C
-    value_type: 145
+    value_type: FP32
     register_type: holding
     state_class: measurement
     platform: modbus_controller
@@ -338,7 +338,7 @@ sensor:
   - name: Temperatuur van gebouw
     address: 3072
     unit_of_measurement: °C
-    value_type: 145
+    value_type: FP32
     register_type: holding
     state_class: measurement
     platform: modbus_controller

@@ -4,7 +4,7 @@
 ## By Demand
 number:
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Demand ventilation speed" # Sets actual fan speed
     id: HRU_fan_demand_value
     icon: mdi:home-import-outline
@@ -27,7 +27,7 @@ number:
               id: HRU_fan_demand_on_off
               value: 0.0
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Demand ventialtion - on/off" # 0 = auto 1 = Manual
     id: HRU_fan_demand_on_off
     register_type: holding
@@ -39,7 +39,7 @@ number:
     icon: mdi:toggle-switch-variant
 ## By Flow
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Flow ingress speed" # Sets actual fan speed
     id: HRU_fan_flow_ingress_value
     icon: mdi:home-import-outline
@@ -62,7 +62,7 @@ number:
               id: HRU_fan_flow_ingress_on_off
               value: 0.0
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Flow ingress - on/off" # 0 = auto 1 = Manual
     id: HRU_fan_flow_ingress_on_off
     register_type: holding
@@ -81,7 +81,7 @@ number:
   # Inside air is directed to the ourside without passing the heat exchanger
   # Thus cold outside air does not heat up from the hot inside air
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Bypass valve - on/off" # 0 = auto 1 = Manual
     id: HRU_bypass_valve_on_off
     register_type: holding
@@ -93,7 +93,7 @@ number:
     icon: mdi:home-import-outline
   
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     name: "Bypass stepper position" # 0 = off 550 = open
     id: HRU_bypass_stepper_state
     register_type: holding

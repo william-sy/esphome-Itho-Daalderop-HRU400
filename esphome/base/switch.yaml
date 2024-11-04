@@ -2,7 +2,7 @@
 # Select Manual / Auto mode on the WTW Unit
 select:
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     id: HRU_fan_flow_ingress_select
     name: "Flow ingress - auto/manual"
     address: 2021
@@ -11,7 +11,7 @@ select:
       Manual: 1
     entity_category: config
   - platform: modbus_controller
-    modbus_controller_id: hru
+    modbus_controller_id: ${modbus_id}
     id: HRU_fan_demand_ingress_select
     name: "Flow demand - auto/manual"
     address: 2011
