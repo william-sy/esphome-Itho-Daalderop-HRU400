@@ -37,7 +37,6 @@ number:
     step: 1
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-    initial_value: 0
   # Demand ventialtion: (exhaust)
   - name: ${f_2012}
     address: 2012
@@ -74,7 +73,6 @@ number:
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-    initial_value: 0
   ## By Flow
   - name: ${f_2020}
     platform: modbus_controller
@@ -110,7 +108,6 @@ number:
     step: 1
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-    initial_value: 0
 
 ###
 # Create a fan entity in HA.
