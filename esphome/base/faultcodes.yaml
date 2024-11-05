@@ -149,6 +149,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates_errors}
     icon: ${alert_icon}
+    entity_category: diagnostic
   - name: ${s_220}
     address: 220
     value_type: U_WORD
