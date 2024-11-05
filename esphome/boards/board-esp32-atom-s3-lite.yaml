@@ -2,9 +2,10 @@
 # ESP settings
 ###
 esp32:
-  board: m5stack-atom
+  board: esp32-s3-devkitc-1  
   framework:
-    type: esp-idf
+    type: arduino
+    version: latest
 ###
 # Uart Settings
 ###
