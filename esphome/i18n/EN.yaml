@@ -51,6 +51,7 @@ substitutions:
   # select.yaml:
   sl_2021: Flow ingress - auto/manual
   sl_2011: Flow demand - auto/manual
+  sl_499: Restart WTW unit.
   # faultcodes.yaml: 
   s_199: Error Code
   s_200: Dirty filter (Volume)

@@ -363,16 +363,6 @@ sensor:
     icon: mdi:clock
 
 number:
-  # Restart device
-  - name: ${s_499}
-    address: 499
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
   # BRDG fan:
   - name: ${s_2000}
     address: 2000

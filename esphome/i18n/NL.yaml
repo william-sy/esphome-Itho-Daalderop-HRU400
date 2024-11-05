@@ -1,6 +1,5 @@
 substitutions:
   # sensors_general.yaml:
-  s_499: Herstart WTW unit.
   s_2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
   s_2001: Werkelijk ventilatieniveau (BRDG) - aan/uit
   s_2020: Volumestroom (flow) toevoerventilator (geen massabalans)
@@ -49,8 +48,9 @@ substitutions:
   s_4002: Mengstroom teller deel 1 (m3)
   s_4003: Mengstroom teller deel 2 (m3)
   # select.yaml:
-  sw_ingress: Volume toevoer - auto/manueel
-  sw_demand: Volume vraag - auto/manuaal
+  sl_ingress: Volume toevoer - auto/manueel
+  sl_demand: Volume vraag - auto/manuaal
+  sl_499: Herstart WTW unit.
   # faultcodes.yaml: 
   s_199: Foutnummer
   s_200: Filter vuil (volumemeting)
