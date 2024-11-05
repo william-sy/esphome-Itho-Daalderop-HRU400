@@ -8,7 +8,7 @@ modbus:
 
 modbus_controller:
   - id: wtw
-    address:          0x1
+    address:          0x48 # Resolves to 72
     modbus_id:        modbuswtw
     setup_priority:   -10
     update_interval:  15s
