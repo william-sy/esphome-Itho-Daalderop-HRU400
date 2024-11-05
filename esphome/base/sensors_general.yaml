@@ -153,7 +153,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    icom: mdi:valve
+    icon: mdi:valve
   - name: ${s_3050}
     address: 3050
     unit_of_measurement: m3/h
