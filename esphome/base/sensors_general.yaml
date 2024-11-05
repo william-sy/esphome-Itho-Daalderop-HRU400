@@ -392,83 +392,9 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  # Demand ventialtion: (ingress)
-  - name: ${s_2010}
-    id: fan_ingress_demand_value
-    address: 2010
-    min_value: 0
-    max_value: ${max_cap}
-    step: 1
-    unit_of_measurement: m3/h
-    #value_type: U_WORD
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    icon: mdi:home-import-outline
-    use_write_multiple: true
-    # If you turn on this value above 1 we need to switch it on
-    on_value_range:
-      - above: 2.0
-        then: 
-          - number.set:
-              id: fan_ingress_demand_on_off
-              value: 1.0
-      - below: 1.0
-        then:
-          - number.set:
-              id: fan_ingress_demand_on_off
-              value: 0.0
-  # 0 = auto 1 = Manual
-  - name: ${s_2011}
-    id: fan_ingress_demand_on_off
-    address: 2011
-    #value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-    #initial_value: 0
-  # Demand ventialtion: (exhaust)
-  - name: ${s_2012}
-    address: 2012
-    id: fan_exhaust_demand_value
-    unit_of_measurement: m3/h
-    #value_type: U_WORD
-    min_value: 0
-    max_value: ${max_cap}
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    icon: mdi:home-export-outline
-    on_value_range:
-      - above: 2.0
-        then: 
-          - number.set:
-              id: fan_flow_exhaust_on_off
-              value: 1.0
-      - below: 1.0
-        then:
-          - number.set:
-              id: fan_flow_exhaust_on_off
-              value: 0.0
-  - name: ${s_2013}
-    id: fan_flow_exhaust_on_off
-    address: 2013
-    #value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-    initial_value: 0
+  
+
+
   # Frost valve
   - name: ${s_2030}
     address: 2030

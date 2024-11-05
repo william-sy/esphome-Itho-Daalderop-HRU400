@@ -1,11 +1,11 @@
 ###
 ##
 # Controlling fan
-## By Demand
 number:
-  - platform: modbus_controller
+  # Demand ventialtion: (ingress)
+  - name: ${f_2010} 
+    platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    name: ${f_2010}
     id: HRU_fan_demand_value
     icon: mdi:home-import-outline
     register_type: holding
@@ -27,9 +27,9 @@ number:
           - number.set:
               id: HRU_fan_demand_on_off
               value: 0.0
-  - platform: modbus_controller
+  - name: ${f_2011}
+    platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    name: ${f_2011}
     id: HRU_fan_demand_on_off
     register_type: holding
     address: 2011
@@ -39,10 +39,47 @@ number:
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
     initial_value: 0
-## By Flow
-  - platform: modbus_controller
+  # Demand ventialtion: (exhaust)
+  - name: ${s_2012}
+    address: 2012
+    id: fan_exhaust_demand_value
+    unit_of_measurement: m3/h
+    #value_type: U_WORD
+    min_value: 0
+    max_value: ${max_cap}
+    step: 1
+    register_type: holding
+    platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    name: ${f_2020}
+    icon: mdi:home-export-outline
+    on_value_range:
+      - above: 2.0
+        then: 
+          - number.set:
+              id: fan_flow_exhaust_on_off
+              value: 1.0
+      - below: 1.0
+        then:
+          - number.set:
+              id: fan_flow_exhaust_on_off
+              value: 0.0
+  - name: ${s_2013}
+    id: fan_flow_exhaust_on_off
+    address: 2013
+    #value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
+    initial_value: 0
+  ## By Flow
+  - name: ${f_2020}
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
     id: HRU_fan_flow_ingress_value
     icon: mdi:home-import-outline
     register_type: holding
@@ -64,9 +101,9 @@ number:
           - number.set:
               id: HRU_fan_flow_ingress_on_off
               value: 0.0
-  - platform: modbus_controller
+  - name: ${f_2021}
+    platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    name: ${f_2021}
     id: HRU_fan_flow_ingress_on_off
     register_type: holding
     address: 2021
@@ -96,7 +133,6 @@ number:
     use_write_multiple: true
     initial_value: 0
     icon: mdi:home-import-outline
-  
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "Bypass stepper position" # 0 = off 550 = open
