@@ -2,25 +2,17 @@ substitutions:
   # sensors_general.yaml:
   s_499: Restart WTW unit.
   s_2000: Real ventilation level (synchronized with BRDG)
-  s_2001: Real ventilation level (BRDG) - Turn On/Off
-  s_2010: Ventilation demand ingress
-  s_2011: Ventilation demand ingress - Turn On/Off
-  s_2012: Ventilation demand exhaust
-  s_2013: Ventilation demand exhaust - Turn On/Off
+  s_2001: Real ventilation level (BRDG) - on/off
   s_2020: Mass flow, intake fan (no mass balanse)
-  s_2021: Mass flow, intake fan (no mass balanse) - Turn On/Off
+  s_2021: Mass flow, intake fan (no mass balanse) - on/off
   s_2022: Mass flow, exhaust fan (no mass balanse)
-  s_2023: Mass flow, exhaust fan (no mass balanse) - Turn On/Off
-  s_2030: Position stepper frost flap steps
-  s_2031: Position stepper frost flap steps - Turn On/Off
-  s_2032: Position stepper bypass valve
-  s_2033: Position stepper bypass valve - Turn On/Off
+  s_2023: Mass flow, exhaust fan (no mass balanse) - on/off
   s_2034: Position stepper zone flap 1
-  s_2035: Position stepper zone flap 1 - Turn On/Off
+  s_2035: Position stepper zone flap 1 - on/off
   s_2200: Ventilation level zone 1
-  s_2201: Ventilation level zone 1 - Turn On/Off
+  s_2201: Ventilation level zone 1 - on/off
   s_2210: Flow demand zone 1
-  s_2211: Flow demand zone 1 - Turn On/Off
+  s_2211: Flow demand zone 1 - on/off
   s_3000: Highest percentage ingress in Automodus
   s_3001: Highest percentage exhaust in Automodus
   s_3010: Highest measured RV (extern & I²C) (not in fans)
@@ -57,8 +49,8 @@ substitutions:
   s_4002: Mixflow counter part 1 (m3)
   s_4003: Mixflow counter part 2 (m3)
   # select.yaml:
-  sl_ingress: Flow ingress - auto/manual
-  sl_demand: Flow demand - auto/manual
+  sl_2021: Flow ingress - auto/manual
+  sl_2011: Flow demand - auto/manual
   # faultcodes.yaml: 
   s_199: Error Code
   s_200: Dirty filter (Volume)
@@ -83,7 +75,15 @@ substitutions:
   s_232: Error fan module exhaust
   s_233: Error fan module ingress
   # fan.yaml
-  f_2010: Demand ventilation speed
-  f_2011: Demand ventialtion - on/off
+  f_2010: Ventilation demand ingress
+  f_2011: Ventilation demand ingress - on/off
+  f_2012: Ventilation demand exhaust
+  f_2013: Ventilation demand exhaust - on/off
   f_2020: Flow ingress speed
   f_2021: Flow ingress - on/off
+  # bypass.yaml
+  b_2032: Position stepper bypass valve
+  b_2033: Position stepper bypass valve - on/off
+  # frostvalve.yaml
+  fv_2030: Position stepper frost flap steps
+  fv_2031: Position stepper frost flap steps - on/off

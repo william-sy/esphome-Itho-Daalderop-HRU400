@@ -47,6 +47,7 @@ packages:
       esphome/base/fan.yaml,
       esphome/base/select.yaml,
       esphome/base/bypass.yaml,
+      esphome/base/frostvalve.yaml,
       #esphome/base/sensors_advanced.yaml,
       esphome/base/faultcodes.yaml,
       esphome/base/zone_1.yaml,

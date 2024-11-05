@@ -1,3 +1,35 @@
+number:
+  ###
+  # Bypass
+  ###
+  # 0 = down 
+  # 550 = open
+  # Inside air is directed to the ourside without passing the heat exchanger
+  # Thus cold outside air does not heat up from the hot inside air
+  - name: ${b_2032}
+    address: 2032
+    #value_type: U_WORD
+    min_value: 0
+    max_value: ${flap_max}
+    step: ${flap_max}
+    register_type: holding
+    platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_id}
+    icon: mdi:valve
+  - name: ${b_2033}
+    address: 2033
+    #value_type: U_WORD
+    min_value: 0
+    max_value: 1
+    step: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
+
+
 switch:
   - platform: template
     name: "Bypass valve - on/off" # 0 = auto 1 = Manual
