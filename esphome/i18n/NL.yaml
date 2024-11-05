@@ -2,25 +2,25 @@ substitutions:
   # sensors_general.yaml:
   s_499: Herstart WTW unit.
   s_2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
-  s_2001: Werkelijk ventilatieniveau (BRDG) - inschakelen/uitschakelen
+  s_2001: Werkelijk ventilatieniveau (BRDG) - aan/uit
   s_2010: Ventilatievraag toevoer
-  s_2011: Ventilatievraag toevoer - inschakelen/uitschakelen
+  s_2011: Ventilatievraag toevoer - aan/uit
   s_2012: Ventilatievraag afvoer
-  s_2013: Ventilatievraag afvoer - inschakelen/uitschakelen
+  s_2013: Ventilatievraag afvoer - aan/uit
   s_2020: Volumestroom (flow) toevoerventilator (geen massabalans)
-  s_2021: Volumestroom (flow) toevoerventilator (geen massabalans) - inschakelen/uitschakelen
+  s_2021: Volumestroom (flow) toevoerventilator (geen massabalans) - aan/uit
   s_2022: Volumestroom (flow) afvoerventilator (geen massabalans)
-  s_2023: Volumestroom (flow) afvoerventilator (geen massabalans) - inschakelen/uitschakelen
+  s_2023: Volumestroom (flow) afvoerventilator (geen massabalans) - aan/uit
   s_2030: Positie stepper vorstklep Stappen
-  s_2031: Positie stepper vorstklep Stappen - inschakelen/uitschakelen
+  s_2031: Positie stepper vorstklep Stappen - aan/uit
   s_2032: Positie stepper bypass klep
-  s_2033: Positie stepper bypass klep - inschakelen/uitschakelen
+  s_2033: Positie stepper bypass klep - aan/uit
   s_2034: Positie stepper zoneklep 1
-  s_2035: Positie stepper zoneklep 1 - inschakelen/uitschakelen
+  s_2035: Positie stepper zoneklep 1 - aan/uit
   s_2200: Ventilatieniveau zone 1
-  s_2201: Ventilatieniveau zone 1 - inschakelen/uitschakelen
+  s_2201: Ventilatieniveau zone 1 - aan/uit
   s_2210: Stroomvraag (flow) zone 1
-  s_2211: Stroomvraag (flow) zone 1 - inschakelen/uitschakelen
+  s_2211: Stroomvraag (flow) zone 1 - aan/uit
   s_3000: Hoogste percentage toevoer in Automodus
   s_3001: Hoogste percentage afvoer in Automodus
   s_3010: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
@@ -56,10 +56,10 @@ substitutions:
   s_4001: Levensduur teller deel 2 (h)
   s_4002: Mengstroom teller deel 1 (m3)
   s_4003: Mengstroom teller deel 2 (m3)
-  # Switch:
+  # select.yaml:
   sw_ingress: Volume toevoer - auto/manueel
   sw_demand: Volume vraag - auto/manuaal
-  # Fault codes: 
+  # faultcodes.yaml: 
   s_199: Foutnummer
   s_200: Filter vuil (volumemeting)
   s_201: Filter vuil (tijdmeting)
@@ -82,3 +82,8 @@ substitutions:
   s_231: Fout volumesensor toevoer
   s_232: Fout ventilatormodule afvoer
   s_233: Fout ventilatormodule toevoer
+  # fan.yaml
+  f_2010: Vraag ventilatie snelheid
+  f_2011: vraag ventilatie - aan/uit
+  f_2020: Volume toevoer snelheid
+  f_2021: Volume toevoer snelheid - aan/uit

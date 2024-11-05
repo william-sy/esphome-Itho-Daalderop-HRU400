@@ -83,3 +83,6 @@ substitutions:
   s_231: Error flow sensor ingress
   s_232: Error fan module exhaust
   s_233: Error fan module ingress
+  # fan.yaml
+  f_2010: Demand ventilation speed
+  f_2011: Demand ventialtion - on/off
