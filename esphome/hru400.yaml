@@ -40,10 +40,10 @@ packages:
     refresh: 0s
     files: [
       # Language Files (to do):
-      #esphome/i18n/EN.yaml,
+      esphome/i18n/EN.yaml,
       #esphome/i18n/NL.yaml,
       esphome/base/base.yaml,
-      esphome/noards/board-esp32-atom-lite.yaml,
+      esphome/boards/board-esp32-atom-lite.yaml,
       esphome/base/fan.yaml,
       esphome/base/switch.yaml,
       esphome/base/bypass.yaml,
