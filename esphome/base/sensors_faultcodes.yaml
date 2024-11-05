@@ -232,6 +232,9 @@ number:
     use_write_multiple: true
     entity_category: diagnostic
     icon: mdi:air-filter
+    min_value: 0
+    max_value: ${max_error_number}
+    step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_201} - Reset"
@@ -243,6 +246,9 @@ number:
     skip_updates: ${skip_updates_errors}
     entity_category: diagnostic
     icon: mdi:air-filter
+    min_value: 0
+    max_value: ${max_error_number}
+    step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_202} - Reset"
@@ -254,6 +260,9 @@ number:
     skip_updates: ${skip_updates_errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    min_value: 0
+    max_value: ${max_error_number}
+    step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: ${s_203} - Reset
@@ -265,6 +274,9 @@ number:
     skip_updates: ${skip_updates_errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    min_value: 0
+    max_value: ${max_error_number}
+    step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_222} - Reset"
@@ -275,3 +287,6 @@ number:
     skip_updates: ${skip_updates_errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    min_value: 0
+    max_value: ${max_error_number}
+    step: 1

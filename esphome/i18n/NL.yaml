@@ -52,10 +52,10 @@ substitutions:
   s_3082: Temperatuur naar buiten
   s_3083: Relatieve vochtigheid naar buiten 
   s_3200: Ongebalanceerde stroomvraag zone 1
-  s_4000: Levensduur teller deel 1
-  s_4001: Levensduur teller deel 2
-  s_4002: Mengstroom teller deel 1
-  s_4003: Mengstroom teller deel 2
+  s_4000: Levensduur teller deel 1 (h)
+  s_4001: Levensduur teller deel 2 (h)
+  s_4002: Mengstroom teller deel 1 (m3)
+  s_4003: Mengstroom teller deel 2 (m3)
   # Switch:
   sw_ingress: Volume toevoer - auto/manueel
   sw_demand: Volume vraag - auto/manuaal

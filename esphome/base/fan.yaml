@@ -113,7 +113,7 @@ fan:
     output: fanoutput
     # Create 7 speed van from 100 to 399 in 50 increments
     speed_count: 7 
-    restore_mode: RESTORE_DEFAULT_ON
+    restore_mode: RESTORE_DEFAULT_OFF
 
 ###
 # Output of the fan.

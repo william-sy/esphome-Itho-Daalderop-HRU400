@@ -63,6 +63,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:molecule-co2
   - name: ${s_3020}
     address: 3020
     unit_of_measurement: Rpm
@@ -71,6 +72,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:speedometer
   - name: ${s_3021}
     address: 3021
     unit_of_measurement: Rpm
@@ -79,6 +81,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:speedometer
   - name: ${s_3022}
     address: 3022
     unit_of_measurement: W
@@ -87,6 +90,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:lightning-bolt
   - name: ${s_3023}
     address: 3023
     unit_of_measurement: W
@@ -95,6 +99,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:lightning-bolt
   - name: ${s_3024}
     address: 3024
     value_type: U_WORD
@@ -126,6 +131,10 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    filters:
+      - multiply: 0.1
+    icon: mdi:temperature-celsius
+    device_class: "temperature"
   - name: ${s_3033}
     address: 3033
     unit_of_measurement: '%'
@@ -134,6 +143,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:water-percent
+    device_class: "humidity"
   - name: ${s_3040}
     address: 3040
     unit_of_measurement: m3/h
@@ -142,6 +153,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icom: mdi:valve
   - name: ${s_3050}
     address: 3050
     unit_of_measurement: m3/h
@@ -167,6 +179,8 @@ sensor:
     platform: modbus_controller
     filters:
       - multiply: 0.1
+    icon: mdi:temperature-celsius
+    device_class: "temperature"
     modbus_controller_id: ${modbus_id}
   - name: ${s_3053}
     address: 3053
@@ -175,6 +189,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:water-percent
+    device_class: "humidity"
   - name: ${s_3060}
     id: hru_m3h_toevoer_binnen_total
     address: 3060
@@ -183,6 +199,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    unit_of_measurement: "m3/h"
   - name: ${s_3061}
     address: 3061
     value_type: U_WORD
@@ -190,6 +207,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    unit_of_measurement: "kg/h"
   - name: ${s_3062}
     address: 3062
     unit_of_measurement: °C
@@ -200,6 +218,8 @@ sensor:
     modbus_controller_id: ${modbus_id}
     filters:
       - multiply: 0.1
+    icon: mdi:temperature-celsius
+    device_class: "temperature"
   - name: ${s_3063}
     address: 3063
     value_type: U_WORD
@@ -207,6 +227,9 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:water-percent
+    device_class: "humidity"
+    unit_of_measurement: "%"
   - name: ${s_3070}
     address: 3070
     value_type: U_WORD
@@ -214,6 +237,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    unit_of_measurement: "m3/h"
   - name: ${s_3071}
     address: 3071
     value_type: U_WORD
@@ -221,6 +245,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    unit_of_measurement: "kg/h"
   - name: ${s_3072}
     address: 3072
     unit_of_measurement: °C
@@ -231,6 +256,8 @@ sensor:
     modbus_controller_id: ${modbus_id}
     filters:
       - multiply: 0.1
+    icon: mdi:temperature-celsius
+    device_class: "temperature"
   - name: ${s_3073}
     address: 3073
     unit_of_measurement: '%'
@@ -239,6 +266,8 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:water-percent
+    device_class: "humidity"
     filters:
       - or:
           - delta: 1
@@ -271,16 +300,19 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     filters:
-    - multiply: 0.1
+      - multiply: 0.1
+    icon: mdi:temperature-celsius
+    device_class: "temperature"
   - name: ${s_3083}
     address: 3083
-    unit_of_measurement: "%"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:water-percent
     device_class: "humidity"
+    unit_of_measurement: "%"
   - name: ${s_3200}
     address: 3200
     unit_of_measurement: "m3/h"
@@ -294,9 +326,11 @@ sensor:
     unit_of_measurement: "h"
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    skip_updates: ${skip_updates}
+    icon: mdi:clock
+    state_class: "total_increasing"
   - name: ${s_4001}
     address: 4001
     unit_of_measurement: "h"
@@ -306,6 +340,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
+    icon: mdi:clock
   - name: ${s_4002}
     address: 4002
     unit_of_measurement: "m3"
@@ -315,6 +350,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
     state_class: "total_increasing"
+    icon: mdi:clock
   - name: ${s_4003}
     address: 4003
     unit_of_measurement: "m3"
@@ -324,9 +360,10 @@ sensor:
     modbus_controller_id: ${modbus_id}
     skip_updates: ${skip_updates}
     state_class: "total_increasing"
-
+    icon: mdi:clock
 
 number:
+  # Restart device
   - name: ${s_499}
     address: 499
     value_type: U_WORD
@@ -336,6 +373,7 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+  # BRDG fan:
   - name: ${s_2000}
     address: 2000
     value_type: U_WORD
@@ -356,81 +394,122 @@ number:
     modbus_controller_id: ${modbus_id}
   # Demand ventialtion: (ingress)
   - name: ${s_2010}
+    id: fan_ingress_demand_value
     address: 2010
     min_value: 0
     max_value: ${max_cap}
     step: 1
     unit_of_measurement: m3/h
-    value_type: U_WORD
+    #value_type: U_WORD
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:home-import-outline
+    use_write_multiple: true
+    # If you turn on this value above 1 we need to switch it on
+    on_value_range:
+      - above: 2.0
+        then: 
+          - number.set:
+              id: fan_ingress_demand_on_off
+              value: 1.0
+      - below: 1.0
+        then:
+          - number.set:
+              id: fan_ingress_demand_on_off
+              value: 0.0
+  # 0 = auto 1 = Manual
   - name: ${s_2011}
+    id: fan_ingress_demand_on_off
     address: 2011
-    value_type: U_WORD
+    #value_type: U_WORD
     min_value: 0
     max_value: 1
     step: 1
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
   # Demand ventialtion: (exhaust)
   - name: ${s_2012}
     address: 2012
+    id: fan_exhaust_demand_value
     unit_of_measurement: m3/h
-    value_type: U_WORD
+    #value_type: U_WORD
     min_value: 0
     max_value: ${max_cap}
     step: 1
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    icon: mdi:home-export-outline
+    on_value_range:
+      - above: 2.0
+        then: 
+          - number.set:
+              id: fan_flow_exhaust_on_off
+              value: 1.0
+      - below: 1.0
+        then:
+          - number.set:
+              id: fan_flow_exhaust_on_off
+              value: 0.0
   - name: ${s_2013}
+    id: fan_flow_exhaust_on_off
     address: 2013
-    value_type: U_WORD
+    #value_type: U_WORD
     min_value: 0
     max_value: 1
     step: 1
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
   # Frost valve
   - name: ${s_2030}
     address: 2030
-    unit_of_measurement: Stappen
     min_value: 0
     max_value: 510
-    step: 1
-    value_type: U_WORD
+    step: 510
+    #value_type: U_WORD
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:snowflake-alert
   - name: ${s_2031}
     address: 2031
     min_value: 0
     max_value: 1
     step: 1
-    value_type: U_WORD
+    #value_type: U_WORD
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  # Bypass valve
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
+  # Bypass valve position:
   - name: ${s_2032}
     address: 2032
-    unit_of_measurement: Stappen
-    value_type: U_WORD
+    #value_type: U_WORD
     min_value: 0
     max_value: ${flap_max}
     step: ${flap_max}
     register_type: holding
     platform: modbus_controller
+    use_write_multiple: true
     modbus_controller_id: ${modbus_id}
+    icon: mdi:valve
   - name: ${s_2033}
     address: 2033
-    value_type: U_WORD
+    #value_type: U_WORD
     min_value: 0
     max_value: 1
     step: 1
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
