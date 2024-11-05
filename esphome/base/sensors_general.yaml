@@ -431,6 +431,7 @@ number:
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+    initial_value: 0
   # Demand ventialtion: (exhaust)
   - name: ${s_2012}
     address: 2012
@@ -467,6 +468,7 @@ number:
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+    initial_value: 0
   # Frost valve
   - name: ${s_2030}
     address: 2030
