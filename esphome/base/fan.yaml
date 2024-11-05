@@ -15,7 +15,6 @@ number:
     step: 1
     value_type: U_WORD
     use_write_multiple: true
-    initial_value: 0
     on_value_range:
       - above: 2.0
         then: 
@@ -89,7 +88,6 @@ number:
     step: 1
     value_type: U_WORD
     use_write_multiple: true
-    initial_value: 0
     on_value_range:
       - above: 2.0
         then: 
