@@ -19,17 +19,17 @@ number:
       - above: 2.0
         then: 
           - number.set:
-              id: HRU_fan_demand_on_off
+              id: fan_demand_on_off
               value: 1.0
       - below: 1.0
         then:
           - number.set:
-              id: HRU_fan_demand_on_off
+              id: fan_demand_on_off
               value: 0.0
   - name: ${f_2011}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    id: HRU_fan_demand_on_off
+    id: fan_demand_on_off
     register_type: holding
     address: 2011
     min_value: 0
@@ -174,7 +174,7 @@ output:
                 then:
                   - logger.log: "fan_output_value: 4"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
                       id: fan_demand_value
@@ -185,7 +185,7 @@ output:
                 then:
                   - logger.log: "fan_output_value: 5"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
                       id: fan_demand_value
@@ -196,7 +196,7 @@ output:
                 then:
                   - logger.log: "fan_output_value: 6"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
                       id: fan_demand_value
@@ -207,7 +207,7 @@ output:
                 then:
                   - logger.log: "fan_output_value: 7"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
                       id: fan_demand_value
@@ -219,7 +219,7 @@ output:
           then:
             - logger.log: "fan_output_value: Back to auto"
             - number.set:
-                id: HRU_fan_demand_on_off
+                id: fan_demand_on_off
                 value: 0.0
 
 
