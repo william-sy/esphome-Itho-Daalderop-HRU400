@@ -6,7 +6,7 @@ number:
   - name: ${f_2010} 
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    id: HRU_fan_demand_value
+    id: fan_demand_value
     icon: mdi:home-import-outline
     register_type: holding
     address: 2010
@@ -77,7 +77,7 @@ number:
   - name: ${f_2020}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    id: HRU_fan_flow_ingress_value
+    id: fan_flow_ingress_value
     icon: mdi:home-import-outline
     register_type: holding
     address: 2020
@@ -90,17 +90,17 @@ number:
       - above: 2.0
         then: 
           - number.set:
-              id: HRU_fan_flow_ingress_on_off
+              id: fan_flow_ingress_on_off
               value: 1.0
       - below: 1.0
         then:
           - number.set:
-              id: HRU_fan_flow_ingress_on_off
+              id: fan_flow_ingress_on_off
               value: 0.0
   - name: ${f_2021}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    id: HRU_fan_flow_ingress_on_off
+    id: fan_flow_ingress_on_off
     register_type: holding
     address: 2021
     min_value: 0
