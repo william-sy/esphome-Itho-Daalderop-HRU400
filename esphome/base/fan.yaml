@@ -138,88 +138,56 @@ output:
                   lambda: return (id(wtw_fan).speed == 1);
                 then:
                   - logger.log: "fan_output_value: 1"
-                  - number.set:
-                      # This is technically redundant, as we automatically do it with fan_demand_value.
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      # set the speed.
-                      id: fan_demand_value
-                      value: 100
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 100 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 2);
                 then:
                   - logger.log: "fan_output_value: 2"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 150
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 150 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 3);
                 then:
                   - logger.log: "fan_output_value: 3"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 200
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 200 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 4);
                 then:
                   - logger.log: "fan_output_value: 4"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 250
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 250 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 5);
                 then:
                   - logger.log: "fan_output_value: 5"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 300
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 300 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 6);
                 then:
                   - logger.log: "fan_output_value: 6"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 350
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 350 }
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 7);
                 then:
                   - logger.log: "fan_output_value: 7"
-                  - number.set:
-                      id: fan_demand_on_off
-                      value: 1.0
-                  - number.set:
-                      id: fan_demand_value
-                      value: 399
+                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - number.set: { id: fan_demand_value, value: 399 }
       - if:
           condition:
             # If we turn the fan off.
             lambda: return !(id(wtw_fan).state);
           then:
             - logger.log: "fan_output_value: Back to auto"
-            - number.set:
-                id: fan_demand_on_off
-                value: 0.0
+            - number.set: { id: fan_demand_on_off, value: 0.0 }
 
 
