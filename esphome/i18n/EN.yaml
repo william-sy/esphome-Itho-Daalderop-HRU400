@@ -56,11 +56,10 @@ substitutions:
   s_4001: Lifetime counter part 2 (h)
   s_4002: Mixflow counter part 1 (m3)
   s_4003: Mixflow counter part 2 (m3)
-  # Switch:
-  sw_ingress: Flow ingress - auto/manual
-  sw_demand: Flow demand - auto/manual
-  # Fault codes: 
-  # Fault codes: 
+  # select.yaml:
+  sl_ingress: Flow ingress - auto/manual
+  sl_demand: Flow demand - auto/manual
+  # faultcodes.yaml: 
   s_199: Error Code
   s_200: Dirty filter (Volume)
   s_201: Dirty Filter (by time)
@@ -86,3 +85,5 @@ substitutions:
   # fan.yaml
   f_2010: Demand ventilation speed
   f_2011: Demand ventialtion - on/off
+  f_2020: Flow ingress speed
+  f_2021: Flow ingress - on/off
