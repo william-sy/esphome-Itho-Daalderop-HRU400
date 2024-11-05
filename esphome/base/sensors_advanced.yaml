@@ -5,95 +5,95 @@ sensor:
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Baud rate
     address: 1
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Pariteit
     address: 2
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Fabrikantgroep
     address: 10
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Sub-ID van de fabrikant
     address: 11
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: ProductNoneID
     address: 12
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Softwareversie
     address: 13
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Softwarerevisie
     address: 14
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Lijstversie
     address: 15
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: OEM-code
     address: 16
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Serienummer deel 1 (uint 64) (MSB)
     address: 100
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Serienummer deel 2 (uint 64)
     address: 101
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Serienummer deel 3 (uint 64)
     address: 102
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
   - name: Serienummer deel 4 (uint 64) (LSB)
     address: 103
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
-    modbus_controller_id: wtw
+    modbus_controller_id: ${modbus_id}
