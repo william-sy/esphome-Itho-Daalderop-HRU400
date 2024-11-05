@@ -139,12 +139,12 @@ output:
                 then:
                   - logger.log: "fan_output_value: 1"
                   - number.set:
-                      # This is technically redundant, as we automatically do it with HRU_fan_demand_value.
-                      id: HRU_fan_demand_on_off
+                      # This is technically redundant, as we automatically do it with fan_demand_value.
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
                       # set the speed.
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 100
             - if:
                 condition:
@@ -152,10 +152,10 @@ output:
                 then:
                   - logger.log: "fan_output_value: 2"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 150
             - if:
                 condition:
@@ -163,10 +163,10 @@ output:
                 then:
                   - logger.log: "fan_output_value: 3"
                   - number.set:
-                      id: HRU_fan_demand_on_off
+                      id: fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 200
             - if:
                 condition:
@@ -177,7 +177,7 @@ output:
                       id: HRU_fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 250
             - if:
                 condition:
@@ -188,7 +188,7 @@ output:
                       id: HRU_fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 300
             - if:
                 condition:
@@ -199,7 +199,7 @@ output:
                       id: HRU_fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 350
             - if:
                 condition:
@@ -210,7 +210,7 @@ output:
                       id: HRU_fan_demand_on_off
                       value: 1.0
                   - number.set:
-                      id: HRU_fan_demand_value
+                      id: fan_demand_value
                       value: 399
       - if:
           condition:

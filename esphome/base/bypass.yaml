@@ -19,6 +19,7 @@ number:
     icon: mdi:valve
   - name: ${b_2033}
     address: 2033
+    id: bypass_valve_on_off
     #value_type: U_WORD
     min_value: 0
     max_value: 1
@@ -33,11 +34,11 @@ number:
 switch:
   - platform: template
     name: "Bypass valve - on/off" # 0 = auto 1 = Manual
-    id: HRU_bypass_valve_on_off_switch
+    id: bypass_valve_on_off_switch
     icon: mdi:toggle-switch-variant
     restore_mode: RESTORE_DEFAULT_OFF
     lambda: |-
-      if (id(HRU_bypass_valve_on_off).state == 1) {
+      if (id(bypass_valve_on_off).state == 1) {
         return true;
       } else {
         return false;
@@ -50,20 +51,20 @@ switch:
           then: 
             - logger.log: "The sensor value is above 200!, change fan to 200"
             - number.set:
-                id: HRU_fan_demand_value
+                id: fan_demand_value
                 value: 200 # Lower the fan to the bypass allowed value
             - delay: 5s # Give fan spindown time
             - number.set:
-                id: HRU_bypass_valve_on_off
+                id: bypass_valve_on_off
                 value: 1 # Set the bypass to on.
             - delay: 5s # Give bypass valve time to open
             - number.set:
-                id: HRU_fan_demand_value
+                id: fan_demand_value
                 value: 0 # Set the fan back to auto.
           else:
             - logger.log: "The sensor value is below 200!, turn on bypass"
             - number.set:
-                id: HRU_bypass_valve_on_off
+                id: bypass_valve_on_off
                 value: 1 # Set the bypass to on.
     turn_off_action:
       then:
@@ -73,18 +74,18 @@ switch:
           then: 
             - logger.log: "The sensor value is above 200, change fan to 200 before turn off"
             - number.set:
-                id: HRU_fan_demand_value
+                id: fan_demand_value
                 value: 200 # Lower the fan to the bypass allowed value
             - delay: 5s # Give fan spindown time
             - number.set:
-                id: HRU_bypass_valve_on_off
+                id: bypass_valve_on_off
                 value: 0 # Set the bypass to off.
             - delay: 5s # Give bypass valve time to open
             - number.set:
-                id: HRU_fan_demand_value
+                id: fan_demand_value
                 value: 0 # Set the fan back to auto.
           else:
             - logger.log: "The sensor value is below 200, turn off bypass"
             - number.set:
-                id: HRU_bypass_valve_on_off
+                id: bypass_valve_on_off
                 value: 0 # Set the bypass to off.
