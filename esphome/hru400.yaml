@@ -53,5 +53,5 @@ packages:
       #esphome/base/zone_2.yaml,
       #esphome/base/zone_3.yaml,
       #esphome/base/zone_4.yaml,
-      esphome/base/sensors_general.yaml
+      esphome/base/general.yaml
     ]
