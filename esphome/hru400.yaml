@@ -39,20 +39,26 @@ packages:
     ref: main
     refresh: 0s
     files: [
-      # Language Files (to do):
+      # Step 1: Choose a language:
       esphome/i18n/EN.yaml,
       #esphome/i18n/NL.yaml,
-      esphome/base/base.yaml,
+      # Step 2: Choose the board you bought:
       esphome/boards/board-esp32-atom-lite.yaml,
+      #esphome/boards/board-esp32-atom-s3-lite.yaml,
+      # Step 4: Configure the general stuff:
+      esphome/base/base.yaml,
       esphome/base/fan.yaml,
       esphome/base/select.yaml,
       esphome/base/bypass.yaml,
       esphome/base/frostvalve.yaml,
-      #esphome/base/sensors_advanced.yaml,
+      #esphome/base/advanced.yaml,
       esphome/base/faultcodes.yaml,
-      esphome/base/zone_1.yaml,
-      #esphome/base/zone_2.yaml,
-      #esphome/base/zone_3.yaml,
-      #esphome/base/zone_4.yaml,
+      # Add a comma here if you enable zones:
       esphome/base/general.yaml
+      # Step 5: Enable aditional zones if you have them:
+      #esphome/zones/zone_1.yaml,
+      #esphome/zones/zone_2.yaml,
+      #esphome/zones/zone_3.yaml,
+      #esphome/zones/zone_4.yaml,
+      # Step 6: Dont forget to remove the last comma
     ]
