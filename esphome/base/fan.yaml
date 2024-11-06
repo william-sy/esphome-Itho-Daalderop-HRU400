@@ -130,7 +130,6 @@ output:
     write_action:
       - if:
           condition:
-            # If we turn the fan on, change the speed of the fan. 
             lambda: return (id(wtw_fan).state);
           then:
             - if:
@@ -184,7 +183,6 @@ output:
                   - number.set: { id: fan_demand_value, value: 399 }
       - if:
           condition:
-            # If we turn the fan off.
             lambda: return !(id(wtw_fan).state);
           then:
             - logger.log: "fan_output_value: Back to auto"

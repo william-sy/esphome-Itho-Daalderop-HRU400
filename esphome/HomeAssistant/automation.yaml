@@ -1,0 +1,72 @@
+alias: WTW-Fan-Controller
+description: "Sets the WTW to high for 30/60 min, then back to auto"
+mode: single
+triggers:
+  - entity_id:
+      - input_boolean.wtw_time_30
+    from: "off"
+    to: "on"
+    id: Time30
+    trigger: state
+  - entity_id:
+      - input_boolean.wtw_time_60
+    from: "off"
+    to: "on"
+    id: Time60
+    trigger: state
+conditions: []
+actions:
+  - parallel:
+      - if:
+          - condition: trigger
+            id:
+              - Time60
+        then:
+          - target:
+              entity_id: fan.wtw_rs485_wtw_fan
+            data:
+              percentage: 100
+            action: fan.set_percentage
+          - delay:
+              hours: 1
+              minutes: 0
+              seconds: 0
+              milliseconds: 0
+            enabled: true
+          - target:
+              entity_id: fan.wtw_rs485_wtw_fan
+            data:
+              percentage: 42
+            action: fan.set_percentage
+          - data:
+              entity_id:
+                - "{{ trigger.to_state.entity_id }}"
+            action: input_boolean.turn_off
+      - if:
+          - condition: trigger
+            id:
+              - Time30
+        then:
+          - target:
+              entity_id: fan.wtw_rs485_wtw_fan
+            data:
+              percentage: 100
+            action: fan.set_percentage
+          - delay:
+              hours: 0
+              minutes: 30
+              seconds: 0
+              milliseconds: 0
+            enabled: true
+          - target:
+              entity_id:
+                - fan.wtw_rs485_wtw_fan
+              device_id: []
+              area_id: []
+            data:
+              percentage: 42
+            action: fan.set_percentage
+          - data:
+              entity_id:
+                - "{{ trigger.to_state.entity_id }}"
+            action: input_boolean.turn_off
