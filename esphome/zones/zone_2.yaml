@@ -1,0 +1,53 @@
+sensor:
+  - name: Positie stepper zoneklep 2
+    address: 2036
+    unit_of_measurement: Stappen
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42037 inschakelen/uitschakelen
+    address: 2037
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Ventilatieniveau zone 2
+    address: 2202
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42203 inschakelen/uitschakelen
+    address: 2203
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Stroomvraag (flow) zone 2
+    address: 2212
+    unit_of_measurement: m³/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: 42213 inschakelen/uitschakelen
+    address: 2213
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: Ongebalanceerde stroomvraag zone 2
+    address: 3201
+    unit_of_measurement: m³/h
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
