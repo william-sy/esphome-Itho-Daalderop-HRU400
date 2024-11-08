@@ -2,7 +2,9 @@
 ##
 # Controlling fan
 number:
+#######
   # Demand ventialtion: (ingress)
+#######
   - name: ${f_2010} 
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -11,8 +13,9 @@ number:
     register_type: holding
     address: 2010
     min_value: 0
-    max_value: 399
+    max_value: ${max_cap}
     step: 1
+    initial_value: 0
     value_type: U_WORD
     use_write_multiple: true
     on_value_range:
@@ -37,7 +40,9 @@ number:
     step: 1
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+#######
   # Demand ventialtion: (exhaust)
+#######  
   - name: ${f_2012}
     address: 2012
     id: fan_exhaust_demand_value
@@ -46,6 +51,7 @@ number:
     min_value: 0
     max_value: ${max_cap}
     step: 1
+    initial_value: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -73,7 +79,9 @@ number:
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+#######
   ## By Flow
+#######
   - name: ${f_2020}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -82,8 +90,9 @@ number:
     register_type: holding
     address: 2020
     min_value: 0
-    max_value: 399
+    max_value: ${max_cap}
     step: 1
+    initial_value: 0
     value_type: U_WORD
     use_write_multiple: true
     on_value_range:
