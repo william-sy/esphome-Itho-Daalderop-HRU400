@@ -24,3 +24,10 @@ substitutions:
   flap_max: "550"
   alert_icon: mdi:alert-circle
   max_error_number: "5"
+  fan_speed_1: "100"
+  fan_speed_2: "150"
+  fan_speed_3: "200"
+  fan_speed_4: "250"
+  fan_speed_5: "300"
+  fan_speed_6: "350"
+  fan_speed_7: "399"
