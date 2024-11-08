@@ -115,6 +115,7 @@ number:
     min_value: 0
     max_value: 1
     step: 1
+    initial_value: 0
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
 
