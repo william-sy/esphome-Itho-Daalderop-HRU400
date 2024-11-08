@@ -140,7 +140,6 @@ sensor:
     skip_updates: ${skip_updates_errors}
     entity_category: diagnostic
     icon: ${alert_icon}
-    entity_category: diagnostic
   - name: ${s_219}
     address: 219
     value_type: U_WORD
