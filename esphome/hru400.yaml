@@ -6,7 +6,12 @@ esphome:
   on_boot:
     priority: 600
     then:
+      - number.set: 
+          # If you remove this, it will always restore to last set number and ignore the next.
+          id: HRU_fan_demand_value
+          value: 0
       - number.set:
+          # I will be ignored if the above number is more than 0
           id: fan_demand_on_off
           value: 0
       - number.set:
