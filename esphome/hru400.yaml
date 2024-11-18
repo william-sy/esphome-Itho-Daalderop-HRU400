@@ -2,6 +2,25 @@ esphome:
   name: wtw-rs485
   friendly_name: WTW-RS485
   comment: Itho Daalderop HRU 400 WTW
+  # Make sure the WTW unit is in auto mode after updating the ESP.
+  on_boot:
+    priority: 600
+    then:
+      - number.set:
+          id: fan_demand_on_off
+          value: 0
+      - number.set:
+          id: bypass_valve_on_off
+          value: 0
+      - number.set:
+          id: fan_flow_ingress_on_off
+          value: 0
+      - number.set:
+          id: bypass_valve_on_off
+          value: 0
+      - number.set:
+          id: bypass_stepper_state
+          value: 0
 
 # Enable logging
 logger:
