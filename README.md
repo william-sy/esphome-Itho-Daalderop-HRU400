@@ -18,3 +18,7 @@ This way you do not need to solder.
 2. A 3 pin connector that will plug into the WTW unit
 example [Removable Screw Terminal - 3p - 3.81mm](https://www.tinytronics.nl/en/cables-and-connectors/connectors/screw-terminals/removable-screw-terminal-3p-3.81mm)
 
+
+## Official documentation
+It appears that the official installation documentation has changed on the official website.
+Altough there are lots of changes in this new document, it seems to have no impact on the modbus side of things.
