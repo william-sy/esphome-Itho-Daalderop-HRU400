@@ -37,3 +37,5 @@ select:
     entity_category: config
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+    skip_updates: 10
+    value_type: U_WORD
