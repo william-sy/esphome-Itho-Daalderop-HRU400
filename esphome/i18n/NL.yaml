@@ -48,8 +48,8 @@ substitutions:
   s_4002: Mengstroom teller deel 1 (m3)
   s_4003: Mengstroom teller deel 2 (m3)
   # select.yaml:
-  sl_ingress: Volume toevoer - auto/manueel
-  sl_demand: Volume vraag - auto/manuaal
+  sl_2021: Volume toevoer - auto/manueel
+  sl_2011: Volume vraag - auto/manueel
   sl_499: Herstart WTW unit.
   # faultcodes.yaml: 
   s_199: Foutnummer
