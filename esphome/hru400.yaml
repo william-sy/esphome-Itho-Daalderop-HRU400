@@ -6,7 +6,7 @@ esphome:
   on_boot:
     priority: 600
     then:
-      - number.set: 
+      - number.set:
           # If you remove this, it will always restore to last set number and ignore the next.
           id: fan_demand_value
           value: 0
@@ -46,7 +46,7 @@ wifi:
     ssid: "WTW-RS485 Fallback Hotspot"
     password: "HRU400Fallback"
 ##
-# Enable captive portal  
+# Enable captive portal
 captive_portal:
 ##
 # Debugging webserver
@@ -60,26 +60,26 @@ packages:
     ref: main
     refresh: 0s
     files: [
-      # Step 1: Choose a language:
-      esphome/i18n/EN.yaml,
-      #esphome/i18n/NL.yaml,
-      # Step 2: Choose the board you bought:
-      esphome/boards/board-esp32-atom-lite.yaml,
-      #esphome/boards/board-esp32-atom-s3-lite.yaml,
-      # Step 4: Configure the general stuff:
-      esphome/base/base.yaml,
-      esphome/base/fan.yaml,
-      esphome/base/select.yaml,
-      esphome/base/bypass.yaml,
-      esphome/base/frostvalve.yaml,
-      #esphome/base/advanced.yaml,
-      esphome/base/faultcodes.yaml,
-      # Add a comma here if you enable zones:
-      esphome/base/general.yaml
-      # Step 5: Enable aditional zones if you have them:
-      #esphome/zones/zone_1.yaml,
-      #esphome/zones/zone_2.yaml,
-      #esphome/zones/zone_3.yaml,
-      #esphome/zones/zone_4.yaml,
-      # Step 6: Dont forget to remove the last comma
-    ]
+        # Step 1: Choose a language:
+        esphome/i18n/EN.yaml,
+        #esphome/i18n/NL.yaml,
+        # Step 2: Choose the board you bought:
+        #esphome/boards/board-esp32-atom-lite.yaml,
+        esphome/boards/board-esp32-atom-s3-lite.yaml,
+        # Step 4: Configure the general stuff:
+        esphome/base/base.yaml,
+        esphome/base/fan.yaml,
+        esphome/base/select.yaml,
+        esphome/base/bypass.yaml,
+        esphome/base/frostvalve.yaml,
+        #esphome/base/advanced.yaml,
+        esphome/base/faultcodes.yaml,
+        # Add a comma here if you enable zones:
+        esphome/base/general.yaml,
+        # Step 5: Enable aditional zones if you have them:
+        #esphome/zones/zone_1.yaml,
+        #esphome/zones/zone_2.yaml,
+        #esphome/zones/zone_3.yaml,
+        #esphome/zones/zone_4.yaml,
+        # Step 6: Dont forget to remove the last comma
+      ]
