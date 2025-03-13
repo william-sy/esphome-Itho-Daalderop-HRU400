@@ -6,7 +6,7 @@ esphome:
   on_boot:
     priority: 600
     then:
-      - number.set: 
+      - number.set:
           # If you remove this, it will always restore to last set number and ignore the next.
           id: fan_demand_value
           value: 0
@@ -46,7 +46,7 @@ wifi:
     ssid: "WTW-RS485 Fallback Hotspot"
     password: "HRU400Fallback"
 ##
-# Enable captive portal  
+# Enable captive portal
 captive_portal:
 ##
 # Debugging webserver
@@ -64,6 +64,10 @@ packages:
       esphome/i18n/EN.yaml,
       #esphome/i18n/NL.yaml,
       # Step 2: Choose the board you bought:
+      # IMPORTANT SEE README -> https://github.com/william-sy/esphome-Itho-Daalderop-HRU400/blob/main/README.md
+      # New board settings:
+      #esphome/boards/uart/m5stack/U034/m5stack-C124-atom-s3-lite.yaml,
+      # Legacy board settings:
       esphome/boards/board-esp32-atom-lite.yaml,
       #esphome/boards/board-esp32-atom-s3-lite.yaml,
       # Step 4: Configure the general stuff:

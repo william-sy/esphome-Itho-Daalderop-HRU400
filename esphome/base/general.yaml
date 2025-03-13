@@ -229,7 +229,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:water-percent
     device_class: "humidity"
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
   - name: ${s_3070}
     address: 3070
     value_type: U_WORD
@@ -272,7 +272,7 @@ sensor:
       - or:
           - delta: 1
           - heartbeat: 60s
-      - lambda: 
+      - lambda: |-
           float rand1 = rand() % 1;        
           return x + rand1;
   - name: ${s_3080}
@@ -312,7 +312,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:water-percent
     device_class: "humidity"
-    unit_of_measurement: "%"
+    unit_of_measurement: '%'
 
   - name: ${s_4000}
     address: 4000
