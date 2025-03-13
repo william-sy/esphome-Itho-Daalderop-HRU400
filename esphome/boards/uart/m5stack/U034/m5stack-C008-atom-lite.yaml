@@ -1,6 +1,4 @@
-###
-# ESP settings
-###
+# Note: this is the grey module
 esp32:
   board: esp32-s3-devkitc-1 
   framework:
@@ -11,8 +9,8 @@ esp32:
 ###
 uart:
   id: uart_modbus
-  tx_pin: 6
-  rx_pin: 5
+  tx_pin: 32
+  rx_pin: 26
   baud_rate: 19200
   data_bits: 8
   stop_bits: 1
