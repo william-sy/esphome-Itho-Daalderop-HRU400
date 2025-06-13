@@ -26,16 +26,37 @@ select:
     entity_category: config
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+##
+# Esphome and the WTW are not super happy with this one, 
+# it throws errors upon boot trying to read the state but this is a WRITE only.
+# (also this is a unsigned 8 bit which is not supported only  unsigned 16 bit, but this should be less of a problem)
+##
+
+#  - name: ${sl_499}
+#    platform: modbus_controller
+#    modbus_controller_id: ${modbus_id}
+#    id: restrart_device
+#    address: 499
+#    optionsmap:
+#      Running: 0
+#      Restart: 1
+#    entity_category: config
+#    use_write_multiple: true
+#    icon: mdi:toggle-switch-variant
+#    skip_updates: 10
+#    value_type: U_WORD
+
+## 
+# We replace it with this new feature in 2025.6
+## 
+switch:
   - name: ${sl_499}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: restrart_device
+    register_type: coil
     address: 499
-    optionsmap:
-      Running: 0
-      Restart: 1
+    assumed_state: false
     entity_category: config
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-    skip_updates: 10
-    value_type: U_WORD
+    icon: "mdi:restart"
+    restore_mode: RESTORE_DEFAULT_OFF
