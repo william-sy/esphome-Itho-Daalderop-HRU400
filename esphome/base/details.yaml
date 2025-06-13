@@ -1,0 +1,80 @@
+sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU modbus-address"
+    id: hru_modbus_address
+    register_type: holding
+    address: 0 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU baud rate"
+    id: hru_baudrate
+    register_type: holding
+    address: 1 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU parity"
+    id: hru_parity
+    register_type: holding
+    address: 2 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU softwareversion"
+    id: hru_software_version
+    register_type: holding
+    address: 13 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU software revision"
+    id: hru_software_revision
+    register_type: holding
+    address: 14 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU listversion"
+    id: hru_list_version
+    register_type: holding
+    address: 15 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU OEM code"
+    id: hru_oem_code
+    register_type: holding
+    address: 16 # 0x000E
+    value_type: U_WORD
+    skip_updates: 10
+    entity_category: diagnostic
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    name: "HRU serialnumber"
+    id: hru_serial_number
+    register_type: holding
+    address: 100 # 0x000E
+    value_type: U_QWORD
+    skip_updates: 10
+    entity_category: diagnostic
