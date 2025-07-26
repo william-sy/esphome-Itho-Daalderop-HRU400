@@ -40,7 +40,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     custom_command:
-      function_code: 0x03
+      function_code: "0x03"
       start_address: 3000
       register_count: 1
     lambda: |-
