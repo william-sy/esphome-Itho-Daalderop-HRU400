@@ -6,3 +6,18 @@ sensor:
     register_type: holding
     value_type: U_WORD
     #register_count: 1
+
+
+number:
+  - platform: modbus_controller
+    name: "Fan Demand"
+    id: fan_demand_value
+    modbus_controller_id: ${modbus_id}
+    register_type: holding
+    address: 4010  # 42011 - 1
+    value_type: U_WORD
+    min_value: 0
+    max_value: 399
+    step: 1
+    use_write_multiple: true
+    icon: mdi:home-import-outline
