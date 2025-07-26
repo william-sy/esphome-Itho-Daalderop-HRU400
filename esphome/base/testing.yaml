@@ -9,10 +9,11 @@ sensor:
 
 
 # number:
-#   - platform: modbus_controller
-#     name: "Fan Demand"
-#     id: fan_demand_value
+#   - name: "Fan Demand"
+#     platform: modbus_controller
 #     modbus_controller_id: ${modbus_id}
+#     id: fan_demand_value
+#     icon: mdi:home-import-outline
 #     register_type: holding
 #     address: 2010
 #     value_type: U_WORD
@@ -20,4 +21,4 @@ sensor:
 #     max_value: 399
 #     step: 1
 #     use_write_multiple: true
-#     icon: mdi:home-import-outline
+
