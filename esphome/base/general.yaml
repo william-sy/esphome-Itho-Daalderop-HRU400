@@ -35,7 +35,7 @@ sensor:
     address: 3000
     unit_of_measurement: '%'
     value_type: U_WORD
-    register_type: coil
+    register_type: discrete_input
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -43,7 +43,7 @@ sensor:
     address: 3001
     unit_of_measurement: '%'
     value_type: U_WORD
-    register_type: holding
+    register_type: discrete_input
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -356,7 +356,7 @@ sensor:
     icon: mdi:clock
 
 number:
-  # BRDG fan:
+  # BRDG fan: (stands for bridge ? and is the 4 button remote?)
   - name: ${s_2000}
     address: 2000
     value_type: U_WORD
