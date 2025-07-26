@@ -42,16 +42,7 @@ sensor:
 
     value_type: RAW
     custom_command: [0x03, 0x0B, 0xB8, 0x00, 0x01]  # Function 3, address 3000, 1 register
-    
-    lambda: |-
-      ESP_LOGD("modbus_raw", "Raw response size: %d", x.size());
-      for (size_t i = 0; i < x.size(); i++) {
-        ESP_LOGD("modbus_raw", "Byte %d: 0x%02X", i, x[i]);
-      }
-      if (x.size() >= 2) {
-        return x[1];  // Adjust based on actual byte layout
-      }
-      return NAN
+
 
 
 
