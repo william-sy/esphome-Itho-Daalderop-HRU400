@@ -34,14 +34,22 @@ sensor:
   - name: ${s_3000}
     #address: 3000
     unit_of_measurement: '%'
-    value_type: U_WORD
+    #value_type: U_WORD
     #register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    custom_command: "function_code: 0x03, start_address: 3000, register_count: 1"
+
+    value_type: FP32_R
+    custom_command: [0x03, 0x0B, 0xB8, 0x00, 0x01]  # Function 3, address 3000, 1 register
     lambda: |-
-      return (x[0] & 0x00FF);
+      // x is a std::vector<uint8_t> of raw response bytes
+      // Example: extract low byte of first register
+      if (x.size() >= 2) {
+        return x[1];  // or x[0], depending on device response
+      }
+      return NAN;
+
 
   - name: ${s_3001}
     address: 3001
