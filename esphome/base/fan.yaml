@@ -1,21 +1,28 @@
 ###
 ##
-# Controlling fan
+# Controlling the WTW fan
+
+##
+# These are the numbers for the fan:
+# 2010: Demand ventilation: Going to the building - Intake
+# 2011: Demand ventilation: Turn on / off
+# 2012: Demand ventilation: Going to outfide - Exhaust
+# 2013: Demand ventilation: Turn on / off
+# 2020: Volume flow: intake fan
+# 2021: Volume flow: intake fan: Turn on / off
+# 2022: Volume flow: exhaust fan
+# 2023: Volume flow: exhaust fan: Turn on / off
+
 number:
-#######
-  # Demand ventialtion: (ingress)
-#######
   - name: ${f_2010} 
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: fan_demand_value
     icon: mdi:home-import-outline
-    register_type: holding
     address: 2010
     min_value: 0
-    max_value: ${max_cap}
+    max_value: ${max.cap}
     step: 1
-    #initial_value: 0
     value_type: U_WORD
     use_write_multiple: true
     on_value_range:
@@ -33,66 +40,53 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: fan_demand_on_off
-    register_type: holding
     address: 2011
     min_value: 0
     max_value: 1
     step: 1
     use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-#######
-  # Demand ventialtion: (exhaust)
-#######  
-  - name: ${f_2012}
-    address: 2012
-    id: fan_exhaust_demand_value
-    unit_of_measurement: m3/h
-    #value_type: U_WORD
-    min_value: 0
-    max_value: ${max_cap}
-    step: 1
-    #initial_value: 0
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    icon: mdi:home-export-outline
-    on_value_range:
-      - above: 2.0
-        then: 
-          - number.set:
-              id: fan_flow_exhaust_on_off
-              value: 1.0
-      - below: 1.0
-        then:
-          - number.set:
-              id: fan_flow_exhaust_on_off
-              value: 0.0
-  - name: ${f_2013}
-    id: fan_flow_exhaust_on_off
-    address: 2013
-    #value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-#######
-  ## By Flow
-#######
+    icon: mdi:toggle-switch-variant 
+  # - name: ${f_2012}
+  #   address: 2012
+  #   id: fan_exhaust_demand_value
+  #   unit_of_measurement: m3/h
+  #   min_value: 0
+  #   max_value: ${max.cap}
+  #   step: 1
+  #   platform: modbus_controller
+  #   modbus_controller_id: ${modbus_id}
+  #   icon: mdi:home-export-outline
+  #   use_write_multiple: true
+  #   on_value_range:
+  #     - above: 2.0
+  #       then: 
+  #         - number.set:
+  #             id: fan_flow_exhaust_on_off
+  #             value: 1.0
+  #     - below: 1.0
+  #       then:
+  #         - number.set:
+  #             id: fan_flow_exhaust_on_off
+  #             value: 0.0
+  # - name: ${f_2013}
+  #   id: fan_flow_exhaust_on_off
+  #   address: 2013
+  #   min_value: 0
+  #   max_value: 1
+  #   step: 1
+  #   platform: modbus_controller
+  #   modbus_controller_id: ${modbus_id}
+  #   use_write_multiple: true
+  #   icon: mdi:toggle-switch-variant
   - name: ${f_2020}
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: fan_flow_ingress_value
     icon: mdi:home-import-outline
-    register_type: holding
     address: 2020
     min_value: 0
-    max_value: ${max_cap}
+    max_value: ${max.cap}
     step: 1
-    #initial_value: 0
     value_type: U_WORD
     use_write_multiple: true
     on_value_range:
@@ -110,12 +104,10 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     id: fan_flow_ingress_on_off
-    register_type: holding
     address: 2021
     min_value: 0
     max_value: 1
     step: 1
-    #initial_value: 0
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
 
@@ -150,7 +142,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_1}
+                      value: ${fan.speed_1}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 2);
@@ -159,7 +151,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_2}
+                      value: ${fan.speed_2}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 3);
@@ -168,7 +160,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_3}
+                      value: ${fan.speed_3}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 4);
@@ -177,7 +169,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_4}
+                      value: ${fan.speed_4}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 5);
@@ -186,7 +178,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_5}
+                      value: ${fan.speed_5}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 6);
@@ -195,7 +187,7 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_6}
+                      value: ${fan.speed_6}
             - if:
                 condition:
                   lambda: return (id(wtw_fan).speed == 7);
@@ -204,12 +196,10 @@ output:
                   - number.set: { id: fan_demand_on_off, value: 1.0 }
                   - number.set:
                       id: fan_demand_value
-                      value: ${fan_speed_7}
+                      value: ${fan.speed_7}
       - if:
           condition:
             lambda: return !(id(wtw_fan).state);
           then:
             - logger.log: "fan_output_value: Back to auto"
             - number.set: { id: fan_demand_on_off, value: 0.0 }
-
-

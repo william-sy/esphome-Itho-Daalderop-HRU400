@@ -321,7 +321,7 @@ sensor:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates}
+    skip_updates: ${skip_updates.base}
     icon: mdi:clock
     state_class: "total_increasing"
   - name: ${s_4001}
@@ -332,7 +332,7 @@ sensor:
     state_class: "total_increasing"
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates}
+    skip_updates: ${skip_updates.base}
     icon: mdi:clock
   - name: ${s_4002}
     address: 4002
@@ -341,7 +341,7 @@ sensor:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates}
+    skip_updates: ${skip_updates.base}
     state_class: "total_increasing"
     icon: mdi:clock
   - name: ${s_4003}
@@ -351,7 +351,7 @@ sensor:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates}
+    skip_updates: ${skip_updates.base}
     state_class: "total_increasing"
     icon: mdi:clock
 
@@ -363,15 +363,15 @@ number:
     min_value: 0
     max_value: 25
     step: 1
-    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
   - name: ${s_2001}
     address: 2001
     value_type: U_WORD
     min_value: 0
     max_value: 1
     step: 1
-    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true

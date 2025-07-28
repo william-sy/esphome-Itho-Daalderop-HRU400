@@ -26,16 +26,21 @@ select:
     entity_category: config
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-  - name: ${sl_499}
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    id: restrart_device
-    address: 499
-    optionsmap:
-      Running: 0
-      Restart: 1
-    entity_category: config
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
-    skip_updates: 10
-    value_type: U_WORD
+
+##
+# Rebooting the device does produce errors, so we will turn if off. 
+##
+
+  # - name: ${sl_499}
+  #   platform: modbus_controller
+  #   modbus_controller_id: ${modbus_id}
+  #   id: restrart_device
+  #   address: 499
+  #   optionsmap:
+  #     Running: 0
+  #     Restart: 1
+  #   entity_category: config
+  #   use_write_multiple: true
+  #   icon: mdi:toggle-switch-variant
+  #   skip_updates: 10
+  #   value_type: U_WORD

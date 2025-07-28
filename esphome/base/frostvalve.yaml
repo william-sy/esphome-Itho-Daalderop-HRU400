@@ -1,27 +1,24 @@
+##
+# Frost valve
+# If the ingress air is far below freezing point, the WTW unit will open this valve.
+# Also the supply fan will spin harder. See manual page 15.
+##
 number:
-  # Frost valve
-  - name: ${fv_2030}
-    address: 2030
-    min_value: 0
-    max_value: 510
-    step: 510
-    #initial_value: 0
-    #value_type: U_WORD
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    use_write_multiple: true
-    icon: mdi:snowflake-alert
+  # - name: ${fv_2030}
+  #   address: 2030
+  #   min_value: 0
+  #   max_value: 510
+  #   step: 510
+  #   platform: modbus_controller
+  #   modbus_controller_id: ${modbus_id}
+  #   use_write_multiple: true
+  #   icon: mdi:snowflake-alert
   - name: ${fv_2031}
     address: 2031
     min_value: 0
     max_value: 1
     step: 1
-    #initial_value: 0
-    #value_type: U_WORD
-    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
- 
