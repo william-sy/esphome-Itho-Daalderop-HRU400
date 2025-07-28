@@ -8,7 +8,7 @@ light:
     num_leds: 1
     rgb_order: GRB
     chipset: ws2812
-    rmt_channel: 1
+    #rmt_channel: 1
 
 output:
   - platform: template
