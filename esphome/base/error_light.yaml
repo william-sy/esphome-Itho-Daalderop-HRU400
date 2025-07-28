@@ -1,3 +1,21 @@
+light:
+  # Enable status LED
+  - platform: status_led
+    output: status_output
+    name: "Status Led"
+    internal: True
+
+  #G35=RGB WS2812C-2020
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: 35
+    num_leds: 4
+    # RMT 0 channel is occupied by IR
+    rmt_channel: 1
+    chipset: ws2812
+    id: led
+    name: "Led"
+
 output:
   - platform: template
     id: status_output
