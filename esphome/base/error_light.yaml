@@ -5,7 +5,7 @@ light:
     num_leds: 1
     variant: sk6812
     name: "Atom RGB Light"
-    id: atom_light
+    id: led
     restore_mode: RESTORE_DEFAULT_OFF
 
 output:
