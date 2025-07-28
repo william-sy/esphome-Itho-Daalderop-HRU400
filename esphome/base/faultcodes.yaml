@@ -1,5 +1,8 @@
+##
+# All the fault codes that the unit generates.
+# These are writable for reset.
+##
 sensor:
-  # These are writable for reset:
   - name: ${s_199}
     address: 199
     value_type: U_WORD
@@ -8,7 +11,7 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     entity_category: diagnostic
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
   - name: ${s_200}
     address: 200
@@ -17,7 +20,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_201}
@@ -27,7 +30,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_202}
@@ -37,7 +40,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_203}
@@ -47,7 +50,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_210}
@@ -57,7 +60,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_211}
@@ -67,7 +70,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_212}
@@ -77,7 +80,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_213}
@@ -87,7 +90,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_214}
@@ -97,7 +100,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_215}
@@ -107,7 +110,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_216}
@@ -117,7 +120,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_217}
@@ -127,7 +130,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_218}
@@ -137,7 +140,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_219}
@@ -147,7 +150,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
   - name: ${s_220}
@@ -157,7 +160,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_221}
@@ -167,7 +170,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
   - name: ${s_222}
@@ -177,7 +180,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
   - name: ${s_230}
@@ -187,7 +190,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
   - name: ${s_231}
@@ -197,7 +200,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
   - name: ${s_232}
@@ -207,7 +210,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
   - name: ${s_233}
@@ -217,7 +220,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
 
@@ -226,68 +229,63 @@ number:
     modbus_controller_id: ${modbus_id}
     name: "${s_200} - Reset"
     id: HRU_errors1
-    register_type: holding
     address: 200
     value_type: U_WORD
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     use_write_multiple: true
     entity_category: diagnostic
     icon: mdi:air-filter
     min_value: 0
-    max_value: ${max_error_number}
+    max_value: ${max.error_number}
     step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_201} - Reset"
     id: HRU_errors2
-    register_type: holding
     address: 201
     value_type: U_WORD
     use_write_multiple: true
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: mdi:air-filter
     min_value: 0
-    max_value: ${max_error_number}
+    max_value: ${max.error_number}
     step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_202} - Reset"
     id: HRU_errors3_egressFlow
-    register_type: holding
     address: 202
     value_type: U_WORD
     use_write_multiple: true
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
     min_value: 0
-    max_value: ${max_error_number}
+    max_value: ${max.error_number}
     step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: ${s_203} - Reset
     id: HRU_errors4_ingressFlow
-    register_type: holding
     address: 203
     value_type: U_WORD
     use_write_multiple: true
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
     min_value: 0
-    max_value: ${max_error_number}
+    max_value: ${max.error_number}
     step: 1
   - platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     name: "${s_222} - Reset"
-    register_type: holding
     address: 222
     value_type: U_WORD
     use_write_multiple: true
-    skip_updates: ${skip_updates_errors}
+    skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
     min_value: 0
-    max_value: ${max_error_number}
+    max_value: ${max.error_number}
     step: 1

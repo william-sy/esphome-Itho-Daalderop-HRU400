@@ -1,37 +1,34 @@
+###
+# Summer bypass
+###
+# States:
+## 0   = open, 550 = Closed
+# What is it:
+## Inside air is directed to the ourside without passing the heat exchanger
+## Thus cold outside air does not heat up from the hot inside air
+
 number:
-  ###
-  # Bypass
-  ###
-  # 0 = down 
-  # 550 = open
-  # Inside air is directed to the ourside without passing the heat exchanger
-  # Thus cold outside air does not heat up from the hot inside air
-  - name: ${b_2032}
-    address: 2032
-    #value_type: U_WORD
-    min_value: 0
-    max_value: ${flap_max}
-    step: ${flap_max}
-    #initial_value: 0
-    register_type: holding
-    platform: modbus_controller
-    use_write_multiple: true
-    modbus_controller_id: ${modbus_id}
-    icon: mdi:valve
+  # seems not to be updated.
+  # - name: ${b_2032}
+  #   address: 2032
+  #   id: bypass_valve_value
+  #   min_value: 0
+  #   max_value: ${max.flap}
+  #   step: ${max.flap}
+  #   platform: modbus_controller
+  #   use_write_multiple: true
+  #   modbus_controller_id: ${modbus_id}
+  #   icon: mdi:valve
   - name: ${b_2033}
     address: 2033
     id: bypass_valve_on_off
-    #value_type: U_WORD
     min_value: 0
     max_value: 1
     step: 1
-    #initial_value: 0
-    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-
 
 switch:
   - platform: template
@@ -64,7 +61,7 @@ switch:
                 id: fan_demand_value
                 value: 0 # Set the fan back to auto.
           else:
-            - logger.log: "The sensor value is below 200!, turn on bypass"
+            - logger.log: "The sensor value is already below 200 we can turn on bypass"
             - number.set:
                 id: bypass_valve_on_off
                 value: 1 # Set the bypass to on.
@@ -74,7 +71,7 @@ switch:
           condition:
             lambda: 'return id(hru_m3h_toevoer_binnen_total).state > 200;'
           then: 
-            - logger.log: "The sensor value is above 200, change fan to 200 before turn off"
+            - logger.log: "The sensor value is above 200, change fan to 200 before turning off"
             - number.set:
                 id: fan_demand_value
                 value: 200 # Lower the fan to the bypass allowed value

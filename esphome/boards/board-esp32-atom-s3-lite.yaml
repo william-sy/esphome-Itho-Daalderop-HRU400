@@ -2,20 +2,22 @@
 # ESP settings
 ###
 esp32:
-  board: esp32-s3-devkitc-1 
+  board:        esp32-s3-devkitc-1 
+  flash_size:   8MB
+## Atom S3 lite  
   framework:
-    type: arduino
-    version: latest
+    type:       esp-idf
+    version:    recommended
 ###
 # Uart Settings
 ###
 uart:
-  id: uart_modbus
-  tx_pin: 6
-  rx_pin: 5
-  baud_rate: 19200
-  data_bits: 8
-  stop_bits: 1
-  parity: EVEN
+  id:           uart_modbus
+  tx_pin:       6
+  rx_pin:       5
+  baud_rate:    19200
+  data_bits:    8
+  stop_bits:    1
+  parity:       EVEN
   debug:
-    direction: BOTH
+    direction:  BOTH
