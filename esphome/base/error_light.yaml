@@ -19,19 +19,19 @@ output:
           condition:
             lambda: |-
               return (
-                id(errorcode_210) > 0 ||
-                id(errorcode_211) > 0 ||
-                id(errorcode_212) > 0 ||
-                id(errorcode_213) > 0 ||
-                id(errorcode_214) > 0 ||
-                id(errorcode_215) > 0 ||
-                id(errorcode_220) > 0 ||
-                id(errorcode_221) > 0 ||
-                id(errorcode_222) > 0 ||
-                id(errorcode_230) > 0 ||
-                id(errorcode_231) > 0 ||
-                id(errorcode_232) > 0 ||
-                id(errorcode_233) > 0 
+                id(errorcode_210).state > 0 ||
+                id(errorcode_211).state  > 0 ||
+                id(errorcode_212).state  > 0 ||
+                id(errorcode_213).state  > 0 ||
+                id(errorcode_214).state  > 0 ||
+                id(errorcode_215).state  > 0 ||
+                id(errorcode_220).state  > 0 ||
+                id(errorcode_221).state  > 0 ||
+                id(errorcode_222).state  > 0 ||
+                id(errorcode_230).state  > 0 ||
+                id(errorcode_231).state  > 0 ||
+                id(errorcode_232).state  > 0 ||
+                id(errorcode_233).state  > 0 
               );
           then:
             - light.turn_on:
@@ -46,8 +46,8 @@ output:
           condition:
             lambda: |-
               return (
-                id(errorcode_200) > 0 ||
-                id(errorcode_201) > 0 
+                id(errorcode_200).state  > 0 ||
+                id(errorcode_201).state  > 0 
               );
           then:
             - light.turn_on:
@@ -62,10 +62,10 @@ output:
           condition:
             lambda: |-
               return (
-                id(errorcode_216) > 0 ||
-                id(errorcode_217) > 0 ||
-                id(errorcode_218) > 0 ||
-                id(errorcode_219) > 0 
+                id(errorcode_216).state  > 0 ||
+                id(errorcode_217).state  > 0 ||
+                id(errorcode_218).state  > 0 ||
+                id(errorcode_219).state  > 0 
               );
           then:
             - light.turn_on:
