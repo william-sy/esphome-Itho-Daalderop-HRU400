@@ -32,7 +32,7 @@ interval:
               id(errorcode_233).state > 0
           ) {
             id(led).turn_on();
-            id(led).addressable_set(0, esphome::light::ESPColor::make_color(255, 0, 0));  // Red
+            id(led).set_rgb(1.0, 0.0, 0.0);  // Red
           } else if (
               id(errorcode_216).state  > 0 ||
               id(errorcode_217).state  > 0 ||
@@ -40,13 +40,13 @@ interval:
               id(errorcode_219).state  > 0 
           ) {
             id(led).turn_on();
-            id(led).addressable_set(0, esphome::light::ESPColor::make_color(0, 255, 0));  // Green
+            id(led).set_rgb(0.0, 1.0, 0.0);  // Green
           } else if (
               id(errorcode_200).state  > 0 ||
               id(errorcode_201).state  > 0 
           ) {
             id(led).turn_on();
-            id(led).addressable_set(0, esphome::light::ESPColor::make_color(0, 0, 255));  // Blue
+            id(led).set_rgb(0.0, 0.0, 1.0);  // Blue
           } else {
             id(led).turn_off();
           }
