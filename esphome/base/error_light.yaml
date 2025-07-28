@@ -1,0 +1,89 @@
+output:
+  - platform: template
+    id: status_output
+    type: binary
+    write_action:
+      - if:
+          condition:
+            lambda: |-
+              return (
+                id(errorcode_210) > 0 ||
+                id(errorcode_211) > 0 ||
+                id(errorcode_212) > 0 ||
+                id(errorcode_213) > 0 ||
+                id(errorcode_214) > 0 ||
+                id(errorcode_215) > 0 ||
+                id(errorcode_220) > 0 ||
+                id(errorcode_221) > 0 ||
+                id(errorcode_222) > 0 ||
+                id(errorcode_230) > 0 ||
+                id(errorcode_231) > 0 ||
+                id(errorcode_232) > 0 ||
+                id(errorcode_233) > 0 
+              );
+          then:
+            - light.turn_on:
+                id: led
+                brightness: 70%
+                red: 100%
+                green: 0%
+                blue: 0%
+          else:
+            - light.turn_off: led
+      - if:
+          condition:
+            lambda: |-
+              return (
+                id(errorcode_200) > 0 ||
+                id(errorcode_201) > 0 
+              );
+          then:
+            - light.turn_on:
+                id: led
+                brightness: 70%
+                red: 0%
+                green: 0%
+                blue: 100%
+          else:
+            - light.turn_off: led
+      - if:
+          condition:
+            lambda: |-
+              return (
+                id(errorcode_216) > 0 ||
+                id(errorcode_217) > 0 ||
+                id(errorcode_218) > 0 ||
+                id(errorcode_219) > 0 
+              );
+          then:
+            - light.turn_on:
+                id: led
+                brightness: 70%
+                red: 0%
+                green: 100%
+                blue: 0%
+          else:
+            - light.turn_off: led
+
+# id(errorcode_199) > 0 || Generic error code
+# id(errorcode_200) > 0 || filter volume
+# id(errorcode_201) > 0 || filter time
+# id(errorcode_202) > 0 || exhaust flow
+# id(errorcode_203) > 0 || ingress flow
+# id(errorcode_210) > 0 || sensor 
+# id(errorcode_211) > 0 || sensor
+# id(errorcode_212) > 0 || sensor
+# id(errorcode_213) > 0 || sensor
+# id(errorcode_214) > 0 || sensor
+# id(errorcode_215) > 0 || sensor
+# id(errorcode_216) > 0 || valve zone 1
+# id(errorcode_217) > 0 || valve zone 2 
+# id(errorcode_218) > 0 || valve zone 3
+# id(errorcode_219) > 0 || valve zone 4
+# id(errorcode_220) > 0 || bypass valve
+# id(errorcode_221) > 0 || frost valve
+# id(errorcode_222) > 0 || electronic
+# id(errorcode_230) > 0 || sensor flow exhaust
+# id(errorcode_231) > 0 || sensor flor intake
+# id(errorcode_232) > 0 || fan module exhaust
+# id(errorcode_233) > 0 || fan module intake

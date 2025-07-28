@@ -13,6 +13,7 @@ sensor:
     entity_category: diagnostic
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
+    id: errorcode_199
   - name: ${s_200}
     address: 200
     value_type: U_WORD
@@ -23,6 +24,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_200
   - name: ${s_201}
     address: 201
     value_type: U_WORD
@@ -33,6 +35,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_201
   - name: ${s_202}
     address: 202
     value_type: U_WORD
@@ -43,6 +46,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_202
   - name: ${s_203}
     address: 203
     value_type: U_WORD
@@ -53,6 +57,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_203
   - name: ${s_210}
     address: 210
     value_type: U_WORD
@@ -63,6 +68,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_210
   - name: ${s_211}
     address: 211
     value_type: U_WORD
@@ -73,6 +79,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_211
   - name: ${s_212}
     address: 212
     value_type: U_WORD
@@ -83,6 +90,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_212
   - name: ${s_213}
     address: 213
     value_type: U_WORD
@@ -93,6 +101,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_213
   - name: ${s_214}
     address: 214
     value_type: U_WORD
@@ -103,6 +112,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_214
   - name: ${s_215}
     address: 215
     value_type: U_WORD
@@ -113,6 +123,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_215
   - name: ${s_216}
     address: 216
     value_type: U_WORD
@@ -123,6 +134,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_216
   - name: ${s_217}
     address: 217
     value_type: U_WORD
@@ -133,6 +145,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_217
   - name: ${s_218}
     address: 218
     value_type: U_WORD
@@ -143,6 +156,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_218
   - name: ${s_219}
     address: 219
     value_type: U_WORD
@@ -153,6 +167,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_219
   - name: ${s_220}
     address: 220
     value_type: U_WORD
@@ -163,6 +178,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_220
   - name: ${s_221}
     address: 221
     value_type: U_WORD
@@ -173,6 +189,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     entity_category: diagnostic
     icon: ${alert_icon}
+    id: errorcode_221
   - name: ${s_222}
     address: 222
     value_type: U_WORD
@@ -183,6 +200,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_222
   - name: ${s_230}
     address: 230
     value_type: U_WORD
@@ -193,6 +211,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_230
   - name: ${s_231}
     address: 231
     value_type: U_WORD
@@ -203,6 +222,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_231
   - name: ${s_232}
     address: 232
     value_type: U_WORD
@@ -213,6 +233,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_232
   - name: ${s_233}
     address: 233
     value_type: U_WORD
@@ -223,6 +244,7 @@ sensor:
     skip_updates: ${skip_updates.errors}
     icon: ${alert_icon}
     entity_category: diagnostic
+    id: errorcode_233
 
 number:
   - platform: modbus_controller
