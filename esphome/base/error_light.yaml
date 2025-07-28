@@ -1,12 +1,14 @@
+
+# RGB LED on GPIO35
 light:
-  - platform: neopixelbus
-    type: GRB
-    pin: GPIO35
-    num_leds: 1
-    variant: sk6812
-    name: "Atom RGB Light"
+  - platform: esp32_rmt_led_strip
+    name: "RGB LED"
     id: led
-    restore_mode: RESTORE_DEFAULT_OFF
+    pin: 35
+    num_leds: 1
+    rgb_order: GRB
+    chipset: ws2812
+    rmt_channel: 1
 
 output:
   - platform: template
