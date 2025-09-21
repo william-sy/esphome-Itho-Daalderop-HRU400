@@ -1,17 +1,45 @@
 substitutions:
   # sensors_general.yaml:
+  s_499: Herstart WTW unit.
   s_2000: Werkelijk ventilatieniveau (gesynchroniseerd met BRDG)
   s_2001: Werkelijk ventilatieniveau (BRDG) - aan/uit
+
   s_2020: Volumestroom (flow) toevoerventilator (geen massabalans)
   s_2021: Volumestroom (flow) toevoerventilator (geen massabalans) - aan/uit
+  
   s_2022: Volumestroom (flow) afvoerventilator (geen massabalans)
   s_2023: Volumestroom (flow) afvoerventilator (geen massabalans) - aan/uit
   s_2034: Positie stepper zoneklep 1
   s_2035: Positie stepper zoneklep 1 - aan/uit
+  s_2036: Positie stepper zoneklep 2
+  s_2037: Positie stepper zoneklep 2 - aan/uit
+  s_2038: Positie stepper zoneklep 3
+  s_2039: Positie stepper zoneklep 3 - aan/uit
+  s_2040: Positie stepper zoneklep 4
+  s_2041: Positie stepper zoneklep 4 - aan/uit
+
   s_2200: Ventilatieniveau zone 1
   s_2201: Ventilatieniveau zone 1 - aan/uit
+  s_2202: Ventilatieniveau zone 2
+  s_2203: Ventilatieniveau zone 2 - aan/uit
+  s_2204: Ventilatieniveau zone 3
+  s_2205: Ventilatieniveau zone 3 - aan/uit
+  s_2206: Ventilatieniveau zone 4
+  s_2207: Ventilatieniveau zone 4 - aan/uit
+  s_2208: Ventilatieniveau zone 5
+  s_2209: Ventilatieniveau zone 5 - aan/uit
+
   s_2210: Stroomvraag (flow) zone 1
   s_2211: Stroomvraag (flow) zone 1 - aan/uit
+  s_2212: Stroomvraag (flow) zone 2
+  s_2213: Stroomvraag (flow) zone 2 - aan/uit
+  s_2214: Stroomvraag (flow) zone 3
+  s_2215: Stroomvraag (flow) zone 3 - aan/uit
+  s_2216: Stroomvraag (flow) zone 4
+  s_2217: Stroomvraag (flow) zone 4 - aan/uit
+  s_2218: Stroomvraag (flow) zone 5
+  s_2219: Stroomvraag (flow) zone 5 - aan/uit
+  
   s_3000: Hoogste percentage toevoer in Automodus
   s_3001: Hoogste percentage afvoer in Automodus
   s_3010: Hoogst gemeten RV (extern en I²C) (niet in ventilatoren)
@@ -41,8 +69,14 @@ substitutions:
   s_3080: Volumestroom naar buiten (m3/h)
   s_3081: Massastroom naar buiten (kg/h)
   s_3082: Temperatuur naar buiten
-  s_3083: Relatieve vochtigheid naar buiten 
+  s_3083: Relatieve vochtigheid naar buiten
+
   s_3200: Ongebalanceerde stroomvraag zone 1
+  s_3201: Ongebalanceerde stroomvraag zone 2
+  s_3202: Ongebalanceerde stroomvraag zone 3
+  s_3203: Ongebalanceerde stroomvraag zone 4
+  s_3204: Ongebalanceerde stroomvraag zone 5
+
   s_4000: Levensduur teller deel 1 (h)
   s_4001: Levensduur teller deel 2 (h)
   s_4002: Mengstroom teller deel 1 (m3)

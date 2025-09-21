@@ -15,38 +15,22 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  # massflow exhaust
-  - name: ${s_2022}
-    address: 2022
-    unit_of_measurement: m3/h
+  - name: ${s_3000}
+    address: 3000
+    unit_of_measurement: '%'
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2023}
-    address: 2023
+  - name: ${s_3001}
+    address: 3001
+    unit_of_measurement: '%'
     value_type: U_WORD
     register_type: holding
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  # - name: ${s_3000}
-  #   address: 3000
-  #   unit_of_measurement: '%'
-  #   value_type: U_WORD
-  #   register_type: holding
-  #   state_class: measurement
-  #   platform: modbus_controller
-  #   modbus_controller_id: ${modbus_id}
-  # - name: ${s_3001}
-  #   address: 3001
-  #   unit_of_measurement: '%'
-  #   value_type: U_WORD
-  #   register_type: holding
-  #   state_class: measurement
-  #   platform: modbus_controller
-  #   modbus_controller_id: ${modbus_id}
   - name: ${s_3010}
     address: 3010
     unit_of_measurement: '%'
@@ -366,12 +350,26 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
-  - name: ${s_2001}
-    address: 2001
+  # massflow exhaust
+  - name: ${s_2022}
+    address: 2022
+    unit_of_measurement: m3/h
     value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
+    register_type: holding
+    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-    use_write_multiple: true
+
+switch:
+  - name: ${s_2001}
+    address: 2001
+    bitmask: 0
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    register_type: holding
+  - name: ${s_2023}
+    address: 2023
+    bitmask: 0
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    register_type: holding
