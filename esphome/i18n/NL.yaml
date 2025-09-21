@@ -121,3 +121,5 @@ substitutions:
   # frostvalve.yaml
   fv_2030: Positie stepper vorstklep Stappen
   fv_2031: Positie stepper vorstklep Stappen - aan/uit
+
+  gn_001: Standaard ventialtie stand

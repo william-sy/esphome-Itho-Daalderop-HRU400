@@ -359,6 +359,14 @@ number:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+  - platform: template
+    name: ${gn_001}
+    id: return_fan_to_speed
+    icon: mdi:fan
+    min_value: 0
+    max_value: 3
+    step: 1
+    optimistic: true
 
 switch:
   - name: ${s_2001}

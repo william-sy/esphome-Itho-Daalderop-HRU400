@@ -121,3 +121,5 @@ substitutions:
   # frostvalve.yaml
   fv_2030: Position stepper frost flap steps
   fv_2031: Position stepper frost flap steps - on/off
+
+  gn_001: Default ventilation speed
