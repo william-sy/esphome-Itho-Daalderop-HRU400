@@ -100,13 +100,6 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     icon: mdi:lightning-bolt
-  - name: ${s_3024}
-    address: 3024
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
   - name: ${s_3030}
     address: 3030
     unit_of_measurement: m3/h
@@ -375,3 +368,37 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
+
+binary_sensor:
+  - name: ${s_3024_z1}
+    address: 3024
+    bitmask: 0
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z2}
+    address: 3024
+    bitmask: 1
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z3}
+    address: 3024
+    bitmask: 2
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z4}
+    address: 3024
+    bitmask: 3
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
