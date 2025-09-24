@@ -12,9 +12,6 @@ number:
     
   - name: ${s_2204}
     address: 2204
-    min_value: 0
-    max_value: 25
-    step: 1
     value_type: U_WORD
     register_type: holding
     platform: modbus_controller
