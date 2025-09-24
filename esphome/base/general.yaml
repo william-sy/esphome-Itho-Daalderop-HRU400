@@ -177,6 +177,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: ${s_3053}
     address: 3053
+    unit_of_measurement: %
     value_type: U_WORD
     register_type: holding
     state_class: measurement
