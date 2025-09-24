@@ -92,24 +92,11 @@ number:
     on_value_range:
       - above: 2.0
         then: 
-          - number.set:
-              id: fan_flow_ingress_on_off
-              value: 1.0
+          - switch.turn_on: fan_flow_ingress_on_off
       - below: 1.0
         then:
-          - number.set:
-              id: fan_flow_ingress_on_off
-              value: 0.0
-  - name: ${f_2021}
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    id: fan_flow_ingress_on_off
-    address: 2021
-    min_value: 0
-    max_value: 1
-    step: 1
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant
+          - switch.turn_off: fan_flow_ingress_on_off
+
 
 ###
 # Create a fan entity in HA.
@@ -203,3 +190,13 @@ output:
           then:
             - logger.log: "fan_output_value: Back to auto"
             - number.set: { id: fan_demand_on_off, value: 0.0 }
+
+switch:
+  - name: ${f_2021}
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    id: fan_flow_ingress_on_off
+    address: 2021
+    register_type: holding
+    use_write_multiple: true
+    icon: mdi:toggle-switch-variant
