@@ -43,6 +43,10 @@ substitutions:
   s_3022: Werkelijke vermogen voedingsventilator
   s_3023: Werkelijke vermogen afvoerventilator
   s_3024: Zonekleppen aangesloten; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  s_3024_z1: Zone 1 aangesloten
+  s_3024_z2: Zone 2 aangesloten
+  s_3024_z3: Zone 3 aangesloten
+  s_3024_z4: Zone 4 aangesloten
   s_3030: Volumestroom van buitenaf
   s_3031: Massastroom van buitenaf
   s_3032: Temperatuur van buitenaf
