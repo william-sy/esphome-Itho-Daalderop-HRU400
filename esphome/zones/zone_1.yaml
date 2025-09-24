@@ -3,7 +3,7 @@ number:
   # Position stepper zone flap 1
   - name: ${s_2034}
     address: 2034
-    unit_of_measurement: Stappen
+    unit_of_measurement: ${meas_steps}
     value_type: U_WORD
     min_value: 0
     max_value: ${flap_max}
