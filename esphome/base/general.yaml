@@ -374,27 +374,23 @@ binary_sensor:
     address: 3024
     bitmask: 0
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_3024_z2}
     address: 3024
     bitmask: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_3024_z3}
     address: 3024
     bitmask: 2
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
   - name: ${s_3024_z4}
     address: 3024
     bitmask: 3
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
