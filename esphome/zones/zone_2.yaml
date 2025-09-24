@@ -1,4 +1,4 @@
-sensor:
+number:
   - name: ${s_2036}
     address: 2036
     unit_of_measurement: ${meas_steps}
