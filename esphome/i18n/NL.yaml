@@ -65,6 +65,10 @@ substitutions:
   s_3082: Temperatuur naar buiten
   s_3083: Relatieve vochtigheid naar buiten 
   s_3200: Ongebalanceerde stroomvraag zone 1
+  s_3201: Ongebalanceerde stroomvraag zone 2
+  s_3202: Ongebalanceerde stroomvraag zone 3
+  s_3203: Ongebalanceerde stroomvraag zone 4
+  s_3204: Ongebalanceerde stroomvraag zone 5
   s_4000: Levensduur teller deel 1 (h)
   s_4001: Levensduur teller deel 2 (h)
   s_4002: Mengstroom teller deel 1 (m3)
