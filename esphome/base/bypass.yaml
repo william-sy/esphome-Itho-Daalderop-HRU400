@@ -54,18 +54,12 @@ switch:
                 id: fan_demand_value
                 value: 200 # Lower the fan to the bypass allowed value
             - delay: 5s # Give fan spindown time
-            - number.set:
-                id: bypass_valve_on_off
-                value: 1 # Set the bypass to on.
+            - switch.turn_on: bypass_valve_on_off
             - delay: 5s # Give bypass valve time to open
-            - number.set:
-                id: fan_demand_value
-                value: 0 # Set the fan back to auto.
+            - switch.turn_off: fan_demand_value
           else:
             - logger.log: "The sensor value is already below 200 we can turn on bypass"
-            - number.set:
-                id: bypass_valve_on_off
-                value: 1 # Set the bypass to on.
+            - switch.turn_on: bypass_valve_on_off
     turn_off_action:
       then:
         if:
@@ -77,15 +71,9 @@ switch:
                 id: fan_demand_value
                 value: 200 # Lower the fan to the bypass allowed value
             - delay: 5s # Give fan spindown time
-            - number.set:
-                id: bypass_valve_on_off
-                value: 0 # Set the bypass to off.
+            - switch.turn_off: bypass_valve_on_off
             - delay: 5s # Give bypass valve time to open
-            - number.set:
-                id: fan_demand_value
-                value: 0 # Set the fan back to auto.
+            - switch.turn_off: fan_demand_value
           else:
             - logger.log: "The sensor value is below 200, turn off bypass"
-            - number.set:
-                id: bypass_valve_on_off
-                value: 0 # Set the bypass to off.
+            - switch.turn_off: bypass_valve_on_off
