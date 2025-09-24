@@ -44,6 +44,10 @@ substitutions:
   s_3022: Power usage ingress fan
   s_3023: Power usage exhaust fan
   s_3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  s_3024_z1: Zone 1 connected
+  s_3024_z2: Zone 2 connected
+  s_3024_z3: Zone 3 connected
+  s_3024_z4: Zone 4 connected
   s_3030: Volume flow from outside
   s_3031: Mass flow from outside
   s_3032: Temperature from outside
