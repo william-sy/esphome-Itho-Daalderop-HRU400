@@ -360,12 +360,12 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
+
+switch:
   - name: ${s_2001}
     address: 2001
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
+    bitmask: 0
+    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
