@@ -57,7 +57,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: ${s_3011}
     address: 3011
-    unit_of_measurement: Ppm
+    unit_of_measurement: ppm
     value_type: U_WORD
     register_type: holding
     state_class: measurement
