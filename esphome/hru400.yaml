@@ -20,9 +20,6 @@ esphome:
       - number.set:
           id: fan_flow_ingress_on_off
           value: 0
-      - number.set:
-          id: bypass_valve_on_off
-          value: 0
 
 # Enable logging
 logger:
