@@ -369,6 +369,8 @@ number:
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
 
+
+### The connectivity of the zone flaps, does not show up for some reason on my system. YMMV
 binary_sensor:
   - name: ${s_3024_z1}
     address: 3024
