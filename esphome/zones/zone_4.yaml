@@ -31,6 +31,7 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
 
+sensor:
   - name: ${s_3203}
     address: 3203
     unit_of_measurement: m3/h
