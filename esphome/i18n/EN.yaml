@@ -84,9 +84,9 @@ substitutions:
   s_201: Dirty Filter (by time)
   s_202: Flow-warning exhaust flow
   s_203: Flow-warning ingress flow
-  s_210: Error hunidity sensor intern
-  s_211: Error hunidity sensor exhaust
-  s_212: Error hunidity sensor ingress
+  s_210: Error humidity sensor intern
+  s_211: Error humidity sensor exhaust
+  s_212: Error humidity sensor ingress
   s_213: Error temperature sensor intern
   s_214: Error temperature sensor exhaust
   s_215: Error temperature sensor ingress
