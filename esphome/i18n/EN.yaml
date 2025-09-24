@@ -9,6 +9,12 @@ substitutions:
   s_2023: Mass flow, exhaust fan (no mass balance) - on/off
   s_2034: Position stepper zone flap 1
   s_2035: Position stepper zone flap 1 - on/off
+  s_2036: Position stepper zone flap 2
+  s_2037: Position stepper zone flap 2 - on/off
+  s_2038: Position stepper zone flap 3
+  s_2039: Position stepper zone flap 3 - on/off
+  s_2040: Position stepper zone flap 4
+  s_2041: Position stepper zone flap 4 - on/off
   s_2200: Ventilation level zone 1
   s_2201: Ventilation level zone 1 - on/off
   s_2210: Flow demand zone 1
@@ -88,3 +94,6 @@ substitutions:
   # frostvalve.yaml
   fv_2030: Position stepper frost flap steps
   fv_2031: Position stepper frost flap steps - on/off
+
+  # measurements in dual languages
+  meas_steps: steps
