@@ -14,9 +14,7 @@ esphome:
           # I will be ignored if the above number is more than 0
           id: fan_demand_on_off
           value: 0
-      - number.set:
-          id: bypass_valve_on_off
-          value: 0
+      - switch.turn_off: bypass_valve_on_off
       - number.set:
           id: fan_flow_ingress_on_off
           value: 0
