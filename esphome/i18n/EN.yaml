@@ -66,6 +66,10 @@ substitutions:
   s_3082: Temperature to outside
   s_3083: Relative air humidity to outside (%)
   s_3200: Unbalanced flow demand zone 1
+  s_3201: Unbalanced flow demand zone 2
+  s_3202: Unbalanced flow demand zone 3
+  s_3203: Unbalanced flow demand zone 4
+  s_3204: Unbalanced flow demand zone 5
   s_4000: Lifetime counter part 1 (h)
   s_4001: Lifetime counter part 2 (h)
   s_4002: Mixflow counter part 1 (m3)
