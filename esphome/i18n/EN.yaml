@@ -17,8 +17,24 @@ substitutions:
   s_2041: Position stepper zone flap 4 - on/off
   s_2200: Ventilation level zone 1
   s_2201: Ventilation level zone 1 - on/off
+  s_2202: Ventilation level zone 2
+  s_2203: Ventilation level zone 2 - on/off
+  s_2204: Ventilation level zone 3
+  s_2205: Ventilation level zone 3 - on/off
+  s_2206: Ventilation level zone 4
+  s_2207: Ventilation level zone 4 - on/off
+  s_2208: Ventilation level zone 5
+  s_2209: Ventilation level zone 5 - on/off
   s_2210: Flow demand zone 1
   s_2211: Flow demand zone 1 - on/off
+  s_2212: Flow demand zone 2
+  s_2213: Flow demand zone 2 - on/off
+  s_2214: Flow demand zone 3
+  s_2215: Flow demand zone 3 - on/off
+  s_2216: Flow demand zone 4
+  s_2217: Flow demand zone 4 - on/off
+  s_2218: Flow demand zone 5
+  s_2219: Flow demand zone 5 - on/off
   s_3000: Highest percentage ingress in Automodus
   s_3001: Highest percentage exhaust in Automodus
   s_3010: Highest measured RV (extern & I²C) (not in fans)
