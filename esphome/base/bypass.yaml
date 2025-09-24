@@ -19,18 +19,18 @@ number:
   #   use_write_multiple: true
   #   modbus_controller_id: ${modbus_id}
   #   icon: mdi:valve
+
+
+switch:
   - name: ${b_2033}
     address: 2033
+    bitmask: 0
     id: bypass_valve_on_off
-    min_value: 0
-    max_value: 1
-    step: 1
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
-
-switch:
+    
   - platform: template
     name: "Bypass valve - on/off" # 0 = auto 1 = Manual
     id: bypass_valve_on_off_switch
