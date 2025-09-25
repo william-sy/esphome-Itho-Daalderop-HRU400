@@ -20,6 +20,7 @@ number:
     id: fan_demand_value
     icon: mdi:home-import-outline
     address: 2010
+    unit_of_measurement: "m3/h"
     min_value: 0
     max_value: ${max.cap}
     step: 1
