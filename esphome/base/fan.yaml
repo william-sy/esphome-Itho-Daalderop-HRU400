@@ -83,6 +83,7 @@ number:
     modbus_controller_id: ${modbus_id}
     id: fan_flow_ingress_value
     icon: mdi:home-import-outline
+    unit_of_measurement: "m3/h"
     address: 2020
     min_value: 0
     max_value: ${max.cap}
