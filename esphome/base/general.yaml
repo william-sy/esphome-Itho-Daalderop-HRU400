@@ -363,12 +363,14 @@ switch:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
   - name: ${s_2021}
     address: 2021
     bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
 
 ### The connectivity of the zone flaps, does not show up for some reason on my system. YMMV
 binary_sensor:
