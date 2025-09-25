@@ -24,7 +24,6 @@ number:
 switch:
   - name: ${b_2033}
     address: 2033
-    bitmask: 0
     register_type: holding
     id: bypass_valve_on_off
     platform: modbus_controller
