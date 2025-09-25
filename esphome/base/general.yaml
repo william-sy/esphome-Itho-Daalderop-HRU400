@@ -54,7 +54,7 @@ sensor:
     icon: mdi:molecule-co2
   - name: ${s_3020}
     address: 3020
-    unit_of_measurement: Rpm
+    unit_of_measurement: "rpm"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -63,7 +63,7 @@ sensor:
     icon: mdi:speedometer
   - name: ${s_3021}
     address: 3021
-    unit_of_measurement: Rpm
+    unit_of_measurement: "rpm"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
