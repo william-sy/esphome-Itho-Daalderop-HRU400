@@ -8,13 +8,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2021}
-    address: 2021
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+
   # massflow exhaust
   - name: ${s_2022}
     address: 2022
@@ -24,13 +18,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2023}
-    address: 2023
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+
   # - name: ${s_3000}
   #   address: 3000
   #   unit_of_measurement: '%'
@@ -369,7 +357,18 @@ switch:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
-
+  - name: ${s_2023}
+    address: 2023
+    bitmask: 0
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_2021}
+    address: 2021
+    bitmask: 0
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
 
 ### The connectivity of the zone flaps, does not show up for some reason on my system. YMMV
 binary_sensor:
