@@ -8,13 +8,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2021}
-    address: 2021
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+
   # massflow exhaust
   - name: ${s_2022}
     address: 2022
@@ -24,13 +18,7 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2023}
-    address: 2023
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+
   # - name: ${s_3000}
   #   address: 3000
   #   unit_of_measurement: '%'
@@ -57,7 +45,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: ${s_3011}
     address: 3011
-    unit_of_measurement: Ppm
+    unit_of_measurement: ppm
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -66,7 +54,7 @@ sensor:
     icon: mdi:molecule-co2
   - name: ${s_3020}
     address: 3020
-    unit_of_measurement: Rpm
+    unit_of_measurement: "rpm"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -75,7 +63,7 @@ sensor:
     icon: mdi:speedometer
   - name: ${s_3021}
     address: 3021
-    unit_of_measurement: Rpm
+    unit_of_measurement: "rpm"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -100,13 +88,6 @@ sensor:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     icon: mdi:lightning-bolt
-  - name: ${s_3024}
-    address: 3024
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
   - name: ${s_3030}
     address: 3030
     unit_of_measurement: m3/h
@@ -184,6 +165,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
   - name: ${s_3053}
     address: 3053
+    unit_of_measurement: "%"
     value_type: U_WORD
     register_type: holding
     state_class: measurement
@@ -366,12 +348,50 @@ number:
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
+
+switch:
   - name: ${s_2001}
     address: 2001
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
+    register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
+  - name: ${s_2023}
+    address: 2023
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+  - name: ${s_2021}
+    address: 2021
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
+### The connectivity of the zone flaps, does not show up for some reason on my system. YMMV
+binary_sensor:
+  - name: ${s_3024_z1}
+    address: 3024
+    bitmask: 0
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z2}
+    address: 3024
+    bitmask: 1
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z3}
+    address: 3024
+    bitmask: 2
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+  - name: ${s_3024_z4}
+    address: 3024
+    bitmask: 3
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}

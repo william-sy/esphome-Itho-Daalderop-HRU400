@@ -1,5 +1,5 @@
 sensor:
-  - name: Fabrikantgroep
+  - name: ${a_10}
     address: 10
     value_type: U_WORD
     register_type: holding
@@ -8,7 +8,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Sub-ID van de fabrikant
+  - name: ${a_11}
     address: 11
     value_type: U_WORD
     register_type: holding
@@ -17,7 +17,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: ProductNoneID
+  - name: ${a_12}
     address: 12
     value_type: U_WORD
     register_type: holding
@@ -26,7 +26,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Softwareversie
+  - name: ${a_13}
     address: 13
     value_type: U_WORD
     register_type: holding
@@ -35,7 +35,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Softwarerevisie
+  - name: ${a_14}
     address: 14
     value_type: U_WORD
     register_type: holding
@@ -44,7 +44,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Lijstversie
+  - name: ${a_15}
     address: 15
     value_type: U_WORD
     register_type: holding
@@ -53,7 +53,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: OEM-code
+  - name: ${a_16}
     address: 16
     value_type: U_WORD
     register_type: holding
@@ -62,7 +62,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Serienummer deel 1 (uint 64) (MSB)
+  - name: ${a_100}
     address: 100
     value_type: U_WORD
     register_type: holding
@@ -71,7 +71,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Serienummer deel 2 (uint 64)
+  - name: ${a_101}
     address: 101
     value_type: U_WORD
     register_type: holding
@@ -80,7 +80,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Serienummer deel 3 (uint 64)
+  - name: ${a_102}
     address: 102
     value_type: U_WORD
     register_type: holding
@@ -89,7 +89,7 @@ sensor:
     modbus_controller_id: ${modbus_id}
     icon: mdi:information-box
     skip_updates: ${skip_updates.advanced}
-  - name: Serienummer deel 4 (uint 64) (LSB)
+  - name: ${a_103}
     address: 103
     value_type: U_WORD
     register_type: holding
@@ -101,7 +101,7 @@ sensor:
 
 number:
   # Changing these will also make you change your yaml files: 
-  - name: Modbus-addres
+  - name: ${a_0}
     address: 0
     value_type: U_WORD
     register_type: holding
@@ -112,7 +112,7 @@ number:
     min_value: 1
     max_value: 247
     step: 1
-  - name: Baud rate
+  - name: ${a_1}
     address: 1
     value_type: U_WORD
     register_type: holding
@@ -123,7 +123,7 @@ number:
     min_value: 0
     max_value: 4
     step: 1
-  - name: Pariteit
+  - name: ${a_2}
     address: 2
     value_type: U_WORD
     register_type: holding

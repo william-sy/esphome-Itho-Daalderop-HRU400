@@ -9,10 +9,32 @@ substitutions:
   s_2023: Mass flow, exhaust fan (no mass balance) - on/off
   s_2034: Position stepper zone flap 1
   s_2035: Position stepper zone flap 1 - on/off
+  s_2036: Position stepper zone flap 2
+  s_2037: Position stepper zone flap 2 - on/off
+  s_2038: Position stepper zone flap 3
+  s_2039: Position stepper zone flap 3 - on/off
+  s_2040: Position stepper zone flap 4
+  s_2041: Position stepper zone flap 4 - on/off
   s_2200: Ventilation level zone 1
   s_2201: Ventilation level zone 1 - on/off
+  s_2202: Ventilation level zone 2
+  s_2203: Ventilation level zone 2 - on/off
+  s_2204: Ventilation level zone 3
+  s_2205: Ventilation level zone 3 - on/off
+  s_2206: Ventilation level zone 4
+  s_2207: Ventilation level zone 4 - on/off
+  s_2208: Ventilation level zone 5
+  s_2209: Ventilation level zone 5 - on/off
   s_2210: Flow demand zone 1
   s_2211: Flow demand zone 1 - on/off
+  s_2212: Flow demand zone 2
+  s_2213: Flow demand zone 2 - on/off
+  s_2214: Flow demand zone 3
+  s_2215: Flow demand zone 3 - on/off
+  s_2216: Flow demand zone 4
+  s_2217: Flow demand zone 4 - on/off
+  s_2218: Flow demand zone 5
+  s_2219: Flow demand zone 5 - on/off
   s_3000: Highest percentage ingress in Automodus
   s_3001: Highest percentage exhaust in Automodus
   s_3010: Highest measured RV (extern & I²C) (not in fans)
@@ -22,6 +44,10 @@ substitutions:
   s_3022: Power usage ingress fan
   s_3023: Power usage exhaust fan
   s_3024: Zone flaps connected; Bit 0=Zone 1; Bit 1=Zone 2; Bit 3=Zone 3; Bit 4=Zone 4
+  s_3024_z1: Zone 1 connected
+  s_3024_z2: Zone 2 connected
+  s_3024_z3: Zone 3 connected
+  s_3024_z4: Zone 4 connected
   s_3030: Volume flow from outside
   s_3031: Mass flow from outside
   s_3032: Temperature from outside
@@ -44,6 +70,10 @@ substitutions:
   s_3082: Temperature to outside
   s_3083: Relative air humidity to outside (%)
   s_3200: Unbalanced flow demand zone 1
+  s_3201: Unbalanced flow demand zone 2
+  s_3202: Unbalanced flow demand zone 3
+  s_3203: Unbalanced flow demand zone 4
+  s_3204: Unbalanced flow demand zone 5
   s_4000: Lifetime counter part 1 (h)
   s_4001: Lifetime counter part 2 (h)
   s_4002: Mixflow counter part 1 (m3)
@@ -58,9 +88,9 @@ substitutions:
   s_201: Dirty Filter (by time)
   s_202: Flow-warning exhaust flow
   s_203: Flow-warning ingress flow
-  s_210: Error hunidity sensor intern
-  s_211: Error hunidity sensor exhaust
-  s_212: Error hunidity sensor ingress
+  s_210: Error humidity sensor intern
+  s_211: Error humidity sensor exhaust
+  s_212: Error humidity sensor ingress
   s_213: Error temperature sensor intern
   s_214: Error temperature sensor exhaust
   s_215: Error temperature sensor ingress
@@ -88,3 +118,22 @@ substitutions:
   # frostvalve.yaml
   fv_2030: Position stepper frost flap steps
   fv_2031: Position stepper frost flap steps - on/off
+
+    # advanced.yaml
+  a_10: Manufacturer group
+  a_11: Sub-ID from the manufacturer
+  a_12: Product ID
+  a_13: Software version
+  a_14: Software revision
+  a_15: List version #?
+  a_16: OEM code
+  a_100: Serial number part 1 (uint 64) (MSB)
+  a_101: Serial number part 2 (uint 64)
+  a_102: Serial number part 3 (uint 64)
+  a_103: Serial number part 4 (uint 64) (LSB)
+  a_0: Modbus address
+  a_1: Baud rate
+  a_2: Parity
+
+  # measurements in multiple languages
+  meas_steps: steps

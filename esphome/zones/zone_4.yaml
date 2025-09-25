@@ -1,53 +1,66 @@
-sensor:
-  - name: Positie stepper zoneklep 4
+number:
+  - name: ${s_2040}
     address: 2040
-    unit_of_measurement: Stappen
+    unit_of_measurement: ${meas_steps}
     value_type: U_WORD
+    min_value: 0
+    max_value: ${flap_max}
+    step: 1
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42041 inschakelen/uitschakelen
-    address: 2041
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: Ventilatieniveau zone 4
+    use_write_multiple: true
+
+  - name: ${s_2206}
     address: 2206
+    min_value: 0
+    max_value: 25
+    step: 1
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42207 inschakelen/uitschakelen
-    address: 2207
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: Stroomvraag (flow) zone 4
+    use_write_multiple: true
+
+  - name: ${s_2216}
     address: 2216
-    unit_of_measurement: m³/h
+    min_value: 0
+    max_value: ${max_cap}
+    step: 1
+    unit_of_measurement: m3/h
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: 42217 inschakelen/uitschakelen
-    address: 2217
-    value_type: U_WORD
-    register_type: holding
-    state_class: measurement
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-  - name: Ongebalanceerde stroomvraag zone 4
+    use_write_multiple: true
+
+sensor:
+  - name: ${s_3203}
     address: 3203
-    unit_of_measurement: m³/h
+    unit_of_measurement: m3/h
     value_type: U_WORD
     register_type: holding
-    state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+
+switch: 
+  - name: ${s_2041}
+    address: 2041
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
+  - name: ${s_2207}
+    address: 2207
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
+  - name: ${s_2217}
+    address: 2217
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true

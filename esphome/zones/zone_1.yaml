@@ -3,7 +3,7 @@ number:
   # Position stepper zone flap 1
   - name: ${s_2034}
     address: 2034
-    unit_of_measurement: Stappen
+    unit_of_measurement: ${meas_steps}
     value_type: U_WORD
     min_value: 0
     max_value: ${flap_max}
@@ -11,15 +11,8 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2035}
-    address: 2035
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
   # ventilation level zone 1
   - name: ${s_2200}
     address: 2200
@@ -30,15 +23,8 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2201}
-    address: 2201
-    value_type: U_WORD
-    min_value: 0
-    max_value: 1
-    step: 1
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
   # Flow demand zone 1:
   - name: ${s_2210}
     address: 2210
@@ -50,15 +36,8 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
-  - name: ${s_2211}
-    address: 2211
-    min_value: 0
-    max_value: 1
-    step: 1
-    value_type: U_WORD
-    register_type: holding
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+
 sensor:
   - name: ${s_3200}
     address: 3200
@@ -68,3 +47,23 @@ sensor:
     state_class: measurement
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+
+switch:
+  - name: ${s_2201}
+    address: 2201
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+  - name: ${s_2211}
+    address: 2211
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+  - name: ${s_2035}
+    address: 2035
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
