@@ -17,7 +17,6 @@ number:
 switch:
   - name: ${fv_2031}
     address: 2031
-    bitmask: 0
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     register_type: holding
