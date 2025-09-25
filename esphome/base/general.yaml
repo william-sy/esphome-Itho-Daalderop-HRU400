@@ -352,21 +352,18 @@ number:
 switch:
   - name: ${s_2001}
     address: 2001
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
   - name: ${s_2023}
     address: 2023
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
     use_write_multiple: true
   - name: ${s_2021}
     address: 2021
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
