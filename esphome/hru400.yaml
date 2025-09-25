@@ -10,10 +10,7 @@ esphome:
           # If you remove this, it will always restore to last set number and ignore the next.
           id: fan_demand_value
           value: 0
-      - number.set:
-          # I will be ignored if the above number is more than 0
-          id: fan_demand_on_off
-          value: 0
+      - switch.turn_off: fan_demand_on_off
       - switch.turn_off: bypass_valve_on_off
       - switch.turn_off: fan_flow_ingress_on_off
 
