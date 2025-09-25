@@ -118,5 +118,21 @@ substitutions:
   fv_2030: Positie stepper vorstklep Stappen
   fv_2031: Positie stepper vorstklep Stappen - aan/uit
 
+  # advanced.yaml
+  a_10: Fabrikantgroep
+  a_11: Sub-ID van de fabrikant
+  a_12: Product-ID
+  a_13: Softwareversie
+  a_14: Softwarerevisie
+  a_15: Lijstversie
+  a_16: OEM-code
+  a_100: Serienummer deel 1 (uint 64) (MSB)
+  a_101: Serienummer deel 2 (uint 64)
+  a_102: Serienummer deel 3 (uint 64)
+  a_103: Serienummer deel 4 (uint 64) (LSB)
+  a_0: Modbus-addres
+  a_1: Baud rate
+  a_2: Pariteit
+  
    # measurements in dual languages
   meas_steps: stappen
