@@ -36,16 +36,7 @@ number:
           - number.set:
               id: fan_demand_on_off
               value: 0.0
-  - name: ${f_2011}
-    platform: modbus_controller
-    modbus_controller_id: ${modbus_id}
-    id: fan_demand_on_off
-    address: 2011
-    min_value: 0
-    max_value: 1
-    step: 1
-    use_write_multiple: true
-    icon: mdi:toggle-switch-variant 
+
   # - name: ${f_2012}
   #   address: 2012
   #   id: fan_exhaust_demand_value
@@ -127,7 +118,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 1);
                 then:
                   - logger.log: "fan_output_value: 1"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_1}
@@ -136,7 +127,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 2);
                 then:
                   - logger.log: "fan_output_value: 2"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_2}
@@ -145,7 +136,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 3);
                 then:
                   - logger.log: "fan_output_value: 3"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_3}
@@ -154,7 +145,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 4);
                 then:
                   - logger.log: "fan_output_value: 4"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_4}
@@ -163,7 +154,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 5);
                 then:
                   - logger.log: "fan_output_value: 5"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_5}
@@ -172,7 +163,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 6);
                 then:
                   - logger.log: "fan_output_value: 6"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_6}
@@ -181,7 +172,7 @@ output:
                   lambda: return (id(wtw_fan).speed == 7);
                 then:
                   - logger.log: "fan_output_value: 7"
-                  - number.set: { id: fan_demand_on_off, value: 1.0 }
+                  - switch.turn_on: fan_demand_on_off
                   - number.set:
                       id: fan_demand_value
                       value: ${fan.speed_7}
@@ -190,7 +181,7 @@ output:
             lambda: return !(id(wtw_fan).state);
           then:
             - logger.log: "fan_output_value: Back to auto"
-            - number.set: { id: fan_demand_on_off, value: 0.0 }
+            - switch.turn_off: fan_demand_on_off
 
 switch:
   - name: ${f_2021}
@@ -201,3 +192,12 @@ switch:
     register_type: holding
     use_write_multiple: true
     icon: mdi:toggle-switch-variant
+
+  - name: ${f_2011}
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    id: fan_demand_on_off
+    address: 2011
+    use_write_multiple: true
+    register_type: holding
+    icon: mdi:toggle-switch-variant 
