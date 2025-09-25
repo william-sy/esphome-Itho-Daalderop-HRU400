@@ -28,14 +28,10 @@ number:
     on_value_range:
       - above: 2.0
         then: 
-          - number.set:
-              id: fan_demand_on_off
-              value: 1.0
+          - switch.turn_on: fan_demand_on_off
       - below: 1.0
         then:
-          - number.set:
-              id: fan_demand_on_off
-              value: 0.0
+          - switch.turn_off: fan_demand_on_off
 
   # - name: ${f_2012}
   #   address: 2012
