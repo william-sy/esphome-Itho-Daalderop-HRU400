@@ -46,7 +46,6 @@ sensor:
 switch: 
   - name: ${s_2041}
     address: 2041
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -54,7 +53,6 @@ switch:
 
   - name: ${s_2207}
     address: 2207
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
@@ -62,7 +60,6 @@ switch:
 
   - name: ${s_2217}
     address: 2217
-    bitmask: 0
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
