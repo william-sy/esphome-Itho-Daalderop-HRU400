@@ -119,5 +119,21 @@ substitutions:
   fv_2030: Position stepper frost flap steps
   fv_2031: Position stepper frost flap steps - on/off
 
-  # measurements in dual languages
+    # advanced.yaml
+  a_10: Manufacturer group
+  a_11: Sub-ID from the manufacturer
+  a_12: Product ID
+  a_13: Software version
+  a_14: Software revision
+  a_15: List version #?
+  a_16: OEM code
+  a_100: Serial number part 1 (uint 64) (MSB)
+  a_101: Serial number part 2 (uint 64)
+  a_102: Serial number part 3 (uint 64)
+  a_103: Serial number part 4 (uint 64) (LSB)
+  a_0: Modbus address
+  a_1: Baud rate
+  a_2: Parity
+
+  # measurements in multiple languages
   meas_steps: steps
