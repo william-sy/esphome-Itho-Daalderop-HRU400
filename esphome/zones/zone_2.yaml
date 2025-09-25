@@ -9,6 +9,7 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
     
   - name: ${s_2202}
     address: 2202
@@ -19,6 +20,7 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
 
   - name: ${s_2212}
     address: 2212
@@ -30,6 +32,7 @@ number:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
 
 sensor:
   - name: ${s_3201}
@@ -47,6 +50,7 @@ switch:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
 
   - name: ${s_2203}
     address: 2203
@@ -54,6 +58,7 @@ switch:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
 
   - name: ${s_2213}
     address: 2213
@@ -61,3 +66,4 @@ switch:
     register_type: holding
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
