@@ -36,3 +36,7 @@ substitutions:
     speed_5:              300
     speed_6:              350
     speed_7:              399
+
+button:
+  - platform: restart
+    name: "Reset the ESP"
