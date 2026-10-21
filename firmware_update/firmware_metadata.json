@@ -1,0 +1,80 @@
+{
+  "product_code": "03-00632",
+  "product_description": "WTW-unit HRU 400",
+  "firmware": [
+    {
+      "type": "WIFI",
+      "firmware_version": "13.1",
+      "id": "13",
+      "url": "https://assets.eu.bettyblocks.com/eu-central-1-fed492c8696c42e79591299f88fdd19c/676ca0a6db1947a9a66257f57fc91b73/13/RF-Module.bin.enc",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "apply_factory_reset_after_update": false,
+      "wait_minutes_after_update": null,
+      "hash_text": "",
+      "appliance_address": "8A",
+      "description": ""
+    },
+    {
+      "type": "WIFI",
+      "firmware_version": "21.2",
+      "id": "31",
+      "url": "https://assets.eu.bettyblocks.com/eu-central-1-fed492c8696c42e79591299f88fdd19c/676ca0a6db1947a9a66257f57fc91b73/31/RF-Module.bin.enc",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "apply_factory_reset_after_update": false,
+      "wait_minutes_after_update": 0,
+      "hash_text": "",
+      "appliance_address": "8A",
+      "description": ""
+    },
+    {
+      "type": "BASE",
+      "firmware_version": "8.1",
+      "id": "32",
+      "url": "https://assets.eu.bettyblocks.com/eu-central-1-fed492c8696c42e79591299f88fdd19c/676ca0a6db1947a9a66257f57fc91b73/32/PD-68HRU450-v1_8_1-BL.hex.enc",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "apply_factory_reset_after_update": true,
+      "wait_minutes_after_update": 0,
+      "hash_text": "b17a4f803f4b60bd98bdd827258883b89e389b208539e02947019c9ae662c525",
+      "appliance_address": "82",
+      "description": "VDA & WT4 software v1.8.1 (MZR compatible update)"
+    },
+    {
+      "type": "WIFI",
+      "firmware_version": "17.2",
+      "id": "34",
+      "url": "https://assets.eu.bettyblocks.com/eu-central-1-fed492c8696c42e79591299f88fdd19c/676ca0a6db1947a9a66257f57fc91b73/34/RF-Module.bin.enc",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "apply_factory_reset_after_update": false,
+      "wait_minutes_after_update": 0,
+      "hash_text": "",
+      "appliance_address": "8A",
+      "description": ""
+    },
+    {
+      "type": "WIFI",
+      "firmware_version": "1.13",
+      "id": "2",
+      "url": "https://assets.bettyblocks.com/fed492c86-676ca0a6db1947a9a66257f57fc91b73/2/itho-daalderop-wifi-module.bin",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "hash_text": "",
+      "appliance_address": "8A",
+      "description": "Release 1.13"
+    },
+    {
+      "type": "WIFI",
+      "firmware_version": "1.14",
+      "id": "4",
+      "url": "https://assets.bettyblocks.com/fed492c86-676ca0a6db1947a9a66257f57fc91b73/4/itho-daalderop-wifi-module.bin",
+      "url_eeprom": "",
+      "has_eeprom": false,
+      "hash_text": "",
+      "appliance_address": "8A",
+      "description": "Release 1.14"
+    }
+  ]
+}
