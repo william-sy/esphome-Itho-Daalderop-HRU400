@@ -4,18 +4,23 @@
 # Also the supply fan will spin harder. See manual page 15.
 ##
 number:
-  # - name: ${fv_2030}
-  #   address: 2030
-  #   min_value: 0
-  #   max_value: 510
-  #   step: 510
-  #   platform: modbus_controller
-  #   modbus_controller_id: ${modbus_id}
-  #   use_write_multiple: true
-  #   icon: mdi:snowflake-alert
+  # 0 = open, 510 = closed (100% in the service app).
+  # Only has an effect while the manual override switch below is on.
+  - name: ${fv_2030}
+    id: frost_valve_position
+    address: 2030
+    value_type: U_WORD
+    min_value: 0
+    max_value: 510
+    step: 1
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id}
+    use_write_multiple: true
+    icon: mdi:snowflake-alert
 
 switch:
   - name: ${fv_2031}
+    id: frost_valve_on_off
     address: 2031
     platform: modbus_controller
     modbus_controller_id: ${modbus_id}

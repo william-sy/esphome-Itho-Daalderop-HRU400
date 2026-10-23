@@ -118,7 +118,7 @@ substitutions:
   b_2034: Bypass klep - aan⁄uit
   # frostvalve.yaml
   fv_2030: Positie stepper vorstklep Stappen
-  fv_2031: Positie stepper vorstklep Stappen - aan⁄uit
+  fv_2031: Vorstklep handmatig overschrijven (uit = automatisch)
 
   # advanced.yaml
   a_10: Fabrikantgroep

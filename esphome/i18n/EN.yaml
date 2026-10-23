@@ -119,7 +119,7 @@ substitutions:
   b_2034: Bypass valve - on⁄off
   # frostvalve.yaml
   fv_2030: Position stepper frost flap steps
-  fv_2031: Position stepper frost flap steps - on⁄off
+  fv_2031: Frost flap manual override (off = automatic)
 
     # advanced.yaml
   a_10: Manufacturer group

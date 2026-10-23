@@ -13,6 +13,7 @@ esphome:
       - switch.turn_off: fan_demand_on_off
       - switch.turn_off: bypass_valve_on_off
       - switch.turn_off: fan_flow_ingress_on_off
+      - switch.turn_off: frost_valve_on_off
 
 # Enable logging
 logger:
