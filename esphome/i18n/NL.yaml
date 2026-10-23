@@ -104,6 +104,7 @@ substitutions:
   s_231: Fout volumesensor toevoer
   s_232: Fout ventilatormodule afvoer
   s_233: Fout ventilatormodule toevoer
+  fc_reset_all: Reset alle fouttellers
   # fan.yaml
   f_2010: Ventilatievraag snelheid
   f_2011: Ventilatievraag - aan⁄uit

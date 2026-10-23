@@ -289,3 +289,21 @@ number:
     min_value: 0
     max_value: ${max.error_number}
     step: 1
+###
+# Reset all fault counters (200-203, 210-222, 230-233) in one go.
+# 199 (error number) is read only.
+button:
+  - platform: template
+    name: ${fc_reset_all}
+    icon: mdi:restore-alert
+    entity_category: config
+    on_press:
+      - lambda: |-
+          const uint16_t regs[] = {200, 201, 202, 203,
+                                   210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222,
+                                   230, 231, 232, 233};
+          for (uint16_t reg : regs) {
+            id(${modbus_id})->queue_command(
+                modbus_controller::ModbusCommandItem::create_write_multiple_command(
+                    id(${modbus_id}), reg, 1, std::vector<uint16_t>{0}));
+          }

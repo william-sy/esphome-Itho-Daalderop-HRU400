@@ -46,7 +46,7 @@ switch:
       then:
         if:
           condition:
-            lambda: 'return id(hru_m3h_toevoer_binnen_total).state > 200;'
+            lambda: 'return std::max(id(hru_m3h_toevoer_binnen_total).state, id(hru_m3h_afvoer_binnen_total).state) > 200;'
           then: 
             - logger.log: "The sensor value is above 200!, change fan to 200"
             - number.set:
@@ -65,7 +65,7 @@ switch:
       then:
         if:
           condition:
-            lambda: 'return id(hru_m3h_toevoer_binnen_total).state > 200;'
+            lambda: 'return std::max(id(hru_m3h_toevoer_binnen_total).state, id(hru_m3h_afvoer_binnen_total).state) > 200;'
           then: 
             - logger.log: "The sensor value is above 200, change fan to 200 before turning off"
             - number.set:

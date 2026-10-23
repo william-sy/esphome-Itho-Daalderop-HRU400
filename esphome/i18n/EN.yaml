@@ -105,6 +105,7 @@ substitutions:
   s_231: Error flow sensor ingress
   s_232: Error fan module exhaust
   s_233: Error fan module ingress
+  fc_reset_all: Reset all fault counters
   # fan.yaml
   f_2010: Ventilation demand ingress
   f_2011: Ventilation demand ingress - on⁄off
