@@ -138,3 +138,79 @@ substitutions:
   
    # measurements in dual languages
   meas_steps: stappen
+
+  # settings.yaml: unit settings mirrored at 45001 + 2 * setting index (key = wire address)
+  h_5000: Maximum capacity
+  h_5002: Ingeregeld debiet toevoer
+  h_5004: Ventilatiepercentage in stand 1
+  h_5006: Ventilatiepercentage in stand 2
+  h_5008: Ventilatiepercentage in stand 3
+  h_5010: Ventilatiepercentage autostand zonder CO2 sensoren
+  h_5012: Ventilatiepercentage autostand met CO2 sensoren
+  h_5014: Ventilatiepercentage auto-nachtstand (niet in BE)
+  h_5016: Maximale tijd buiten auto-stand
+  h_5018: Humidity sample time
+  h_5020: Vochtstijging aanschakelcriterium
+  h_5022: Ventilatiepercentage bij vochtregeling
+  h_5024: Vocht minimale aan-tijd
+  h_5026: Humidity relative humidity off
+  h_5028: Humidity absolute humidity off
+  h_5030: Humidity maximum on time
+  h_5032: Humidity not start if bypass closes
+  h_5034: Balance control sample time
+  h_5036: Neglect mass flows for supply enthalpy time
+  h_5038: Heater present
+  h_5040: Heater pwm period
+  h_5042: Frost control sample time
+  h_5044: Frost control delay
+  h_5046: Frost temperature setpoint
+  h_5048: Frost iaction
+  h_5050: Frost valve stepper speed
+  h_5052: Frost valve part volume flow open
+  h_5054: Frost unbalance per degree
+  h_5056: Tijd vorstklep open (bij nieuwe woning)
+  h_5058: Bypass valve stepper speed
+  h_5060: Bypass valve maximum steps
+  h_5062: Bypass valve opening direction
+  h_5064: Bypass valve opening maximum flow
+  h_5066: Bypass control sample time
+  h_5068: Binnentemperatuurgrens voor bypass
+  h_5070: Bypass summer day temperature
+  h_5072: Bypass summer day reset temparature
+  h_5074: Bypass zomerdag grens
+  h_5076: Zomernacht boost grens
+  h_5078: Zomernacht boost stap
+  h_5080: Ventilatieniveau bij zomernachtboost
+  h_5082: Tijd dat bypassklep dicht blijft na eerste start
+  h_5084: Power limit supply fan
+  h_5086: Power limit extract fan
+  h_5088: Vuil filter volumegrens
+  h_5090: Dirty filter volume reset value
+  h_5092: Vuil filter tijdgrens
+  h_5094: Dirty filter time reset value
+  h_5096: Fire present temperature
+  h_5098: Fire extinguished temperature
+  h_5100: Good air quality
+  h_5102: Poor air quality
+  h_5104: Modbus master (Y/N)
+  h_5106: Modbus-adres (na herstart)
+  h_5108: Baudrate (na herstart)
+  h_5110: Pariteit (na herstart)
+  h_5112: Error ifg hmi not available
+  h_5114: B0 zone valve (×1E8)
+  h_5116: B1 zone valve (×1E8)
+  h_5118: G zone valve (×1E8)
+  h_5120: Zone valve stepper speed
+  h_5122: Zone valve maximum steps
+  h_5124: Zone valve play
+  h_5126: Zoning system activation
+  h_5128: Ingeregelde debiet zone 1
+  h_5130: Ingeregelde debiet zone 2
+  h_5132: Ingeregelde debiet zone 3
+  h_5134: Ingeregelde debiet zone 4
+  h_5136: Capacity ibs zone5
+  h_5138: Channel resistance zone1
+  h_5140: Channel resistance zone2
+  h_5142: Channel resistance zone3
+  h_5144: Channel resistance zone4
+  h_serial: Serienummer (tekst)
