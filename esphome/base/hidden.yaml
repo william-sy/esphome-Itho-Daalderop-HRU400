@@ -1,0 +1,51 @@
+# Undocumented registers found by read-only scanning (2026-10-30). Not in the manual.
+# Wire address = manual number - 40001.
+sensor:
+  # 45001/45003/45005/45007/45009: values 430, 400, 50, 80, 100 (meaning unknown).
+  # Compare with the settings in the Itho Service-app / web tool. Even registers read 0.
+  - name: "Hidden 45001"
+    address: 5000
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+  - name: "Hidden 45003"
+    address: 5002
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+  - name: "Hidden 45005"
+    address: 5004
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+  - name: "Hidden 45007"
+    address: 5006
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+  - name: "Hidden 45009"
+    address: 5008
+    value_type: U_WORD
+    register_type: holding
+    state_class: measurement
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+
+text_sensor:
+  # 40105-40110: serial number as ASCII, e.g. WT4231290080
+  - name: "Serial number (text)"
+    address: 104
+    register_count: 6
+    response_size: 12
+    raw_encode: NONE
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}

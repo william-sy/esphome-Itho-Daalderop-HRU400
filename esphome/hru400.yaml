@@ -69,6 +69,7 @@ packages:
       esphome/base/frostvalve.yaml,
       #esphome/base/advanced.yaml,
       esphome/base/faultcodes.yaml,
+      esphome/base/hidden.yaml,
       # Add a comma here if you enable zones:
       esphome/base/general.yaml
       # Step 5: Enable aditional zones if you have them:
