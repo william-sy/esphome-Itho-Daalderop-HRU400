@@ -1,0 +1,564 @@
+# All settings mirrored at 45001 + 2*index. Read-only. Generated from the Service-app catalog (sw 8).
+# Scale factors for fractional settings are inferred from catalog defaults; check them against the app.
+# 32-bit settings (#44-47, #57-59) only read the low word here.
+sensor:
+  - name: "Setting 0 maximumCapacity"
+    address: 5000
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 1 Ingeregeld debiet toevoer"
+    address: 5002
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³/h"
+  - name: "Setting 2 Ventilatiepercentage in stand 1"
+    address: 5004
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 3 Ventilatiepercentage in stand 2"
+    address: 5006
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 4 Ventilatiepercentage in stand 3"
+    address: 5008
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 5 Ventilatiepercentage autostand zonder CO2 sensoren"
+    address: 5010
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 6 Ventilatiepercentage autostand met CO2 sensoren"
+    address: 5012
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 7 Ventilatiepercentage auto-nachtstand NIET  in BE"
+    address: 5014
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 8 Maximale tijd buiten auto-stand"
+    address: 5016
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m"
+  - name: "Setting 9 iHumiditySampleTime"
+    address: 5018
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 10 Vochtstijging aanschakelcriterium"
+    address: 5020
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "mg/kg"
+  - name: "Setting 11 Ventilatiepercentage bij vochtregeling"
+    address: 5022
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 12 iHumidityMinimumOnTime"
+    address: 5024
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m"
+  - name: "Setting 13 iHumidityRelativeHumidityOff"
+    address: 5026
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 14 iHumidityAbsoluteHumidityOff"
+    address: 5028
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 15 iHumidityMaximumOnTime"
+    address: 5030
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 16 iHumidityNotStartIfBypassCloses"
+    address: 5032
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 17 balanceControlSampleTime"
+    address: 5034
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 18 neglectMassFlowsForSupplyEnthalpyTime"
+    address: 5036
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 19 heaterPresent"
+    address: 5038
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 20 heaterPWMPeriod"
+    address: 5040
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.01
+  - name: "Setting 21 frostControlSampleTime"
+    address: 5042
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 22 frostControlDelay"
+    address: 5044
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 23 frostTemperatureSetpoint"
+    address: 5046
+    value_type: S_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.1
+  - name: "Setting 24 frostIaction"
+    address: 5048
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.01
+  - name: "Setting 25 frostValveStepperSpeed"
+    address: 5050
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 26 frostValvePartVolumeFlowOpen"
+    address: 5052
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 27 frostUnbalancePerDegree"
+    address: 5054
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 28 Tijd vorstklep open (bij nieuwe woning)"
+    address: 5056
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "uur"
+  - name: "Setting 29 bypassValveStepperSpeed"
+    address: 5058
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 30 bypassValveMaximumSteps"
+    address: 5060
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 31 bypassValveOpeningDirection"
+    address: 5062
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 32 bypassValveOpeningMaximumFlow"
+    address: 5064
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 33 bypassControlSampleTime"
+    address: 5066
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 34 Binnentemperatuurgrens voor bypass"
+    address: 5068
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.1
+    unit_of_measurement: "°C"
+  - name: "Setting 35 bypassSummerDayTemperature"
+    address: 5070
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.1
+  - name: "Setting 36 bypassSummerDayResetTemparature"
+    address: 5072
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.1
+  - name: "Setting 37 bypassSummerDayBoundary"
+    address: 5074
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "Km"
+  - name: "Setting 38 summerNightBoostBoundary"
+    address: 5076
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "Km"
+  - name: "Setting 39 summerNightBoostIncrement"
+    address: 5078
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.1
+    unit_of_measurement: "%/min"
+  - name: "Setting 40 Ventilatieniveau bij zomernachtboost"
+    address: 5080
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "%"
+  - name: "Setting 41 Tijd dat bypassklep dicht blijft na eerste start"
+    address: 5082
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "h"
+  - name: "Setting 42 powerLimitSupplyFan"
+    address: 5084
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 43 powerLimitExtractFan"
+    address: 5086
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 44 Vuil filter volumegrens"
+    address: 5088
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³"
+  - name: "Setting 45 dirtyFilterVolumeResetValue"
+    address: 5090
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 46 Vuil filter tijdgrens"
+    address: 5092
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "d"
+  - name: "Setting 47 dirtyFilterTimeResetValue"
+    address: 5094
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 48 firePresentTemperature"
+    address: 5096
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 49 fireExtinguishedTemperature"
+    address: 5098
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 50 goodAirQuality"
+    address: 5100
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 51 poorAirQuality"
+    address: 5102
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 52 modbusMaster (Y/N) (after reboot)"
+    address: 5104
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 53 modbusAddress (after reboot)"
+    address: 5106
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "None"
+  - name: "Setting 54 baudRate (after reboot), 0 = 9600, 1 = 19200 (default), 2 = 38400, 3 = 57600, 4 = 115200"
+    address: 5108
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "b/s"
+  - name: "Setting 55 parity (after reboot)"
+    address: 5110
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "None"
+  - name: "Setting 56 errorIfgHMINotAvailable"
+    address: 5112
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 57 B0ZoneValve (×1E8)"
+    address: 5114
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 58 B1ZoneValve (×1E8)"
+    address: 5116
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 59 gZoneValve (×1E8)"
+    address: 5118
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 60 zoneValveStepperSpeed"
+    address: 5120
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 61 zoneValveMaximumSteps"
+    address: 5122
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 62 zoneValvePlay"
+    address: 5124
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 63 zoningSystemActivation"
+    address: 5126
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 64 Ingeregelde debiet zone 1"
+    address: 5128
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³/h"
+  - name: "Setting 65 Ingeregelde debiet zone 2"
+    address: 5130
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³/h"
+  - name: "Setting 66 Ingeregelde debiet zone 3"
+    address: 5132
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³/h"
+  - name: "Setting 67 Ingeregelde debiet zone 4"
+    address: 5134
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    unit_of_measurement: "m³/h"
+  - name: "Setting 68 capacityIBSZone5"
+    address: 5136
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+  - name: "Setting 69 channelResistanceZone1"
+    address: 5138
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.0001
+  - name: "Setting 70 channelResistanceZone2"
+    address: 5140
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.0001
+  - name: "Setting 71 channelResistanceZone3"
+    address: 5142
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.0001
+  - name: "Setting 72 channelResistanceZone4"
+    address: 5144
+    value_type: U_WORD
+    register_type: holding
+    platform: modbus_controller
+    modbus_controller_id: ${modbus_id_slow}
+    entity_category: diagnostic
+    filters:
+      - multiply: 0.0001
