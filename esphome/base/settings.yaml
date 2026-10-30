@@ -915,7 +915,6 @@ text_sensor:
   # 40105-40110: serial number as ASCII, e.g. WT4231290080
   - name: ${h_serial}
     address: 104
-    register_count: 6
     response_size: 12
     raw_encode: NONE
     register_type: holding

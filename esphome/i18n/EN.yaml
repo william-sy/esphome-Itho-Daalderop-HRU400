@@ -193,7 +193,7 @@ substitutions:
   h_5098: Fire extinguished temperature
   h_5100: Good air quality
   h_5102: Poor air quality
-  h_5104: Modbus master (Y/N)
+  h_5104: Modbus master (Y⁄N)
   h_5106: Modbus address (after reboot)
   h_5108: Baud rate (after reboot)
   h_5110: Parity (after reboot)
