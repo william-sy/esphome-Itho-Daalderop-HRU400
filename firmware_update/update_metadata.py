@@ -5,10 +5,12 @@ Normally run through update_firmware.sh. Standalone:
 
     python3 update_metadata.py                      # record file + sha256 for every firmware file present
     python3 update_metadata.py --fetch              # also download missing files (public asset links)
-    python3 update_metadata.py --catalog cat.json   # first merge new entries from a saved catalog response
+    python3 update_metadata.py --catalog 03-00851=cat.json   # first merge a saved catalog response for that article
 
 Layout: BASE firmware lives in base/, WIFI firmware in wifi/, named hru400_<TYPE>_<version>.bin.
-Entries are matched by their server "id". Existing entries keep every field; this only adds new
+Entries are matched by their server "id", and several products can share one entry (the HRU 400, 300 and 375
+use the same firmware). Each entry lists the article numbers it belongs to in "products" and, when a catalog
+was merged, the catalog's "software_versions". Existing entries keep every other field; this only adds new
 entries and fills in "file" (path relative to this folder) and "sha256". Standard library only.
 """
 import argparse
@@ -23,22 +25,37 @@ META = os.path.join(HERE, "firmware_metadata.json")
 SUBDIR = {"BASE": "base", "WIFI": "wifi"}      # also the only types the app can flash
 
 
-def merge_catalog(meta, path):
+def tag(entry, key, value):
+    """Add `value` to the list entry[key] if it is not there yet."""
+    items = entry.setdefault(key, [])
+    if value not in items:
+        items.append(value)
+        items.sort()
+
+
+def merge_catalog(meta, article, path):
     with open(path) as f:
         payload = json.load(f)
     product = payload.get("product", payload)
-    have = {str(e["id"]) for e in meta["firmware"]}
+    name = product.get("name") or product.get("description") or ""
+    if article not in meta["products"] or (name and not meta["products"][article]):
+        meta["products"][article] = name
+    by_id = {str(e["id"]): e for e in meta["firmware"]}
     added = []
     for sv in product.get("software_versions", []):
         for fw_type, entries in (sv.get("firmware") or {}).items():
             if fw_type not in SUBDIR:
                 continue
             for e in entries:
-                if str(e.get("id")) in have:
-                    continue
-                meta["firmware"].append({"type": fw_type, **e})
-                have.add(str(e["id"]))
-                added.append(f"{fw_type} {e.get('firmware_version')} (id {e.get('id')})")
+                entry = by_id.get(str(e.get("id")))
+                if entry is None:
+                    entry = {"type": fw_type, **e}
+                    meta["firmware"].append(entry)
+                    by_id[str(e["id"])] = entry
+                    added.append(f"{fw_type} {e.get('firmware_version')} (id {e.get('id')})")
+                tag(entry, "products", article)
+                if sv.get("software_version") not in (None, ""):
+                    tag(entry, "software_versions", str(sv["software_version"]))
     return added
 
 
@@ -65,15 +82,31 @@ def find_elsewhere(name):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--fetch", action="store_true", help="download missing files from each entry's url")
-    ap.add_argument("--catalog", help="saved catalog response to merge new entries from")
+    ap.add_argument("--catalog", action="append", default=[], metavar="ARTICLE=FILE",
+                    help="saved catalog response for an article number (repeatable)")
     args = ap.parse_args()
 
-    with open(META) as f:
-        meta = json.load(f)
+    meta = None
+    if os.path.exists(META) and os.path.getsize(META) > 0:
+        with open(META) as f:
+            meta = json.load(f)
+    if meta is None:                      # missing or empty file: start a fresh list
+        meta = {"products": {}, "firmware": []}
+        print("no metadata yet, starting a new list")
+    # older files had a single product_code; fold it into "products"
+    legacy = meta.pop("product_code", None)
+    desc = meta.pop("product_description", "")
+    meta.setdefault("products", {})
+    if legacy and legacy not in meta["products"]:
+        meta["products"][legacy] = desc
+    if legacy:
+        for e in meta["firmware"]:
+            tag(e, "products", legacy)
 
-    if args.catalog:
-        added = merge_catalog(meta, args.catalog)
-        print("new from catalog:", ", ".join(added) if added else "nothing new")
+    for spec in args.catalog:
+        article, _, path = spec.partition("=")
+        added = merge_catalog(meta, article, path)
+        print(f"{article}: new from catalog:", ", ".join(added) if added else "nothing new")
 
     listed = set()
     print(f"{'type':5} {'version':8} {'id':>4}  status")

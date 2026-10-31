@@ -1,6 +1,4 @@
 {
-  "product_code": "03-00632",
-  "product_description": "WTW-unit HRU 400",
   "firmware": [
     {
       "type": "WIFI",
@@ -15,7 +13,15 @@
       "appliance_address": "8A",
       "description": "",
       "file": "wifi/hru400_WIFI_13.1.bin",
-      "sha256": "3f9e95682dba4cf2f5e611f3a0a6ebf89e6390bfa570c75c36abccb429911bfb"
+      "sha256": "3f9e95682dba4cf2f5e611f3a0a6ebf89e6390bfa570c75c36abccb429911bfb",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "6"
+      ]
     },
     {
       "type": "WIFI",
@@ -30,7 +36,18 @@
       "appliance_address": "8A",
       "description": "",
       "file": "wifi/hru400_WIFI_21.2.bin",
-      "sha256": "ab7cdbc4ca51f52aea8acdae4cae7b0e36d40daec8ba6837c25e42528c636586"
+      "sha256": "ab7cdbc4ca51f52aea8acdae4cae7b0e36d40daec8ba6837c25e42528c636586",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "type": "BASE",
@@ -45,7 +62,18 @@
       "appliance_address": "82",
       "description": "VDA & WT4 software v1.8.1 (MZR compatible update)",
       "file": "base/hru400_BASE_8.1.bin",
-      "sha256": "9e36aafc6e62529a1251d50407ed8c4532739c760eb67b3ae9855af20de6d108"
+      "sha256": "9e36aafc6e62529a1251d50407ed8c4532739c760eb67b3ae9855af20de6d108",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
     },
     {
       "type": "WIFI",
@@ -60,7 +88,16 @@
       "appliance_address": "8A",
       "description": "",
       "file": "wifi/hru400_WIFI_17.2.bin",
-      "sha256": "651e1bbc2ece9d8d09a326b9db1046f0870a9e0f110aef1b295213377db69360"
+      "sha256": "651e1bbc2ece9d8d09a326b9db1046f0870a9e0f110aef1b295213377db69360",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "8",
+        "9"
+      ]
     },
     {
       "type": "WIFI",
@@ -73,7 +110,13 @@
       "appliance_address": "8A",
       "description": "Release 1.13",
       "file": "wifi/hru400_WIFI_1.13.bin",
-      "sha256": "6ff2c16b25621985bd2da0b349b4749a10f57fb571c41bf43f9d816f58588a31"
+      "sha256": "6ff2c16b25621985bd2da0b349b4749a10f57fb571c41bf43f9d816f58588a31",
+      "products": [
+        "03-00632"
+      ],
+      "software_versions": [
+        "4"
+      ]
     },
     {
       "type": "WIFI",
@@ -84,7 +127,13 @@
       "has_eeprom": false,
       "hash_text": "",
       "appliance_address": "8A",
-      "description": "Release 1.14"
+      "description": "Release 1.14",
+      "products": [
+        "03-00632"
+      ],
+      "software_versions": [
+        "4"
+      ]
     },
     {
       "type": "BASE",
@@ -99,7 +148,16 @@
       "appliance_address": "82",
       "description": "HRU VDA & WT4 software v1.9.1 (o.a. VDA RV sensor fix)",
       "file": "base/hru400_BASE_1.9.1.bin",
-      "sha256": "133b0ebd572ed452482e5361d38935862efb2aada05ff3daff03e14c410ebbc2"
+      "sha256": "133b0ebd572ed452482e5361d38935862efb2aada05ff3daff03e14c410ebbc2",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "8",
+        "9"
+      ]
     },
     {
       "type": "WIFI",
@@ -114,7 +172,20 @@
       "appliance_address": "8A",
       "description": "",
       "file": "wifi/hru400_WIFI_22.11.bin",
-      "sha256": "2727894f8a5e4e6b107b7869472f3bee3825372337760b1edbd60ea8332e13e7"
+      "sha256": "2727894f8a5e4e6b107b7869472f3bee3825372337760b1edbd60ea8332e13e7",
+      "products": [
+        "03-00632",
+        "03-00851",
+        "03-00853"
+      ],
+      "software_versions": [
+        "9"
+      ]
     }
-  ]
+  ],
+  "products": {
+    "03-00632": "WTW-unit HRU 400",
+    "03-00851": "WTW-unit HRU 300",
+    "03-00853": "WTW-unit HRU 375"
+  }
 }
